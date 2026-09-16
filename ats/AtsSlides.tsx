@@ -14,11 +14,9 @@ import {
   Clock,
   Compass,
   Eye,
-  FileCheck,
   FileText,
   Heart,
   Home,
-  Image as ImageIcon,
   Layers,
   Lightbulb,
   Link2,
@@ -35,7 +33,6 @@ import {
   Play,
   Radio,
   RefreshCw,
-  Rocket,
   Route,
   Share2,
   ShoppingCart,
@@ -50,7 +47,6 @@ import {
   VenusAndMars,
   Building2,
   Globe,
-  Gauge,
   ShieldCheck,
   Zap,
 } from "lucide-react";
@@ -62,7 +58,6 @@ import {
   CONTEXTUAL,
   COVER,
   CREATIVE_DECIDE,
-  CREATIVE_SHARE,
   CREATIVES_INTRO,
   CTV,
   EAST_AFRICA,
@@ -533,11 +528,9 @@ const SECTION_BY_INDEX: Record<number, string> = {
   9: "06 / ACTIVATION",
   10: "07 / CREATIVES",
   11: "07 / CREATIVES",
-  12: "07 / CREATIVES",
-  13: "08 / WHY MEDIAPAL",
-  14: "09 / MEASUREMENT",
-  15: "09 / MEASUREMENT",
-  16: "10 / CONTACT",
+  12: "08 / WHY MEDIAPAL",
+  13: "09 / MEASUREMENT",
+  14: "10 / CONTACT",
 };
 
 const SECTION_ICONS: Record<string, LucideIcon> = {
@@ -1626,35 +1619,15 @@ function SlideCreativesDecide() {
   );
 }
 
-function SlideCreativesShare() {
-  return (
-    <SlideShell
-      index={12}
-      tone="light"
-      overlay="paper"
-      image={IMAGES.creativesShare}
-      copySide="full"
-      footerRight={CREATIVE_SHARE.footer}
-    >
-      <p className="ats-eyebrow">{CREATIVE_SHARE.eyebrow}</p>
-      <h2 className="ats-display ats-display--compact ats-display--oneline">
-        {CREATIVE_SHARE.title.toUpperCase()}
-      </h2>
-      <div className="twww-banner-canvas" aria-label="Live banner drop zone">
-        Live banners
-      </div>
-    </SlideShell>
-  );
-}
-
 function SlideWhy() {
   const icons = [Route, Globe, Zap, Network] as const;
   return (
     <SlideShell
-      index={13}
+      index={12}
       tone="hero"
       overlay="dark-left-strong"
-      image={IMAGES.why}
+      image={IMAGES.next}
+      imagePosition="center right"
       copySide="full"
     >
       <p className="ats-eyebrow">{WHY.eyebrow}</p>
@@ -1689,7 +1662,7 @@ function SlideMeasure() {
   ] as const;
   return (
     <SlideShell
-      index={14}
+      index={13}
       tone="light"
       overlay="paper-veil"
       image={IMAGES.measure}
@@ -1709,41 +1682,6 @@ function SlideMeasure() {
           icons={icons}
           images={MEASURE.track.map((t) => t.image)}
           columns={4}
-        />
-      </div>
-    </SlideShell>
-  );
-}
-
-function SlideNext() {
-  return (
-    <SlideShell
-      index={15}
-      tone="hero"
-      overlay="dark-left-strong"
-      image={IMAGES.next}
-      imagePosition="center right"
-      copySide="left"
-    >
-      <p className="ats-eyebrow">{MEASURE.eyebrow}</p>
-      <h2 className="ats-display ats-display--compact ats-display--oneline">
-        {MEASURE.nextTitle.toUpperCase()}
-      </h2>
-      <p className="ats-body ats-section-lede">{MEASURE.approach}</p>
-      <p className="ats-body ats-section-lede ats-activation-lede-2">
-        {MEASURE.approach2}
-      </p>
-      <p className="ats-body ats-section-lede ats-activation-lede-2">
-        {MEASURE.approach3}
-      </p>
-      <div className="ats-next-steps">
-        <ProofPoints
-          layout="values"
-          icons={[Clock, ImageIcon, Rocket, Gauge, FileCheck]}
-          items={MEASURE.steps.map((step, i) => ({
-            label: `Step ${String(i + 1).padStart(2, "0")}`,
-            body: step,
-          }))}
         />
       </div>
     </SlideShell>
@@ -1776,7 +1714,7 @@ function SlideClose() {
 
   return (
     <SlideShell
-      index={16}
+      index={14}
       tone="hero"
       overlay="dark-left-strong"
       image={IMAGES.contact}
@@ -1867,10 +1805,8 @@ const SLIDES = [
   SlideCtv,
   SlideCreativesDecideBrief,
   SlideCreativesDecide,
-  SlideCreativesShare,
   SlideWhy,
   SlideMeasure,
-  SlideNext,
   SlideClose,
 ];
 

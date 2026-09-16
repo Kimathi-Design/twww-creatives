@@ -82,10 +82,8 @@ export const slideTitles = [
   "Connected TV",
   "High-impact creatives",
   "Creatives · Decide & Shop",
-  "Creatives · Prepare, Eat & Share",
   "Why MediaPal",
   "Measurement",
-  "Next steps",
   "Contact",
 ] as const;
 

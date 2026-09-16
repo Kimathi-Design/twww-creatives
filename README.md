@@ -20,5 +20,7 @@ Open http://localhost:3060/deck
 
 ## Notes
 
+- **15 slides** in the live deck (Prepare/Eat/Share and Next steps removed).
 - Favicon is the official MediaPal mark from mediapal.net.
 - Download PDF is enabled in the deck chrome (same file as the public PDF link above).
+- Regenerate the PDF after slide changes: `npm run generate-crisp-pdf` (requires Playwright Chromium: `npx playwright install chromium`).
