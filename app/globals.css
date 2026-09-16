@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+  --ats-navy: #e61a27;
+  --ats-accent: #f15a29;
+  --ats-paper: #faf6f3;
+  --ats-ink: #1a1520;
+}
+
+  html,
+  body {
+  min-height: 100%;
+  background: var(--ats-paper);
+  color: var(--ats-ink);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-ats), "Plus Jakarta Sans", ui-sans-serif, system-ui,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scaled 1920×1080 artboard host for live preview */
+.deck-stage-host {
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.deck-stage-scaler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* zoom (not transform:scale) keeps Framer motion in the same coordinate space */
+  transform-origin: top left;
+  backface-visibility: hidden;
+}
+
+.deck-stage {
+  overflow: hidden;
+  background: #fff;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.deck-fixed-layout {
+  contain: layout style;
+}
