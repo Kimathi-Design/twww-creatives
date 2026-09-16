@@ -59,7 +59,7 @@ const PDF_DOWNLOAD_ENABLED = true;
 const DECK_PDF = ATS_ASSETS.crispPdf;
 
 /**
- * Phones and tablets need the touch presenting layer regardless of width — a
+ * Phones and tablets need the touch presenting layer regardless of width  -  a
  * handset in landscape reports well over the mobile breakpoint, and hover-only
  * controls are unreachable without a pointer.
  */
@@ -86,7 +86,7 @@ function computeDeckScale(
     area?: HTMLElement | null;
   },
 ) {
-  // Prefer the layout container / stage area — never visualViewport. Android
+  // Prefer the layout container / stage area  -  never visualViewport. Android
   // Chrome collapses the URL bar and thrashing visualViewport rescales the
   // artboard, which shifts flex/absolute content and makes motion look glitchy.
   const rect =
@@ -166,7 +166,7 @@ function AtsLoadingScreen({
             fontSize: 13,
             letterSpacing: "0.14em",
             textTransform: "uppercase",
-            color: "#132d7a",
+            color: "#8b0e16",
             fontWeight: 500,
             minHeight: "1.2em",
             opacity: ready ? undefined : 0,
@@ -227,7 +227,7 @@ export function AtsViewer() {
     userStartedRef.current = true;
     showLoaderRef.current = false;
     setShowLoader(false);
-    // Show the stage immediately — do not wait for AnimatePresence
+    // Show the stage immediately  -  do not wait for AnimatePresence
     // onExitComplete (it can miss on mobile / interrupted exits → blank screen).
     setDeckReady(true);
     window.setTimeout(() => {
@@ -339,7 +339,7 @@ export function AtsViewer() {
   const isRotated = isFullscreen && isMobile && isPortrait;
   const mobilePresenting = isFullscreen && isMobile;
 
-  // Tap / click opens the cover. Keyboard start is intentionally omitted —
+  // Tap / click opens the cover. Keyboard start is intentionally omitted  - 
   // Space/Enter were unreliable on Mac (replayed the loader instead of starting).
   // Swallow Space while the gate is up so it cannot scroll or activate controls.
   useEffect(() => {
@@ -364,7 +364,7 @@ export function AtsViewer() {
         };
         await orientation?.lock?.("landscape");
       } catch {
-        /* orientation lock unsupported — CSS rotation handles it */
+        /* orientation lock unsupported  -  CSS rotation handles it */
       }
     } else {
       try {
@@ -414,7 +414,7 @@ export function AtsViewer() {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       // Ignore deck shortcuts while the loading gate is up, and until the
-      // loader exit finishes — otherwise the same Space that starts the deck
+      // loader exit finishes  -  otherwise the same Space that starts the deck
       // also advances past the cover.
       if (showLoaderRef.current || !navArmedRef.current) return;
       if (e.key === "ArrowRight" || e.key === "PageDown" || e.key === " ") {
@@ -805,7 +805,7 @@ export function AtsViewer() {
             title={
               isFullscreen
                 ? "Exit full screen (F or Esc)"
-                : "Present full screen (F) — hides this bar"
+                : "Present full screen (F) - hides this bar"
             }
             className="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-[rgba(19,45,122,0.12)] bg-white transition hover:bg-[#f5f7fb] sm:h-9 sm:w-9"
             style={{ color: "rgba(25,41,87,0.68)" }}

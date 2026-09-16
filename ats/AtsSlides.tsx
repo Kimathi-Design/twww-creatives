@@ -890,9 +890,9 @@ function AudienceIntelligenceWheel() {
   ] as const;
   // 10 nodes, equal 36° steps, starting at top (0°)
   const nodeAngles = AUDIENCE.signals.map((_, i) => i * 36);
-  // Keep red ring ticks on the dashed orbit but clear of labels —
+  // Keep red ring ticks on the dashed orbit but clear of labels  - 
   // nudge each tick along the arc to sit just above/below the copy.
-  // Location (top) has no tick — its copy sits on that arc segment.
+  // Location (top) has no tick  -  its copy sits on that arc segment.
   const ringDotAngles = AUDIENCE.signals
     .map((_, i) => {
       const base = i * 36;
@@ -1095,7 +1095,7 @@ function SlideInventoryPublishers() {
               label: p.name,
               body: (
                 <>
-                  {p.cat} —
+                  {p.cat} ·
                   <br />
                   {p.line}
                 </>

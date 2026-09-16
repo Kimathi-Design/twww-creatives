@@ -39,7 +39,7 @@ const plusJakarta = localFont({
 export const metadata: Metadata = {
   title: "TWWW · MediaPal Proposal · Coca-Cola",
   description:
-    "The World Will Wait — MediaPal media implementation proposal for Coca-Cola Kenya, Tanzania and Uganda.",
+    "The World Will Wait  -  MediaPal media implementation proposal for Coca-Cola Kenya, Tanzania and Uganda.",
   robots: { index: false, follow: false },
   icons: {
     icon: [

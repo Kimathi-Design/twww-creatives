@@ -1,8 +1,14 @@
 # TWWW MediaPal Proposal
 
-Same presentation UI as **ATS / Reserve Trip** profile decks (`ats.css`, SlideShell, Lede, ProofPoints, paxes cards, chrome, Framer Motion).
+Interactive MediaPal × Coca-Cola **The World Will Wait** media proposal deck.
 
-## Run
+## Live
+
+- **Deck:** https://twww-proposal.vercel.app
+- **PDF:** https://twww-proposal.vercel.app/TWWW_MediaPal_Proposal.pdf
+- **GitHub:** https://github.com/Kimathi-Design/TWWW-Proposal
+
+## Run locally
 
 ```bash
 cd TWWW-Proposal
@@ -14,5 +20,5 @@ Open http://localhost:3060/deck
 
 ## Notes
 
-- Placeholder photos/logos currently from `ats-profile-deck` — replace later with TWWW / MediaPal / Coke assets.
-- PDF download disabled until a crisp PDF is generated.
+- Favicon is the official MediaPal mark from mediapal.net.
+- Download PDF is enabled in the deck chrome (same file as the public PDF link above).

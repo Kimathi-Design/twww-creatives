@@ -1,4 +1,4 @@
-/** TWWW proposal content — page-by-page copy as agreed */
+/** TWWW proposal content - page-by-page copy as agreed */
 
 export const SLIDE_W = 1920;
 export const SLIDE_H = 1080;
@@ -68,7 +68,7 @@ export const CONTACT = {
   eldoret: "",
 } as const;
 
-/** Viewer titles — length drives SLIDE_COUNT */
+/** Viewer titles - length drives SLIDE_COUNT */
 export const slideTitles = [
   "Cover",
   "The brief",
@@ -101,7 +101,7 @@ export const BRIEF = {
   eyebrow: "The brief",
   titleLines: ["An occasion gap.", "Not a penetration gap."] as const,
   lead:
-    "Kenya’s meal occasion sits at 4% against an Africa benchmark of 48% — a 44-point occasion gap, not a penetration gap. The job is to make Coke the automatic addition to meals that already happen, especially at home.",
+    "Kenya’s meal occasion sits at 4% against an Africa benchmark of 48% - a 44-point occasion gap, not a penetration gap. The job is to make Coke the automatic addition to meals that already happen, especially at home.",
   media: [
     {
       label: "Same consumers",
@@ -137,7 +137,7 @@ export const RESPONSE = {
   eyebrow: "Our response",
   title: "Activate around meal moments",
   lead:
-    "MediaPal activates Coca-Cola around the moments that decide whether a Coke joins the meal — across Kenya, Tanzania and Uganda — then reinforces enjoyment at the table and turns the occasion into the next week’s invitation.",
+    "MediaPal activates Coca-Cola around the moments that decide whether a Coke joins the meal - across Kenya, Tanzania and Uganda - then reinforces enjoyment at the table and turns the occasion into the next week’s invitation.",
   close:
     "Build the association. Own the decision. Reinforce the habit. Make the occasion shareable.",
   jobs: [
@@ -164,7 +164,7 @@ export const JOURNEY = {
   title: "Buy the moment, not just the channel",
   subhead: "MediaPal maps media to the five moments in the meal journey.",
   footer:
-    "The share stage seeds next week’s decide stage — this is a loop, not a funnel.",
+    "The share stage seeds next week’s decide stage - this is a loop, not a funnel.",
   stages: [
     {
       label: "Decide",
@@ -270,7 +270,7 @@ export const AUDIENCE = {
     {
       label: "Media Environment",
       body: "Daily Nation, Tuko, Standard, Kenyans.co.ke, lifestyle apps",
-      color: "#132d7a",
+      color: "#007683",
     },
     {
       label: "Interests",
@@ -403,16 +403,16 @@ export const EAST_AFRICA = {
   eyebrow: "Inventory · East Africa",
   title: "Ad inventory discovery · Tanzania & Uganda",
   lead:
-    "The same meal-moment system extends into Tanzania and Uganda — so Coca-Cola can build frequent meal association across East Africa with one activation approach and market-level optimisation.",
+    "The same meal-moment system extends into Tanzania and Uganda - so Coca-Cola can build frequent meal association across East Africa with one activation approach and market-level optimisation.",
   markets: [
     {
       name: "Tanzania",
-      body: "Impressions · 637M. Unique reach · 10.6M. Gender — Male 59% · Female 37% · Undefined 5%. Age — 25–34 30% · 18–24 26% · 35–44 21% · 45–54 9% · Undefined 8% · 55–64 3% · 65+ 3%.",
+      body: "Impressions · 637M. Unique reach · 10.6M. Gender - Male 59% · Female 37% · Undefined 5%. Age - 25–34 30% · 18–24 26% · 35–44 21% · 45–54 9% · Undefined 8% · 55–64 3% · 65+ 3%.",
       image: IMAGES.tz,
     },
     {
       name: "Uganda",
-      body: "Impressions · 723M. Unique reach · 12.4M. Gender — Male 58% · Female 37% · Undefined 5%. Age — 25–34 42% · 18–24 21% · 35–44 19% · Undefined 8% · 45–54 6% · 55–64 3% · 65+ 2%.",
+      body: "Impressions · 723M. Unique reach · 12.4M. Gender - Male 58% · Female 37% · Undefined 5%. Age - 25–34 42% · 18–24 21% · 35–44 19% · Undefined 8% · 45–54 6% · 55–64 3% · 65+ 2%.",
       image: IMAGES.ug,
     },
   ] as const,
@@ -437,7 +437,7 @@ export const EAST_AFRICA = {
   footer: "One brief. Three markets. One meal-moment system.",
 } as const;
 
-/** Three equal market reach cards — Kenya · Tanzania · Uganda */
+/** Three equal market reach cards - Kenya · Tanzania · Uganda */
 export const INVENTORY_MARKETS = [
   {
     name: "Kenya",
@@ -515,9 +515,9 @@ export const MOMENT = {
   title: "Moment Ads",
   subhead: "Engage consumers in real meal moments",
   lead1:
-    "MediaPal Moment Ads help Coca-Cola connect with consumers when meal decisions are being made — using real-time signals such as time, location, context and behaviour.",
+    "MediaPal Moment Ads help Coca-Cola connect with consumers when meal decisions are being made - using real-time signals such as time, location, context and behaviour.",
   lead2:
-    "We activate around key Kenya and East Africa meal moments — from work lunches to the journey home and weekend social occasions — so Coca-Cola messaging lands when it matters most.",
+    "We activate around key Kenya and East Africa meal moments - from work lunches to the journey home and weekend social occasions - so Coca-Cola messaging lands when it matters most.",
   moments: [
     {
       label: "12–2pm",
@@ -554,7 +554,7 @@ export const CONTEXTUAL = {
   title: "Contextual advertising",
   subhead: "Reach consumers where meal moments happen",
   lead1:
-    "Contextual advertising places Coca-Cola inside premium food, cooking, lifestyle and entertainment content that shapes meal decisions — strengthening meal association and choice at the table without relying on personal data.",
+    "Contextual advertising places Coca-Cola inside premium food, cooking, lifestyle and entertainment content that shapes meal decisions - strengthening meal association and choice at the table without relying on personal data.",
   lead2:
     "Keyword and semantic targeting across recipes, cooking, lunch and dinner ideas, Kenyan cuisine, groceries, restaurants, music, sport and lifestyle environments.",
   cards: [
@@ -575,7 +575,7 @@ export const CONTEXTUAL = {
     },
     {
       label: "Context, not data",
-      body: "Keyword and semantic targeting — no personal data required.",
+      body: "Keyword and semantic targeting - no personal data required.",
       image: IMAGES.contextualCards[3],
     },
   ] as const,
@@ -594,9 +594,9 @@ export const CTV = {
   title: "Connected TV (CTV)",
   subhead: "Premium streaming. Precise targeting. Stronger meal association.",
   lead1:
-    "CTV reaches consumers at home while families prepare, serve and enjoy meals — combining the storytelling power of TV with digital precision across 1M+ LG Connected TV devices and leading smart TV OEMs in Kenya.",
+    "CTV reaches consumers at home while families prepare, serve and enjoy meals - combining the storytelling power of TV with digital precision across 1M+ LG Connected TV devices and leading smart TV OEMs in Kenya.",
   lead2:
-    "Buy into the home supper window — into and through 7–9.30pm — when the meal and the screen share the room.",
+    "Buy into the home supper window - into and through 7–9.30pm - when the meal and the screen share the room.",
   cards: [
     {
       label: "1M+ LG Connected TV",
@@ -651,7 +651,7 @@ export const CREATIVES_INTRO = {
     },
     {
       label: "Built around the meal journey",
-      body: "Creative timed to Decide, Shop, Prepare, Eat and Share — not generic brand bursts.",
+      body: "Creative timed to Decide, Shop, Prepare, Eat and Share - not generic brand bursts.",
     },
   ] as const,
   close: "From awareness to action across every platform.",
@@ -662,7 +662,7 @@ export const CREATIVE_DECIDE = {
   title: "Decide & Shop",
   subhead: "Live banner executions that win the meal decision before the table.",
   lead:
-    "These are live MediaPal banner creatives — built for the commute-home and retail window where supper is decided and the Coke is added or forgotten.",
+    "These are live MediaPal banner creatives - built for the commute-home and retail window where supper is decided and the Coke is added or forgotten.",
   show: [
     "Leaderboard / billboard / MPU in news and lifestyle environments",
     "Mobile sticky / high-impact display near retail and urban geo",
@@ -678,13 +678,13 @@ export const CREATIVE_DECIDE = {
     {
       label: "Coca-Cola Custom",
       type: "Custom rich unit · 320×480",
-      use: "Decide & Shop — high-impact mobile for journey-home and retail catchments.",
+      use: "Decide & Shop - high-impact mobile for journey-home and retail catchments.",
       src: "https://live.mediapal.net/cdn/twww/coca-cola-custom/320x480/index.html",
     },
     {
       label: "Coca-Cola Tiles",
       type: "Interactive tiles · 320×480",
-      use: "Decide & Shop — tap-to-explore meal pairings in news and lifestyle.",
+      use: "Decide & Shop - tap-to-explore meal pairings in news and lifestyle.",
       src: "https://live.mediapal.net/cdn/twww/coca-cola-tiles/320x480/index.html",
       /** Live stage is 320×570 (640×1140 @ 0.5); bottom-align in 480 clip. */
       frameHeight: 570,
@@ -693,13 +693,13 @@ export const CREATIVE_DECIDE = {
     {
       label: "Hot or Not",
       type: "Engagement poll · 320×480",
-      use: "Decide & Shop — playful choice mechanic that locks Coke to supper.",
+      use: "Decide & Shop - playful choice mechanic that locks Coke to supper.",
       src: "https://live.mediapal.net/cdn/twww/hot-or-not/320x480/index.html",
     },
     {
       label: "Social Carousel",
       type: "Social carousel · 320×480",
-      use: "Decide & Shop — swipeable meal moments for sticky and social inventory.",
+      use: "Decide & Shop - swipeable meal moments for sticky and social inventory.",
       src: "https://live.mediapal.net/cdn/twww/social-carousel/320x480/index.html",
     },
   ] as const,
@@ -710,11 +710,11 @@ export const CREATIVE_SHARE = {
   title: "Prepare, Eat & Share",
   subhead: "Live banner executions that lock Coke to the meal.",
   lead:
-    "Live banners inside food, cooking, family and entertainment contexts — plus formats for the supper and share window when the meal is on.",
+    "Live banners inside food, cooking, family and entertainment contexts - plus formats for the supper and share window when the meal is on.",
   show: [
     "Native / in-article / sidebar beside recipes and dinner ideas",
     "Vertical mobile / social-ready banners for evening and weekend",
-    "Occasion bursts — weekend choma, celebrations, seasonal table",
+    "Occasion bursts - weekend choma, celebrations, seasonal table",
   ] as const,
   label: "Format · Journey stage (Prepare / Eat / Share) · Daypart · Market (KE / TZ / UG)",
   examples: [
@@ -722,14 +722,14 @@ export const CREATIVE_SHARE = {
     "Good food tastes better together. Enjoy a Coke with your meal.",
     "Better meals together.",
   ] as const,
-  footer: "From content to table — and from table to next week’s decision.",
+  footer: "From content to table - and from table to next week’s decision.",
 } as const;
 
 export const WHY = {
   eyebrow: "Why MediaPal",
   title: "Built for meal association that repeats.",
   lead1:
-    "MediaPal is an independent programmatic network — proprietary tech to reach the right audiences across mobile, video, display and CTV.",
+    "MediaPal is an independent programmatic network - proprietary tech to reach the right audiences across mobile, video, display and CTV.",
   lead2:
     "For Coca-Cola Meals across Kenya, Tanzania and Uganda: one system for meal-moment audiences, dayparts and content.",
   cards: [
@@ -763,7 +763,7 @@ export const MEASURE = {
   track: [
     {
       label: "Reach & frequency",
-      body: "Priority dayparts — 12–2 · 4–7 · 7–9.30 · weekends.",
+      body: "Priority dayparts - 12–2 · 4–7 · 7–9.30 · weekends.",
       image: IMAGES.measureCards[0],
     },
     {
@@ -804,15 +804,15 @@ export const MEASURE = {
   ] as const,
   nextTitle: "Next steps",
   approach:
-    "Learn weekly by moment, occasion and market. Shift weight to the stages and dayparts that move meal association — not just cheapest impressions.",
+    "Learn weekly by moment, occasion and market. Shift weight to the stages and dayparts that move meal association - not just cheapest impressions.",
   approach2:
-    "Kenya remains the learning base. Tanzania and Uganda scale what works — same journey map, localised dayparts and creative weightings, one commercial rhythm.",
+    "Kenya remains the learning base. Tanzania and Uganda scale what works - same journey map, localised dayparts and creative weightings, one commercial rhythm.",
   approach3:
     "Every flight should answer: did we grow Coke’s place at the meal, and which moments earned the next investment?",
   steps: [
     "Align occasion priorities and daypart weights by market (KE / TZ / UG).",
     "Lock creative territories and live banner set to approved TWWW assets.",
-    "Build a test-and-learn flight plan — Kenya base, then TZ / UG scale.",
+    "Build a test-and-learn flight plan - Kenya base, then TZ / UG scale.",
     "Confirm measurement dashboard and any brand-lift partner.",
     "Commercial proposal against agreed multi-market scope.",
   ] as const,

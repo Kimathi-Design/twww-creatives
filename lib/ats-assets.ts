@@ -1,4 +1,4 @@
-/** Brand assets for the deck viewer — same shape as ATS profile. */
+/** Brand assets for the deck viewer  -  same shape as ATS profile. */
 
 import { IMAGES, CLIENTS, CONTACT } from "@/lib/ats-content";
 

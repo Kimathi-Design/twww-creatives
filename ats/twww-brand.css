@@ -1,4 +1,4 @@
-/* TWWW brand only — Coke/MediaPal tokens on Reserve Trip deck UI. No new card systems. */
+/* TWWW brand only  -  Coke/MediaPal tokens on Reserve Trip deck UI. No new card systems. */
 
 .ats-viewer,
 .ats-print-root,
@@ -64,7 +64,7 @@
   transform: none;
 }
 
-/* Brand lockups — official Coca-Cola + MediaPal marks */
+/* Brand lockups  -  official Coca-Cola + MediaPal marks */
 .twww-brand {
   display: inline-flex;
   align-items: center;
@@ -155,7 +155,7 @@
   background: linear-gradient(90deg, #b01018, #e61a27, #f15a29) !important;
 }
 
-/* Five-up paxes grid — journey + dense cards */
+/* Five-up paxes grid  -  journey + dense cards */
 .ats-paxes-cards--five {
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 14px;
@@ -181,7 +181,7 @@
   height: 36px;
 }
 
-/* Journey map — equal card height, locked vertical rhythm, larger type */
+/* Journey map  -  equal card height, locked vertical rhythm, larger type */
 .ats-journey-paxes .ats-paxes-card__shade {
   background: linear-gradient(
     180deg,
@@ -300,7 +300,7 @@
   filter: drop-shadow(0 2px 8px rgba(7, 11, 11, 0.45));
 }
 
-/* Live creative drop zone — 320×480 units scaled to full canvas height */
+/* Live creative drop zone  -  320×480 units scaled to full canvas height */
 .twww-banner-canvas {
   flex: 1 1 auto;
   min-height: 0;
@@ -397,7 +397,7 @@
   border: 0;
 }
 
-/* Inventory discovery — offers left, six publishers right */
+/* Inventory discovery  -  offers left, six publishers right */
 .ats-copy:has(.ats-inventory-split) {
   overflow: hidden;
   padding-bottom: 0;
@@ -528,7 +528,7 @@
     );
 }
 
-/* Three equal market reach cards — real PaxesCards + filled stats */
+/* Three equal market reach cards  -  real PaxesCards + filled stats */
 .ats-market-reach {
   margin-top: 12px;
   margin-bottom: 0;
@@ -757,7 +757,7 @@
   color: #fff;
 }
 
-/* Moment / Contextual / CTV — 2×2 PaxesCards aligned to lede measure */
+/* Moment / Contextual / CTV  -  2×2 PaxesCards aligned to lede measure */
 .ats-copy:has(.ats-moment-paxes) {
   overflow: hidden;
 }
@@ -825,7 +825,7 @@
   height: 32px;
 }
 
-/* Measurement — full-width 2×4 PaxesCards */
+/* Measurement  -  full-width 2×4 PaxesCards */
 .ats-measure-paxes {
   flex: 1 1 auto;
   min-height: 0;
@@ -961,7 +961,7 @@
   color: #ff6b6b;
 }
 
-/* —— Audience Discovery + Intelligence wheel (split) —— */
+/*  -  -  Audience Discovery + Intelligence wheel (split)  -  -  */
 .ats-audience-split {
   flex: 1 1 auto;
   min-height: 0;
@@ -1217,7 +1217,7 @@
   letter-spacing: 0.04em;
   line-height: 1.05;
   text-transform: uppercase;
-  color: #132d7a;
+  color: #8b0e16;
 }
 
 .ats-audience-wheel__hub-sub {
@@ -1226,7 +1226,7 @@
   font-weight: 500;
   letter-spacing: 0.01em;
   line-height: 1.15;
-  color: #3b4f8a;
+  color: rgba(26, 21, 32, 0.62);
 }
 
 .ats-audience-wheel__occasion {
@@ -1365,14 +1365,14 @@
   font-weight: 800;
   letter-spacing: 0.01em;
   line-height: 1.15;
-  color: #132d7a;
+  color: #8b0e16;
 }
 
 .ats-audience-wheel__node-copy span {
   font-size: 11px;
   font-weight: 500;
   line-height: 1.28;
-  color: rgba(26, 32, 58, 0.72);
+  color: rgba(26, 21, 32, 0.72);
   white-space: pre-line;
 }
 
@@ -1394,7 +1394,7 @@
   align-items: center;
 }
 
-/* —— Audience wheel hover motion —— */
+/*  -  -  Audience wheel hover motion  -  -  */
 @media (hover: hover) and (pointer: fine) {
   .ats-interactive .ats-audience-wheel__node,
   .ats-interactive .ats-audience-wheel__occasion,
@@ -1524,7 +1524,7 @@
   }
 }
 
-/* —— Brief slide —— */
+/*  -  -  Brief slide  -  -  */
 .ats-brief {
   position: relative;
   flex: 1 1 auto;
