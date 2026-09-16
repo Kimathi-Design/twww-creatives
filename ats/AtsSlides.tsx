@@ -5,26 +5,38 @@ import { Children, isValidElement, useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import type { LucideIcon } from "lucide-react";
 import {
+  Activity,
   Briefcase,
+  BookOpen,
   CalendarDays,
+  Car,
   ChefHat,
   Clock,
   Compass,
   Eye,
+  FileCheck,
   FileText,
   Heart,
   Home,
   Image as ImageIcon,
   Layers,
   Lightbulb,
+  Link2,
   List,
   Mail,
   MapPin,
+  Megaphone,
   MessageCircle,
   MonitorSmartphone,
+  MousePointerClick,
+  Network,
+  Newspaper,
   Phone,
   Play,
   Radio,
+  RefreshCw,
+  Rocket,
+  Route,
   Share2,
   ShoppingCart,
   Smartphone,
@@ -40,6 +52,7 @@ import {
   Globe,
   Gauge,
   ShieldCheck,
+  Zap,
 } from "lucide-react";
 import {
   AUDIENCE,
@@ -530,14 +543,14 @@ const SECTION_BY_INDEX: Record<number, string> = {
 const SECTION_ICONS: Record<string, LucideIcon> = {
   "TWWW PROPOSAL": Sparkles,
   "01 / BRIEF": Compass,
-  "02 / RESPONSE": Target,
-  "03 / JOURNEY": Layers,
+  "02 / RESPONSE": Zap,
+  "03 / JOURNEY": Route,
   "04 / AUDIENCE": Users,
-  "05 / INVENTORY": MapPin,
-  "06 / ACTIVATION": Radio,
-  "07 / CREATIVES": MonitorSmartphone,
-  "08 / WHY MEDIAPAL": Briefcase,
-  "09 / MEASUREMENT": Gauge,
+  "05 / INVENTORY": Newspaper,
+  "06 / ACTIVATION": Clock,
+  "07 / CREATIVES": MousePointerClick,
+  "08 / WHY MEDIAPAL": Network,
+  "09 / MEASUREMENT": Activity,
   "10 / CONTACT": Mail,
 };
 
@@ -743,7 +756,7 @@ function SlideBrief() {
         </div>
         <ProofPoints
           layout="values"
-          icons={[Users, Home, Target, Utensils]}
+          icons={[Users, Home, Clock, Utensils]}
           items={BRIEF.media}
         />
         <div className="ats-brief__stats">
@@ -770,7 +783,7 @@ function SlideBrief() {
 }
 
 function SlideResponse() {
-  const icons = [Sparkles, Target, Users] as const;
+  const icons = [Megaphone, RefreshCw, Heart] as const;
   return (
     <SlideShell
       index={2}
@@ -795,11 +808,11 @@ function SlideResponse() {
 }
 
 function SlideJourney() {
-  const stageIcons = [Users, ShoppingCart, ChefHat, Utensils, Share2] as const;
+  const stageIcons = [Compass, ShoppingCart, ChefHat, Utensils, Share2] as const;
   const pointIcons = [
-    [MapPin, Home, Lightbulb],
-    [MapPin, Smartphone, Star],
-    [FileText, Play, Utensils],
+    [Radio, Home, Lightbulb],
+    [MapPin, Smartphone, ShoppingCart],
+    [BookOpen, Lightbulb, Utensils],
     [Tv, Home, Heart],
     [Users, MessageCircle, CalendarDays],
   ] as const;
@@ -849,7 +862,7 @@ function SlideAudience() {
           </div>
           <ProofPoints
             layout="values"
-            icons={[Target, MapPin, Layers]}
+            icons={[Heart, MapPin, BookOpen]}
             items={AUDIENCE.find}
           />
         </div>
@@ -865,10 +878,10 @@ function AudienceIntelligenceWheel() {
   const reduceMotion = useReducedMotion();
   const signalIcons = [
     MapPin,
-    Play,
-    List,
+    Newspaper,
+    Star,
     MonitorSmartphone,
-    ImageIcon,
+    BookOpen,
     Clock,
     Utensils,
     ShoppingCart,
@@ -1044,11 +1057,11 @@ function AudienceIntelligenceWheel() {
 function SlideInventoryPublishers() {
   const pubIcons = [
     Utensils,
-    Building2,
-    Users,
-    Home,
+    Newspaper,
     Sparkles,
-    Radio,
+    Home,
+    ChefHat,
+    Play,
   ] as const;
 
   return (
@@ -1069,7 +1082,7 @@ function SlideInventoryPublishers() {
           <p className="ats-body ats-section-lede">{KENYA.lead}</p>
           <ProofPoints
             layout="values"
-            icons={[Users, Target, Layers, Play, MapPin]}
+            icons={[Newspaper, Clock, Layers, Tv, MapPin]}
             items={KENYA.unlocks}
           />
         </div>
@@ -1104,7 +1117,7 @@ function MarketReachCards({
 }) {
   const reduceMotion = useReducedMotion();
   const ease = [0.16, 1, 0.3, 1] as const;
-  const marketIcons = [MapPin, MapPin, MapPin] as const;
+  const marketIcons = [MapPin, Globe, MapPin] as const;
 
   return (
     <div
@@ -1297,8 +1310,8 @@ function ActivationStrip({
 }
 
 function SlideMoment() {
-  const icons = [Clock, ShoppingCart, Home, CalendarDays] as const;
-  const stripIcons = [Target, Clock, MapPin, Utensils] as const;
+  const icons = [Briefcase, Car, Home, CalendarDays] as const;
+  const stripIcons = [Zap, Clock, MapPin, Utensils] as const;
   return (
     <SlideShell
       index={7}
@@ -1337,7 +1350,7 @@ function SlideMoment() {
 
 function SlideContextual() {
   const icons = [Target, Utensils, Heart, ShieldCheck] as const;
-  const stripIcons = [MapPin, Layers, Building2, Sparkles] as const;
+  const stripIcons = [Clock, BookOpen, Newspaper, Utensils] as const;
   return (
     <SlideShell
       index={8}
@@ -1378,8 +1391,8 @@ function SlideContextual() {
 }
 
 function SlideCtv() {
-  const icons = [Tv, MonitorSmartphone, Home, ShieldCheck] as const;
-  const stripIcons = [Clock, Users, Sparkles, Utensils] as const;
+  const icons = [Tv, Play, Home, ShieldCheck] as const;
+  const stripIcons = [Clock, Users, Target, Utensils] as const;
   return (
     <SlideShell
       index={9}
@@ -1438,7 +1451,7 @@ function SlideCreativesDecideBrief() {
       </p>
       <ProofPoints
         layout="values"
-        icons={[Users, Smartphone, Gauge, Utensils]}
+        icons={[MousePointerClick, Link2, RefreshCw, Route]}
         items={CREATIVES_INTRO.points}
       />
     </SlideShell>
@@ -1635,7 +1648,7 @@ function SlideCreativesShare() {
 }
 
 function SlideWhy() {
-  const icons = [Target, Globe, Radio, Gauge] as const;
+  const icons = [Route, Globe, Zap, Network] as const;
   return (
     <SlideShell
       index={13}
@@ -1665,10 +1678,10 @@ function SlideWhy() {
 
 function SlideMeasure() {
   const icons = [
-    Clock,
+    Users,
     Utensils,
     Globe,
-    Layers,
+    Heart,
     MonitorSmartphone,
     Tv,
     Target,
@@ -1726,7 +1739,7 @@ function SlideNext() {
       <div className="ats-next-steps">
         <ProofPoints
           layout="values"
-          icons={[MapPin, Layers, Building2, MonitorSmartphone, Target]}
+          icons={[Clock, ImageIcon, Rocket, Gauge, FileCheck]}
           items={MEASURE.steps.map((step, i) => ({
             label: `Step ${String(i + 1).padStart(2, "0")}`,
             body: step,
