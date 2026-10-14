@@ -58,6 +58,7 @@ import {
   CONTEXTUAL,
   COVER,
   CREATIVE_DECIDE,
+  CREATIVE_GAMES,
   CREATIVES_INTRO,
   CTV,
   EAST_AFRICA,
@@ -131,10 +132,29 @@ function CountUpNumber({ value }: { value: string }) {
 function BrandLockup({
   size = "chrome",
   showMediaPal = false,
+  mark = "coke",
 }: {
   size?: "chrome" | "cover" | "nav";
   showMediaPal?: boolean;
+  /** Chrome mark: Coke by default; MediaPal on Why MediaPal. */
+  mark?: "coke" | "mediapal";
 }) {
+  if (mark === "mediapal") {
+    return (
+      <span
+        className={`twww-brand twww-brand--${size} twww-brand--mp-only`}
+        aria-label="MediaPal"
+      >
+        <img
+          className="twww-brand__mp"
+          src={IMAGES.mediapal}
+          alt="MediaPal"
+          decoding="async"
+        />
+      </span>
+    );
+  }
+
   return (
     <span
       className={`twww-brand twww-brand--${size}`}
@@ -516,21 +536,8 @@ function JourneyMapCards({
 }
 
 const SECTION_BY_INDEX: Record<number, string> = {
-  0: "TWWW PROPOSAL",
-  1: "01 / BRIEF",
-  2: "02 / RESPONSE",
-  3: "03 / JOURNEY",
-  4: "04 / AUDIENCE",
-  5: "05 / INVENTORY",
-  6: "05 / INVENTORY",
-  7: "06 / ACTIVATION",
-  8: "06 / ACTIVATION",
-  9: "06 / ACTIVATION",
-  10: "07 / CREATIVES",
-  11: "07 / CREATIVES",
-  12: "08 / WHY MEDIAPAL",
-  13: "09 / MEASUREMENT",
-  14: "10 / CONTACT",
+  0: "PLAY & ENGAGE",
+  1: "DECIDE & SHOP",
 };
 
 const SECTION_ICONS: Record<string, LucideIcon> = {
@@ -542,29 +549,14 @@ const SECTION_ICONS: Record<string, LucideIcon> = {
   "05 / INVENTORY": Newspaper,
   "06 / ACTIVATION": Clock,
   "07 / CREATIVES": MousePointerClick,
+  "DECIDE & SHOP": MousePointerClick,
+  "PLAY & ENGAGE": MousePointerClick,
   "08 / WHY MEDIAPAL": Network,
   "09 / MEASUREMENT": Activity,
   "10 / CONTACT": Mail,
 };
 
 const TAGLINE = "THE WORLD WILL WAIT";
-
-function pageLabel(index: number) {
-  return String(index + 1).padStart(2, "0");
-}
-
-function PageNum({ index }: { index: number }) {
-  if (index === 0) return null;
-  const n = pageLabel(index);
-  return (
-    <span className="ats-page-num">
-      <span className="ats-page-num__live">{n}</span>
-      <span className="ats-page-num__print" aria-hidden>
-        {n}
-      </span>
-    </span>
-  );
-}
 
 function SlideShell({
   index,
@@ -576,6 +568,8 @@ function SlideShell({
   children,
   hideChrome = false,
   footerRight,
+  brandMark = "coke",
+  bookend = false,
 }: {
   index: number;
   tone: Tone;
@@ -586,10 +580,10 @@ function SlideShell({
   children: ReactNode;
   hideChrome?: boolean;
   footerRight?: string;
+  brandMark?: "coke" | "mediapal";
+  bookend?: boolean;
 }) {
-  const isCover = index === 0;
-  const isClose = index === SLIDE_COUNT - 1;
-  const isBookend = isCover || isClose;
+  const isBookend = bookend;
   const sectionRef = useOneLineHeadings();
   const reduceMotion = useReducedMotion();
   const section = SECTION_BY_INDEX[index];
@@ -625,8 +619,7 @@ function SlideShell({
               <span />
             )}
             <div className="ats-chrome-top__right">
-              {!isBookend ? <PageNum index={index} /> : null}
-              {!isBookend ? <BrandLockup /> : null}
+              {!isBookend ? <BrandLockup mark={brandMark} /> : null}
             </div>
           </header>
         ) : null}
@@ -651,7 +644,7 @@ function SlideShell({
           <footer className="ats-chrome-bottom">
             <span className="ats-chrome-bottom__label">
               <Briefcase className="ats-chrome-bottom__icon" size={14} strokeWidth={2} aria-hidden />
-              TWWW Media Proposal
+              TWWW Proposal
             </span>
             <span className="ats-chrome-bottom__rule" aria-hidden />
             <span className="ats-chrome-bottom__tagline">
@@ -679,6 +672,7 @@ function SlideCover() {
       image={IMAGES.cover}
       imagePosition="center"
       copySide="left"
+      bookend
     >
       <div className="ats-cover-copy ats-cover-copy--cover">
         <motion.p
@@ -1432,6 +1426,7 @@ function SlideCreativesDecideBrief() {
       image={IMAGES.creativesIntro}
       copySide="left"
       footerRight={CREATIVES_INTRO.close}
+      brandMark="mediapal"
     >
       <p className="ats-eyebrow">{CREATIVES_INTRO.eyebrow}</p>
       <h2 className="ats-display ats-display--compact">
@@ -1456,26 +1451,79 @@ type LiveBanner = {
   type: string;
   use: string;
   src: string;
+  frameWidth?: number;
   frameHeight?: number;
   align?: "top" | "bottom" | "center";
 };
 
+/** Intrinsic iframe size (may be taller than the visible clip). */
+function bannerFrameSize(banner: {
+  frameWidth?: number;
+  frameHeight?: number;
+}) {
+  return {
+    width: banner.frameWidth ?? 320,
+    height: banner.frameHeight ?? 480,
+  };
+}
+
+/** Visible stage size in the canvas (clipped when align is set). */
+function bannerStageSize(banner: {
+  frameWidth?: number;
+  frameHeight?: number;
+  align?: "top" | "bottom" | "center";
+}) {
+  const frame = bannerFrameSize(banner);
+  return {
+    width: frame.width,
+    height: banner.align ? 480 : frame.height,
+  };
+}
+
 function bannerFrameStyle(banner: {
+  frameWidth?: number;
   frameHeight?: number;
   align?: "top" | "bottom" | "center";
 }): CSSProperties | undefined {
-  const frameHeight = banner.frameHeight ?? 480;
-  if (frameHeight === 480 && !banner.align) return undefined;
+  const frame = bannerFrameSize(banner);
+  if (frame.width === 320 && frame.height === 480 && !banner.align) {
+    return undefined;
+  }
+  const stageH = 480;
   const offsetY =
     banner.align === "bottom"
-      ? 480 - frameHeight
+      ? stageH - frame.height
       : banner.align === "center"
-        ? (480 - frameHeight) / 2
+        ? (stageH - frame.height) / 2
         : 0;
   return {
-    height: frameHeight,
+    width: frame.width,
+    height: frame.height,
     transform: offsetY !== 0 ? `translateY(${offsetY}px)` : undefined,
   };
+}
+
+function reloadBannerFrames(srcs: ReadonlySet<string>) {
+  const frames = document.querySelectorAll<HTMLIFrameElement>(
+    "iframe[data-banner-src]"
+  );
+  frames.forEach((frame) => {
+    const src = frame.dataset.bannerSrc;
+    if (!src || !srcs.has(src)) return;
+    try {
+      // Force a hard reload (same-URL assign/replace is often a no-op).
+      frame.contentWindow?.location.reload();
+      return;
+    } catch {
+      /* sandboxed / cross-origin fallback */
+    }
+    const onBlank = () => {
+      frame.removeEventListener("load", onBlank);
+      frame.src = src;
+    };
+    frame.addEventListener("load", onBlank);
+    frame.src = "about:blank";
+  });
 }
 
 function LiveBannerCanvas({
@@ -1500,8 +1548,10 @@ function LiveBannerCanvas({
       const h = Math.max(el.clientHeight - captionReserve, 120);
       const w = el.clientWidth - padX;
       const n = Math.max(banners.length, 1);
-      const maxW = (w - gap * (n - 1)) / n;
-      const next = Math.min(h / 480, maxW / 320, 1);
+      const stages = banners.map((b) => bannerStageSize(b));
+      const maxH = Math.max(...stages.map((s) => s.height), 480);
+      const sumW = stages.reduce((a, s) => a + s.width, 0);
+      const next = Math.min(h / maxH, (w - gap * (n - 1)) / sumW, 1);
       setScale(Number.isFinite(next) && next > 0 ? next : 1);
     };
 
@@ -1509,7 +1559,7 @@ function LiveBannerCanvas({
     const ro = new ResizeObserver(update);
     ro.observe(el);
     return () => ro.disconnect();
-  }, [banners.length]);
+  }, [banners]);
 
   // Adopt preloaded iframes so creatives stay warm without remounting.
   useEffect(() => {
@@ -1537,45 +1587,106 @@ function LiveBannerCanvas({
     };
   }, [banners]);
 
+  const refreshBanners = () => {
+    reloadBannerFrames(new Set(banners.map((b) => b.src)));
+  };
+
   return (
-    <div
-      ref={canvasRef}
-      className="twww-banner-canvas"
-      aria-label="Live banner creatives"
-    >
-      {banners.map((banner) => (
-        <div
-          key={banner.src}
-          className="twww-banner-canvas__slot"
-          style={{ width: 320 * scale }}
+    <>
+      <div className="twww-banner-toolbar">
+        <button
+          type="button"
+          className="twww-banner-refresh"
+          onClick={refreshBanners}
+          aria-label="Reset banners to first load"
         >
-          <div
-            className="twww-banner-canvas__frame-wrap"
-            style={{ height: 480 * scale }}
-          >
+          <RefreshCw className="twww-banner-refresh__icon" aria-hidden />
+          Refresh
+        </button>
+      </div>
+      <div
+        ref={canvasRef}
+        className="twww-banner-canvas"
+        aria-label="Live banner creatives"
+      >
+        {banners.map((banner) => {
+          const stage = bannerStageSize(banner);
+          return (
             <div
-              className="twww-banner-canvas__scale"
-              style={{ transform: `scale(${scale})` }}
-              data-banner-mount={banner.src}
-            />
-          </div>
-          <div className="twww-banner-canvas__caption">
-            <strong>{banner.type}</strong>
-            <span>{banner.use}</span>
-          </div>
-        </div>
-      ))}
-    </div>
+              key={banner.src}
+              className="twww-banner-canvas__slot"
+              style={{ width: stage.width * scale }}
+            >
+              <div
+                className="twww-banner-canvas__frame-wrap"
+                style={{ height: stage.height * scale }}
+              >
+                <div
+                  className="twww-banner-canvas__scale"
+                  style={{
+                    width: stage.width,
+                    height: stage.height,
+                    transform: `scale(${scale})`,
+                  }}
+                  data-banner-mount={banner.src}
+                />
+              </div>
+              <div className="twww-banner-canvas__caption">
+                <strong>{banner.type}</strong>
+                <span>{banner.use}</span>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </>
   );
 }
 
-/** Warm live HTML creatives before the Decide & Shop slide. */
+/** Block click-outs / popups inside preview iframes; keep in-banner interaction. */
+function installBannerClickGuard(frame: HTMLIFrameElement) {
+  if (frame.dataset.clickGuard === "1") return;
+  frame.dataset.clickGuard = "1";
+  const apply = () => {
+    try {
+      const win = frame.contentWindow;
+      const doc = frame.contentDocument;
+      if (!win || !doc) return;
+      win.open = (() => null) as typeof win.open;
+      const blockNav = (e: Event) => {
+        const t = e.target as Element | null;
+        const a = t?.closest?.("a[href]") as HTMLAnchorElement | null;
+        if (!a) return;
+        const href = a.getAttribute("href") || "";
+        if (!href || href.startsWith("#") || href.startsWith("javascript:")) return;
+        e.preventDefault();
+        e.stopPropagation();
+      };
+      doc.addEventListener("click", blockNav, true);
+      const guardNested = () => {
+        doc.querySelectorAll("iframe").forEach((nested) => {
+          installBannerClickGuard(nested as HTMLIFrameElement);
+        });
+      };
+      guardNested();
+      const mo = new MutationObserver(guardNested);
+      mo.observe(doc.documentElement, { childList: true, subtree: true });
+    } catch {
+      /* ignore */
+    }
+  };
+  frame.addEventListener("load", apply);
+  if (frame.contentDocument?.readyState === "complete") apply();
+}
+
+/** Warm live HTML creatives before creatives slides. */
 export function LiveBannerPreload({
   banners,
 }: {
   banners: readonly {
     label: string;
     src: string;
+    frameWidth?: number;
     frameHeight?: number;
     align?: "top" | "bottom" | "center";
   }[];
@@ -1593,7 +1704,11 @@ export function LiveBannerPreload({
           tabIndex={-1}
           referrerPolicy="no-referrer-when-downgrade"
           allow="autoplay"
+          sandbox="allow-scripts allow-same-origin allow-forms allow-pointer-lock"
           style={bannerFrameStyle(banner)}
+          ref={(el) => {
+            if (el) installBannerClickGuard(el);
+          }}
         />
       ))}
     </div>
@@ -1603,18 +1718,29 @@ export function LiveBannerPreload({
 function SlideCreativesDecide() {
   return (
     <SlideShell
-      index={11}
+      index={1}
       tone="light"
       overlay="paper"
       image={IMAGES.creativesDecide}
       copySide="full"
       footerRight={CREATIVE_DECIDE.footer}
     >
-      <p className="ats-eyebrow">{CREATIVE_DECIDE.eyebrow}</p>
-      <h2 className="ats-display ats-display--compact ats-display--oneline">
-        {CREATIVE_DECIDE.title.toUpperCase()}
-      </h2>
       <LiveBannerCanvas banners={CREATIVE_DECIDE.banners} />
+    </SlideShell>
+  );
+}
+
+function SlideCreativesGames() {
+  return (
+    <SlideShell
+      index={0}
+      tone="light"
+      overlay="paper"
+      image={IMAGES.creativesDecide}
+      copySide="full"
+      footerRight={CREATIVE_GAMES.footer}
+    >
+      <LiveBannerCanvas banners={CREATIVE_GAMES.banners} />
     </SlideShell>
   );
 }
@@ -1623,12 +1749,13 @@ function SlideWhy() {
   const icons = [Route, Globe, Zap, Network] as const;
   return (
     <SlideShell
-      index={12}
+      index={13}
       tone="hero"
       overlay="dark-left-strong"
       image={IMAGES.next}
       imagePosition="center right"
       copySide="full"
+      brandMark="mediapal"
     >
       <p className="ats-eyebrow">{WHY.eyebrow}</p>
       <h2 className="ats-display ats-display--compact">
@@ -1662,11 +1789,12 @@ function SlideMeasure() {
   ] as const;
   return (
     <SlideShell
-      index={13}
+      index={14}
       tone="light"
       overlay="paper-veil"
       image={IMAGES.measure}
       copySide="full"
+      brandMark="mediapal"
     >
       <p className="ats-eyebrow">{MEASURE.eyebrow}</p>
       <h2 className="ats-display ats-display--compact ats-display--oneline">
@@ -1714,12 +1842,13 @@ function SlideClose() {
 
   return (
     <SlideShell
-      index={14}
+      index={15}
       tone="hero"
       overlay="dark-left-strong"
       image={IMAGES.contact}
       imagePosition="center right"
       copySide="left"
+      bookend
     >
       <div className="ats-cover-copy ats-cover-copy--contact">
         <motion.p
@@ -1792,23 +1921,7 @@ function SlideClose() {
   );
 }
 
-const SLIDES = [
-  SlideCover,
-  SlideBrief,
-  SlideResponse,
-  SlideJourney,
-  SlideAudience,
-  SlideInventoryPublishers,
-  SlideInventoryMarkets,
-  SlideMoment,
-  SlideContextual,
-  SlideCtv,
-  SlideCreativesDecideBrief,
-  SlideCreativesDecide,
-  SlideWhy,
-  SlideMeasure,
-  SlideClose,
-];
+const SLIDES = [SlideCreativesGames, SlideCreativesDecide];
 
 export function renderAtsSlide(index: number): ReactElement {
   const Slide = SLIDES[index] ?? SlideCover;

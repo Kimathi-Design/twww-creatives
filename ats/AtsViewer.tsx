@@ -11,11 +11,10 @@ import {
   useRef,
   useState,
 } from "react";
-import { AnimatePresence, motion, MotionConfig } from "framer-motion";
+import { MotionConfig } from "framer-motion";
 import {
   ChevronLeft,
   ChevronRight,
-  Download,
   Maximize2,
   Minimize2,
   X,
@@ -23,24 +22,18 @@ import {
 import { DeckNavProvider } from "@/ats/DeckNavContext";
 import { AtsProgressBar } from "@/ats/AtsProgressBar";
 import { LiveBannerPreload, renderAtsSlide } from "@/ats/AtsSlides";
-import { ATS_ASSETS } from "@/lib/ats-assets";
 import {
   CREATIVE_DECIDE,
-  CRISP_PDF_FILENAME,
-  IMAGES,
+  CREATIVE_GAMES,
   SLIDE_COUNT,
   SLIDE_H as SLIDE_HEIGHT,
   SLIDE_W as SLIDE_WIDTH,
-  slideTitles,
 } from "@/lib/ats-content";
-import { downloadPdf } from "@/lib/download-pdf";
 import "./ats.css";
 import "./twww-brand.css";
 
 const TOTAL_SLIDES = SLIDE_COUNT;
 const FIT_MARGIN = 28;
-const MIN_LOADING_MS = 3000;
-const LOAD_FADE_S = 0.8;
 const MOBILE_BREAKPOINT = 640;
 /** How long the mobile presenting controls linger after a touch. */
 const CONTROLS_HIDE_MS = 2600;
@@ -54,9 +47,6 @@ const QUICK_ZOOM = 2;
 function clamp(value: number, min: number, max: number) {
   return Math.max(min, Math.min(max, value));
 }
-const PDF_DOWNLOAD_ENABLED = true;
-/** High-quality 2× raster export (matches on-screen slides pixel-for-pixel). */
-const DECK_PDF = ATS_ASSETS.crispPdf;
 
 /**
  * Phones and tablets need the touch presenting layer regardless of width  -  a
@@ -65,15 +55,6 @@ const DECK_PDF = ATS_ASSETS.crispPdf;
  */
 function isTouchDevice() {
   return window.matchMedia("(pointer: coarse) and (hover: none)").matches;
-}
-
-function preloadImage(src: string) {
-  return new Promise<void>((resolve) => {
-    const img = new window.Image();
-    img.onload = () => resolve();
-    img.onerror = () => resolve();
-    img.src = src;
-  });
 }
 
 function computeDeckScale(
@@ -109,87 +90,11 @@ function computeDeckScale(
   return Math.min(availW / SLIDE_WIDTH, availH / SLIDE_HEIGHT);
 }
 
-function AtsLoadingScreen({
-  className = "",
-  ready = false,
-}: {
-  className?: string;
-  ready?: boolean;
-}) {
-  return (
-    <div
-      className={`flex h-full w-full items-center justify-center bg-[#faf6f3] ${className}`.trim()}
-    >
-      <div className="flex flex-col items-center gap-6 px-6 text-center">
-        <motion.div
-          className="twww-brand twww-brand--cover"
-          style={{ height: 56 }}
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <img
-            className="twww-brand__coke"
-            src={IMAGES.coke}
-            alt="Coca-Cola"
-            style={{ height: 48 }}
-            decoding="async"
-          />
-          <span className="twww-brand__rule" aria-hidden style={{ height: 36 }} />
-          <img
-            className="twww-brand__mp"
-            src={IMAGES.mediapal}
-            alt="MediaPal"
-            style={{ height: 42 }}
-            decoding="async"
-          />
-        </motion.div>
-        <motion.p
-          style={{
-            margin: 0,
-            fontSize: 14,
-            letterSpacing: "0.2em",
-            textTransform: "uppercase",
-            color: "#8b0e16",
-            fontWeight: 700,
-          }}
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
-        >
-          TWWW Proposal
-        </motion.p>
-        <p
-          aria-hidden={!ready}
-          style={{
-            margin: "8px 0 0",
-            fontSize: 13,
-            letterSpacing: "0.14em",
-            textTransform: "uppercase",
-            color: "#8b0e16",
-            fontWeight: 500,
-            minHeight: "1.2em",
-            opacity: ready ? undefined : 0,
-            animation: ready
-              ? "ats-load-hint-pulse 2.2s ease-in-out infinite"
-              : "none",
-          }}
-        >
-          Tap to begin
-        </p>
-      </div>
-    </div>
-  );
-}
-
 export function AtsViewer() {
   const [current, setCurrent] = useState(0);
   const [scale, setScale] = useState<number | null>(null);
-  const [holdLoading, setHoldLoading] = useState(true);
-  const [coverReady, setCoverReady] = useState(false);
-  const [showLoader, setShowLoader] = useState(true);
-  const [deckReady, setDeckReady] = useState(false);
-  const [downloading, setDownloading] = useState(false);
+  const coverReady = true;
+  const deckReady = true;
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isPortrait, setIsPortrait] = useState(false);
@@ -211,29 +116,8 @@ export function AtsViewer() {
   } | null>(null);
   const zoomRef = useRef(1);
   const panRef = useRef({ x: 0, y: 0 });
-  const assetsReadyRef = useRef(false);
-  const userStartedRef = useRef(false);
-  const showLoaderRef = useRef(true);
-  /** Space advances slides only after the loader has fully exited. */
-  const navArmedRef = useRef(false);
-
   zoomRef.current = zoom;
   panRef.current = pan;
-  showLoaderRef.current = showLoader;
-
-  const beginDeck = useCallback(() => {
-    if (userStartedRef.current) return;
-    if (!assetsReadyRef.current) return;
-    userStartedRef.current = true;
-    showLoaderRef.current = false;
-    setShowLoader(false);
-    // Show the stage immediately  -  do not wait for AnimatePresence
-    // onExitComplete (it can miss on mobile / interrupted exits → blank screen).
-    setDeckReady(true);
-    window.setTimeout(() => {
-      navArmedRef.current = true;
-    }, LOAD_FADE_S * 1000);
-  }, []);
 
   const goTo = useCallback((index: number) => {
     setCurrent(Math.max(0, Math.min(TOTAL_SLIDES - 1, index)));
@@ -293,65 +177,9 @@ export function AtsViewer() {
     [clampPan, resetZoom],
   );
 
-  const handleDownload = useCallback(async () => {
-    if (downloading) return;
-    setDownloading(true);
-    try {
-      const res = await fetch(DECK_PDF, { cache: "no-store" });
-      if (!res.ok) throw new Error("PDF not found");
-      const bytes = new Uint8Array(await res.arrayBuffer());
-      downloadPdf(bytes, CRISP_PDF_FILENAME);
-    } catch {
-      const anchor = document.createElement("a");
-      anchor.href = DECK_PDF;
-      anchor.download = CRISP_PDF_FILENAME;
-      anchor.rel = "noopener";
-      document.body.appendChild(anchor);
-      anchor.click();
-      anchor.remove();
-    } finally {
-      setDownloading(false);
-    }
-  }, [downloading]);
-
-  useEffect(() => {
-    const timer = window.setTimeout(() => setHoldLoading(false), MIN_LOADING_MS);
-    return () => window.clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    let cancelled = false;
-    void Promise.all([
-      preloadImage(ATS_ASSETS.images.cover),
-      preloadImage(IMAGES.coke),
-      preloadImage(IMAGES.mediapal),
-    ]).then(() => {
-      if (!cancelled) setCoverReady(true);
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
-  const assetsReady = !holdLoading && scale !== null && coverReady;
-  assetsReadyRef.current = assetsReady;
   /** Devices that refuse an orientation lock get the deck rotated in CSS. */
   const isRotated = isFullscreen && isMobile && isPortrait;
   const mobilePresenting = isFullscreen && isMobile;
-
-  // Tap / click opens the cover. Keyboard start is intentionally omitted  - 
-  // Space/Enter were unreliable on Mac (replayed the loader instead of starting).
-  // Swallow Space while the gate is up so it cannot scroll or activate controls.
-  useEffect(() => {
-    const onKeyDown = (e: KeyboardEvent) => {
-      if (!showLoaderRef.current) return;
-      if (e.code !== "Space" && e.key !== " " && e.key !== "Enter") return;
-      e.preventDefault();
-      e.stopPropagation();
-    };
-    window.addEventListener("keydown", onKeyDown, true);
-    return () => window.removeEventListener("keydown", onKeyDown, true);
-  }, []);
 
   const toggleFullscreen = useCallback(async () => {
     if (!document.fullscreenElement) {
@@ -413,10 +241,6 @@ export function AtsViewer() {
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      // Ignore deck shortcuts while the loading gate is up, and until the
-      // loader exit finishes  -  otherwise the same Space that starts the deck
-      // also advances past the cover.
-      if (showLoaderRef.current || !navArmedRef.current) return;
       if (e.key === "ArrowRight" || e.key === "PageDown" || e.key === " ") {
         e.preventDefault();
         next();
@@ -590,10 +414,7 @@ export function AtsViewer() {
           ref={containerRef}
           className="ats-viewer deck-viewer fixed inset-0 z-[60] flex flex-col bg-[#f5f7fb]"
         >
-      <div
-        className="flex min-h-0 flex-1 flex-col"
-        {...(showLoader ? { inert: true } : {})}
-      >
+      <div className="flex min-h-0 flex-1 flex-col">
       {scale !== null && !isRotated && (
         <div className={deckReady ? undefined : "invisible"}>
           <AtsProgressBar current={current} total={TOTAL_SLIDES} />
@@ -655,7 +476,12 @@ export function AtsViewer() {
                 {renderAtsSlide(current)}
               </div>
               {coverReady ? (
-                <LiveBannerPreload banners={CREATIVE_DECIDE.banners} />
+                <LiveBannerPreload
+                  banners={[
+                    ...CREATIVE_DECIDE.banners,
+                    ...CREATIVE_GAMES.banners,
+                  ]}
+                />
               ) : null}
             </div>
           </div>
@@ -756,48 +582,7 @@ export function AtsViewer() {
             : { paddingLeft: stageInset, paddingRight: stageInset }
         }
       >
-        <div className="flex min-w-0 shrink-0 items-center gap-3">
-          <span className="twww-brand twww-brand--nav" aria-label="Coca-Cola">
-            <img
-              className="twww-brand__coke"
-              src={IMAGES.coke}
-              alt="Coca-Cola"
-              decoding="async"
-            />
-          </span>
-          <span
-            className="hidden truncate text-[14px] font-semibold text-[rgba(26,21,32,0.55)] lg:inline"
-          >
-            The World Will Wait
-          </span>
-        </div>
-        <span
-          className="hidden flex-1 truncate text-center text-[13px] sm:block"
-          style={{ color: "rgba(25,41,87,0.68)" }}
-        >
-          {slideTitles[current]}
-        </span>
-        <div className="ml-auto flex items-center gap-2 sm:ml-0 sm:gap-3">
-          <button
-            type="button"
-            onClick={PDF_DOWNLOAD_ENABLED ? handleDownload : undefined}
-            disabled={!PDF_DOWNLOAD_ENABLED || scale === null || downloading}
-            aria-label="Download corporate profile PDF"
-            title={
-              PDF_DOWNLOAD_ENABLED
-                ? "Download corporate profile PDF"
-                : "PDF download coming soon"
-            }
-            className="flex h-8 shrink-0 cursor-pointer items-center gap-1.5 whitespace-nowrap rounded-full border border-[rgba(19,45,122,0.12)] bg-white px-2.5 text-[11px] font-medium transition hover:bg-[#f5f7fb] disabled:cursor-not-allowed disabled:opacity-40 sm:h-9 sm:gap-2 sm:px-3 sm:text-[13px]"
-            style={{ color: "rgba(25,41,87,0.68)" }}
-          >
-            <Download
-              className={`h-3.5 w-3.5 shrink-0 sm:h-4 sm:w-4 ${downloading ? "animate-pulse" : ""}`}
-            />
-            <span className="whitespace-nowrap">
-              {downloading ? "Downloading…" : "Download PDF"}
-            </span>
-          </button>
+        <div className="ml-auto flex items-center gap-2 sm:gap-3">
           <button
             type="button"
             onClick={toggleFullscreen}
@@ -847,35 +632,6 @@ export function AtsViewer() {
         </div>
       </nav>
       </div>
-      <AnimatePresence>
-        {showLoader && (
-          <motion.div
-            key="ats-loader"
-            className={`fixed inset-0 z-[80] flex items-center justify-center bg-[#f5f7fb]${
-              assetsReady ? " cursor-pointer" : " cursor-default"
-            }`}
-            aria-label={
-              assetsReady
-                ? "Ready. Tap to begin."
-                : "Loading corporate profile"
-            }
-            aria-busy={!assetsReady}
-            initial={{ opacity: 1 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: LOAD_FADE_S, ease: [0.16, 1, 0.3, 1] }}
-            onPointerUp={(e) => {
-              if (e.pointerType === "mouse" && e.button !== 0) return;
-              beginDeck();
-            }}
-          >
-            <AtsLoadingScreen
-              className="h-full w-full"
-              ready={assetsReady}
-            />
-          </motion.div>
-        )}
-      </AnimatePresence>
         </div>
       </DeckNavProvider>
     </MotionConfig>

@@ -109,6 +109,10 @@
   height: 26px;
 }
 
+.twww-brand--mp-only.twww-brand--chrome .twww-brand__mp {
+  height: 32px;
+}
+
 .twww-brand--cover {
   height: 58px;
   gap: 18px;
@@ -300,12 +304,75 @@
   filter: drop-shadow(0 2px 8px rgba(7, 11, 11, 0.45));
 }
 
+/* Reserves former eyebrow + oneline title so live banners keep scale/position */
+.twww-banner-title-spacer {
+  flex: 0 0 auto;
+  height: 92px;
+  pointer-events: none;
+}
+
+.twww-banner-toolbar {
+  flex: 0 0 auto;
+  height: 92px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0 8px 8px;
+  box-sizing: border-box;
+}
+
+.twww-banner-refresh {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 10px 16px;
+  border: 1px solid rgba(230, 26, 39, 0.28);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  color: #8b0e16;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 8px 22px -14px rgba(13, 15, 26, 0.45);
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.twww-banner-refresh:hover {
+  background: #fff;
+  border-color: rgba(230, 26, 39, 0.55);
+  transform: translateY(-1px);
+}
+
+.twww-banner-refresh:active {
+  transform: translateY(0);
+}
+
+.twww-banner-refresh__icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+.twww-banner-refresh:active .twww-banner-refresh__icon {
+  animation: twww-banner-refresh-spin 0.55s linear;
+}
+
+@keyframes twww-banner-refresh-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* Live creative drop zone  -  320×480 units scaled to full canvas height */
 .twww-banner-canvas {
   flex: 1 1 auto;
   min-height: 0;
   width: 100%;
-  margin-top: 22px;
+  margin-top: 0;
   display: flex;
   align-items: stretch;
   justify-content: space-evenly;

@@ -68,23 +68,10 @@ export const CONTACT = {
   eldoret: "",
 } as const;
 
-/** Viewer titles - length drives SLIDE_COUNT */
+/** Viewer titles - length drives SLIDE_COUNT (creatives pages 12–13 only) */
 export const slideTitles = [
-  "Cover",
-  "The brief",
-  "Our response",
-  "Meal journey",
-  "Audience discovery",
-  "Ad inventory discovery",
-  "Market inventory reach",
-  "Moment Ads",
-  "Contextual",
-  "Connected TV",
-  "High-impact creatives",
+  "Creatives · Play & Engage",
   "Creatives · Decide & Shop",
-  "Why MediaPal",
-  "Measurement",
-  "Contact",
 ] as const;
 
 export const SLIDE_COUNT = slideTitles.length;
@@ -677,28 +664,70 @@ export const CREATIVE_DECIDE = {
       label: "Coca-Cola Custom",
       type: "Custom rich unit · 320×480",
       use: "Decide & Shop - high-impact mobile for journey-home and retail catchments.",
-      src: "https://live.mediapal.net/cdn/twww/coca-cola-custom/320x480/index.html",
+      src: "/twww/creatives/coca-cola-custom/320x480/index.html",
     },
     {
-      label: "Coca-Cola Tiles",
-      type: "Interactive tiles · 320×480",
-      use: "Decide & Shop - tap-to-explore meal pairings in news and lifestyle.",
-      src: "https://live.mediapal.net/cdn/twww/coca-cola-tiles/320x480/index.html",
-      /** Live stage is 320×570 (640×1140 @ 0.5); bottom-align in 480 clip. */
-      frameHeight: 570,
-      align: "bottom",
+      label: "Coca-Cola Catch",
+      type: "Catch game · 320×480",
+      use: "Decide & Shop - catch mechanic for interstitial and sticky.",
+      src: "/twww/creatives/maltesers-catching-game/320x480/index.html",
+      frameWidth: 320,
+      frameHeight: 480,
     },
     {
       label: "Hot or Not",
       type: "Engagement poll · 320×480",
       use: "Decide & Shop - playful choice mechanic that locks Coke to supper.",
-      src: "https://live.mediapal.net/cdn/twww/hot-or-not/320x480/index.html",
+      src: "/twww/creatives/hot-or-not/320x480/index.html",
     },
     {
       label: "Social Carousel",
       type: "Social carousel · 320×480",
       use: "Decide & Shop - swipeable meal moments for sticky and social inventory.",
-      src: "https://live.mediapal.net/cdn/twww/social-carousel/320x480/index.html",
+      src: "/twww/creatives/social-carousel/320x480/index.html",
+    },
+  ] as const,
+} as const;
+
+export const CREATIVE_GAMES = {
+  eyebrow: "Creatives",
+  title: "Play & Engage",
+  subhead: "Live gamified banners that turn meal moments into play.",
+  lead:
+    "Interactive play units - match, collect and catch mechanics that hold attention in the Decide & Shop window and lock Coke to the meal.",
+  footer: "Play that earns the brand a seat at the table.",
+  banners: [
+    {
+      label: "Coca-Cola Collect",
+      type: "Collect game · 300×600",
+      use: "Play & Engage - tap-to-collect meals on half-page inventory.",
+      src: "/twww/creatives/eskimi-9lqrtoqq/300x600/index.html",
+      frameWidth: 300,
+      frameHeight: 600,
+    },
+    {
+      label: "Coca-Cola Match",
+      type: "Match-3 game · 300×600",
+      use: "Play & Engage - match-3 meal play for high-dwell mobile.",
+      src: "/twww/creatives/eskimi-34lmsnnr/300x600/index.html",
+      frameWidth: 300,
+      frameHeight: 600,
+    },
+    {
+      label: "Coca-Cola Felix",
+      type: "Interactive rich unit · 300×600",
+      use: "Play & Engage - tap-to-explore meal play on half-page.",
+      src: "/twww/creatives/felix-nestle/300x600/index.html",
+      frameWidth: 300,
+      frameHeight: 600,
+    },
+    {
+      label: "Hellmann's Spain",
+      type: "VideoBox + Flip Parallax · 300×600",
+      use: "Play & Engage - flip parallax meal moments on half-page.",
+      src: "/twww/creatives/hellmanns-spain/300x600/index.html",
+      frameWidth: 300,
+      frameHeight: 600,
     },
   ] as const,
 } as const;

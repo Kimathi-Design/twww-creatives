@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MediaPal | Coca-Cola Felix - 300x600</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      display: grid;
+      place-items: center;
+    }
+    .stage {
+      width: 300px !important;
+      height: 600px !important;
+      max-width: 300px !important;
+      max-height: 600px !important;
+      overflow: hidden !important;
+      position: relative;
+      background: #fff;
+    }
+    iframe {
+      width: 300px !important;
+      height: 600px !important;
+      max-width: 300px !important;
+      max-height: 600px !important;
+      border: 0 !important;
+      display: block;
+      background: #fff;
+      position: static !important;
+      left: auto !important;
+      top: auto !important;
+      margin: 0 !important;
+    }
+  </style>
+  <script>
+    var publisher_config = {
+      close: function () {},
+      init: function () {},
+      platform: "desktop",
+      clickMacro: "",
+      imp: "",
+      width: 300,
+      height: 600,
+      close_Button: false,
+      close_button: false,
+      prod: false,
+      window: window,
+      element: null
+    };
+    function creatPixel() {}
+    function Visible() { return true; }
+    function initAd() {}
+    function somploClick(url) {
+      var u = url || "javascript:void(0)";
+      try { window.open(u, "_blank"); } catch (e) { location.href = u; }
+    }
+    var impF = false;
+    var isApp = false;
+    var somploIframe = null;
+  </script>
+</head>
+<body>
+  <div class="stage">
+    <iframe id="somploTag" name="somploCreative" src="../shared/creative-605943999.html" title="Coca-Cola Felix 300x600" scrolling="no"></iframe>
+  </div>
+  <script>
+    (function () {
+      var iframe = document.getElementById("somploTag");
+      publisher_config.element = iframe;
+      publisher_config.window = window;
+      somploIframe = null;
+      var started = false;
+      function boot() {
+        try {
+          somploIframe = iframe.contentWindow;
+          if (!somploIframe) return;
+          // Live Somplo mainScript calls somploIframe.startMyAnimation() once visible.
+          if (!started && typeof somploIframe.startMyAnimation === "function") {
+            started = true;
+            somploIframe.startMyAnimation();
+          }
+        } catch (e) {}
+      }
+      iframe.addEventListener("load", function () {
+        boot();
+        setTimeout(boot, 100);
+        setTimeout(boot, 500);
+        setTimeout(boot, 1200);
+      });
+      // In case load already fired
+      setTimeout(boot, 0);
+    })();
+  </script>
+</body>
+</html>

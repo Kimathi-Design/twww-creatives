@@ -1,0 +1,2472 @@
+<html>
+      <head>
+<meta name="ad.size" content="width=300,height=600"><title>MediaPal | Hellmann&#x27;s Spain - 300x600</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=9" />
+        
+        
+        <link href="https://cdn.somplo.com" rel="preconnect" crossorigin>
+        
+
+
+        <style>
+          body {
+            margin:0;
+            background: #000;
+            overflow: hidden;
+          }
+          #container{
+            overflow:hidden;
+            position: relative;
+            
+          }
+          .stopallanimations *{
+            animation-delay: 0s !important;
+            animation-duration: 0s !important;
+          }
+          .somplomain-page-slide{
+            max-width:100vw;
+            max-height:100vh;
+          }
+          .disable-perspeftive .somplo-main-swiper-slide{
+            -webkit-perspective: initial !important;
+            -moz-perspective: initial !important;
+            -o-perspective: initial !important;
+            perspective: initial !important;
+            }
+        </style>
+
+        <script>
+        var startMyAnimationWorked = false;
+        var timeOutForView;
+        var viewpixFierd = false;
+        var ganimationStarted = false;
+        function handleVisibilityChangeNew() {
+          if (!document[hidden]) {
+    
+            fireImppretionfunc();
+    
+          }
+        }
+    
+        function fireImppretionfunc() {
+          if (typeof parent['impF'] == "undefined" || !parent.impF) {
+            initViewability();
+            
+            if (parent.publisher_config.prod || typeof parent.publisher_config.prod == "undefined") {
+              parent.creatPixel("https:%%pre_pixels_impression%%&tech=19", true);
+              
+            } else {
+              console.log("pixels_impression");
+            }
+          }
+    
+            
+    
+    
+    
+          parent.impF = true;
+        }
+        function initViewability() {
+          var intervalViewability = frameToRunTimeout.setInterval(function () {
+            if (parent.Visible(parent.publisher_config.element, parent.publisher_config.window)) {
+              if (!ganimationStarted) {
+                
+                if(!parent.isApp || typeof parent.somploElement == "undefined"){
+                  frameToRunTimeout.setTimeout(function(){parent.initAd()}, 100);
+                }
+                
+                ganimationStarted = true;
+              }
+              timeOutForView = frameToRunTimeout.setTimeout(function () {
+                if (!viewpixFierd) {
+                  if (parent.publisher_config.prod || typeof parent.publisher_config.prod == "undefined") {
+                    parent.creatPixel("https:%%pre_pixels_viewability%%&tech=19", true);
+                    if (parent.publisher_config.imp != '' && typeof parent.publisher_config.imp != "undefined" ) {
+                      parent.creatPixel(parent.publisher_config.imp, false);
+                     
+                    }
+                  } else {
+                    console.log("view")
+                  }
+                  frameToRunTimeout.clearInterval(intervalViewability);
+                  viewpixFierd = true;
+                }
+              }, 1000);
+            } else {
+              frameToRunTimeout.clearTimeout(timeOutForView);
+            }
+          }, 200);
+        }
+    
+        var impF = false;
+        var hidden, visibilityChange;
+
+        parent.creatPixel = function (url, cb){
+          var elem = (typeof frameElement !== "undefined" && frameElement && frameElement.parentElement) || (parent.document && parent.document.body) || document.body;
+          var rand = Math.round(Math.random() * 9999999999999);
+          if(cb){
+            url += '&cb='+rand;
+          }
+          if(typeof parent.publisher_config.prod == 'undefined' || parent.publisher_config.prod){
+            var img = document.createElement('img');
+            img.src = url;
+            img.width = 1;
+            img.height=1;
+            img.style.border = 'none';
+            img.style.position = 'absolute';
+            img.style.bottom = '0';
+            img.style.zIndex = '-9999';
+            elem.appendChild(img);
+          }
+          else{
+            console.log(url);
+          }
+
+
+
+        }
+
+        var somploStartCount = new Date().getTime();
+        var userClicked = false;
+        var isBig = false;
+        var allowTrans = true;
+        var isBigMweb = false;
+        var stopAllAnimationsvar = false;
+        var somploFFirstClickH = false;
+          var animationStarted = false;
+          var SomploResizeEvent;
+          var SomploTimeoutReached;
+          var SomploStarMyAnimationFunction;
+          try{
+             SomploResizeEvent = new Event('SomploResizeEvent');
+          }
+          catch(e) {
+            SomploResizeEvent = document.createEvent('Event');
+            SomploResizeEvent.initEvent('SomploResizeEvent', true, true);
+          }
+
+          try{
+            SomploTimeoutReached = new Event('SomploTimeoutReached');
+          }
+          catch(e) {
+            SomploTimeoutReached = document.createEvent('Event');
+            SomploTimeoutReached.initEvent('SomploTimeoutReached', true, true);
+          }
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", function() {
+              window.dispatchEvent(SomploResizeEvent);
+            });
+          } else {
+            window.dispatchEvent(SomploResizeEvent);
+          }
+          var indexTemp = 0;
+          function reloadImage(elem){
+            if(indexTemp < 6){
+              var currentUrl = elem.src;
+              elem.src = currentUrl;
+              indexTemp++;
+            }
+          }
+          function displayImagesIos(elem){
+            console.log(this);
+            if(!!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)){
+
+              //var current = elem.style.display ? elem.style.display : 'block';
+              elem.style.display = 'none';
+              frameToRunTimeout.setTimeout(function(){
+                elem.style.display = 'block';
+              }, 200)
+            }
+
+          }
+          var allowClose = true;
+          
+        if (parent.publisher_config.prod || typeof parent.publisher_config.prod == "undefined") {
+          parent.creatPixel("https:%%pre_pixels_initialization%%&tech=19", true);
+        } else {
+          console.log("init");
+        }
+          
+        </script>
+
+
+
+
+<script>isMobilecheck = function() {
+  var check = false;
+  (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
+  return check;
+};</script>
+        
+    
+        
+        <script>
+        var mobile_click="null"
+        var main_click_url = "javascript:void(0)";
+          if(mobile_click !== "" && mobile_click !== "null"){
+            if (isMobilecheck()) {
+               main_click_url = "javascript:void(0)";
+            }
+          }
+          else{
+             main_click_url = "javascript:void(0)";
+          }
+          </script>
+        <script>
+        var timeonpage = 5;
+        var pagesTime = true ? JSON.parse('[{"singlePageTime": 5, "singlePageAnimationSpeed": 1, "startAnimationOnTransitionStart":null }]') : JSON.parse('[{"singlePageTime":5,"singlePageAnimationSpeed":1,"startAnimationOnTransitionStart":null}]');
+        var applayToAll = true;
+        var amountLoops = null
+        var hasLoops = null
+          var clodeButtonTimeout;
+          var autoCloseTime;
+
+          if(null){
+            allowClose=false;
+          }
+
+
+        </script>
+        <script src='assets-991217111/jquery-3.4.1.js' type='text/javascript'></script>
+
+        
+      <script src="assets-991217111/player.min.js"></script>
+      
+        <script>
+          function imageInitLoacation13(){
+            window.dispatchEvent(SomploResizeEvent);
+          }
+        </script>
+      
+      
+      
+      
+    <style type="text/css">
+    
+    
+        #closeButton {
+          margin: 0px 0px -32px;
+          position: fixed;
+          left: 0px;
+          top: 11px;
+          width: 32px;
+          height: 32px;
+          z-index: 99996;
+          background-image: url(assets-991217111/numbers2.png);
+          background-position: 0px 672px;
+          display: none !important;
+      }
+      body{
+        background: #ffffff;
+        padding: 0 !important;
+        margin:0;
+      }
+      .somplomain-page-slide{
+        background: #ffffff;
+      }
+      .hiddenComponent{
+        display:none !important;
+      }
+      #somploIcon{
+        position: fixed;
+        z-index: 99999;
+        width: 16px;
+        max-width: 11%;
+        opacity:0.7;
+        cursor: pointer;
+      }
+      #somploIcon:hover{
+        opacity:1;
+      }
+      .bottom-left{
+        bottom: 2px;
+        left: 2px;
+      }
+      .bottom-right{
+        bottom: 2px;
+        right: 2px;
+      }
+      .top-right{
+        top: 2px;
+        right: 2px;
+      }
+      .top-left{
+        top: 2px;
+        left: 2px;
+      }
+      
+        
+        @font-face {
+          font-family:"Roboto";
+          src:url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Me5Q.ttf);
+          font-weight:regular;
+        }
+        .videoPositionClass1{
+          top: 0%;
+          left:0%;
+          transform: translate3d(0%, 0%, 0px);
+        }
+        
+        #videoPlayerCon1 {
+          position:absolute;
+          z-index: 2;
+          display:block;
+        }
+        #videoPlayerCon1 #muteB, #videoPlayerCon1 #playB{
+          pointer-events: initial;
+        }
+        
+          .rotate{
+            display: flex;
+            transform: rotate(0deg);
+          }
+        
+        video{
+          max-width:100%;
+        }
+
+        #videoPlayerCon1 video {
+          object-fit: fill;
+
+        }
+        .loadercon{
+          position: absolute !important;
+        }
+        #videoPlayerCon1 #controllersContaner{
+          pointer-events: none;
+          height:32px  !important;
+        }
+        #videoPlayerCon1 #playB{
+          width:32px !important;
+          height:32px  !important;
+        }
+
+       
+       #videoPlayerCon1 #muteB{
+        width:32px !important;
+        height:32px !important;
+      }
+       
+        #videoPlayerCon1 .mute{
+          background-position: 0px 59% !important;
+        }
+
+        #creative-video-subtitle1 {
+          pointer-events: none;
+          position: absolute;
+          margin: 0;
+          text-align: center;
+          width:90%;
+          padding-bottom: 15px;
+          color: rgba(255,255,255,1);
+          font-size: 14px;
+          font-family:"Roboto", sans-serif;
+          text-align: center;
+          line-height: 1;
+          letter-spacing: 0px;
+          word-break: break-word;
+          
+          
+          z-index: 99;
+        }
+
+        #blur-canvas1 {
+          position: absolute;
+          z-index: 1;
+          top: 50%;
+          left: 50%;
+          transform: translate3d(-50%, -50%, 0px);
+          width: auto;
+          height: 100%;
+          filter: blur(5px);
+        }
+        #controllersContaner div{
+          background-image: url("assets-991217111/sprite-new.png") !important;
+          
+        }
+      #videoContaner{
+        position:absolute !important;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+      
+      
+      
+      
+
+      
+      .somploFlipParallaxPositionClass13{
+        top:100%;
+        left:50%;
+        transform: translate3d(-50%, -100%, 0px);
+      }
+      
+
+        
+          #somplo-flip-parallax-13{
+            width: 100%;
+            height: auto;
+            position: absolute;
+            display:block;
+            z-index:13;
+            filter: drop-shadow(2px 4px 6px rgba(0, 0, 0 , 0.3));
+          }
+        
+        #somplo-flip-parallax-13 .container, #somplo-flip-parallax-13 .front,
+        #somplo-flip-parallax-13 .back{
+          max-height:100vh;
+          max-width:100vw;
+        }
+        
+        #somplo-flip-parallax-13 .container{
+          width: 100%;
+          height: 100%;
+          -webkit-transform-style: preserve-3d;
+                  transform-style: preserve-3d;
+          -webkit-perspective: 1000px;
+                  perspective: 1000px;
+          border-radius: 0px;
+          transform: rotateZ(180deg);
+        }
+
+        #somplo-flip-parallax-13 .front,
+        #somplo-flip-parallax-13 .back{
+          background-size: cover;
+          background-position: center;
+          -webkit-transition: -webkit-transform 1.2s cubic-bezier(0.4, 0.2, 0.2, 1);
+          transition: -webkit-transform 1.2s cubic-bezier(0.4, 0.2, 0.2, 1);
+          -o-transition: transform 1.2s cubic-bezier(0.4, 0.2, 0.2, 1);
+          transition: transform 1.2s cubic-bezier(0.4, 0.2, 0.2, 1);
+          transition: transform 1.2s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform 1.2s cubic-bezier(0.4, 0.2, 0.2, 1);
+          -webkit-backface-visibility: hidden;
+                  backface-visibility: hidden;
+                  visibility:visible;
+
+          text-align: center;
+          height: auto;
+          color: #fff;
+          border-radius: 0px;
+
+        }
+        #somplo-flip-parallax-13.first-flip .front,
+        #somplo-flip-parallax-13.first-flip .back{
+          -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+          transition: -webkit-transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+          -o-transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+          transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+          transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+
+        }
+        
+        
+        #somplo-flip-parallax-13 .side {
+          width: 100%;
+          height: 100%;
+          border-radius: 0px;
+        }
+
+
+        #somplo-flip-parallax-13  .side .bg .color-bg {
+          width: 100%;
+          height: 100%;
+        }
+        #somplo-flip-parallax-13 .side .normalize-box {
+          transform: rotateZ(-180deg);
+          position: relative;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transform-style: preserve-3d;
+          backface-visibility: hidden;
+
+          -webkit-backface-visibility: hidden;
+        }
+        #somplo-flip-parallax-13 .side .bg {
+          width: 100%;
+          height: 100%;
+          border-radius: 0px;
+          overflow: hidden;
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+
+        }
+        #somplo-flip-parallax-13 .side .bg img {
+          width: 100%;
+          height: auto;
+          display: block;
+          object-fit: fill;
+        }
+        #somplo-flip-parallax-13 .side .overlay {
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          position: absolute;
+          transform: translateZ(60px);
+        }
+        
+          #somplo-flip-parallax-13 .front.side .overlay {
+            width: 300px;
+            height: auto;
+            top : 20px;
+            left : 0px;
+          }
+          #somplo-flip-parallax-13 .front.side .overlay .overlay-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            font-family: sans-serif;
+          }
+          #somplo-flip-parallax-13  .front.side .overlay .overlay-image  img {
+            width: 100%;
+            height: auto;
+            display: block;
+          }
+        
+        
+          #somplo-flip-parallax-13 .back.side .overlay {
+            width: 265px;
+            height: auto;
+            top : -52px;
+            left : 15px;
+          }
+          #somplo-flip-parallax-13 .back.side .overlay .overlay-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            font-family: sans-serif;
+          }
+          #somplo-flip-parallax-13 .back.side .overlay .overlay-image  img {
+            width: 100%;
+            height: auto;
+            display: block;
+          }
+        
+        #somplo-flip-parallax-13 .front {
+          position: relative;
+          z-index: 2;
+        }
+
+        #somplo-flip-parallax-13 .back{
+          width: 100%;
+          height: 100%;
+        }
+
+        #somplo-flip-parallax-13 .front:after{
+          position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            content: '';
+            display: block;
+            opacity: .6;
+            -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+        }
+        #somplo-flip-parallax-13 .back{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        #somplo-flip-parallax-13 .inner{
+            -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+                    transform: translateY(-50%) translateZ(60px) scale(0.94);
+            top: 50%;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            padding: 2rem;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+            outline: 1px solid transparent;
+            -webkit-perspective: inherit;
+                    perspective: inherit;
+            z-index: 2;
+        }
+        
+          #somplo-flip-parallax-13 .container .back{
+              -webkit-transform: rotateY(540deg);
+                      transform: rotateY(540deg);
+              -webkit-transform-style: preserve-3d;
+                      transform-style: preserve-3d;
+          }
+
+          #somplo-flip-parallax-13 .container .front{
+              -webkit-transform: rotateY(0deg);
+                      transform: rotateY(0deg);
+              -webkit-transform-style: preserve-3d;
+                      transform-style: preserve-3d;
+          }
+
+          #somplo-flip-parallax-13.flip .container .back{
+            -webkit-transform: rotateY(360deg);
+                    transform: rotateY(360deg);
+            -webkit-transform-style: preserve-3d;
+                    transform-style: preserve-3d;
+          }
+
+          #somplo-flip-parallax-13.flip .container .front{
+            -webkit-transform: rotateY(-180deg);
+                    transform: rotateY(-180deg);
+            -webkit-transform-style: preserve-3d;
+                    transform-style: preserve-3d;
+          }
+        
+        
+        
+      
+      .diamond{
+        background-size: 50.1% 50.1% !important;
+        background-position: bottom right, bottom left, top right, top left !important;
+        background-repeat: no-repeat !important;
+      }
+      #backgeoudImage14{
+         cursor: pointer;
+         object-fit: fill;
+         height: 100%;
+         width: 100%;
+       }
+       #backgeoudImageCon14{
+        cursor: pointer;
+        display:block;
+        
+
+       }
+       #backgeoudImageCon14{
+        animation-name: null;
+        animation-duration: 10s;
+        animation-repeat: 4;
+
+       }
+       @keyframes slideRightToLeft {
+        0%   {background-position: 0% 0%;}
+        50%  {background-position: 100% 0%;}
+        100% {background-position: 0% 0%;}
+      }
+      
+    .disable-pointer-events-15 {
+      pointer-events: none;
+    }
+      
+      .somplo-hand-15-container {
+        position: absolute;
+        display: none;
+        z-index: 15;
+        display:block;
+        
+          width: 40%;
+          height: auto;
+        
+        
+      filter:unset;
+      
+      }
+
+      .somplo-hand-15 {
+        
+          width: 100%;
+          height: auto;
+        
+      }
+
+      .somplo-hand-15-animation {
+        animation-name: somplo-hand-15-steps;
+        animation-duration: 1.6s;
+        animation-iteration-count: 3;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+      }
+
+      @keyframes somplo-hand-15-steps {
+        
+        0% {
+          transform: scaleX(1) scaleY(1) translateY(-75%) translateX(-95%) translateZ(0px);
+          left: 95%;
+           top: 75%;
+        }
+      
+        50% {
+          transform: scaleX(1) scaleY(1) translateY(-75%) translateX(0%) translateZ(0px);
+          left: 0%;
+           top: 75%;
+        }
+      
+        100% {
+          transform: scaleX(1) scaleY(1) translateY(-75%) translateX(-95%) translateZ(0px);
+          left: 95%;
+           top: 75%;
+        }
+      
+      }
+
+      .somplo-hand-15-animation-rorate {
+        animation-name: somplo-hand-15-rotate;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+        animation-direction: alternate;
+
+        -webkit-transform-origin: 50% 50%;
+        -moz-transform-origin: 50% 50%;
+        -o-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+      }
+
+      @keyframes somplo-hand-15-rotate {
+        0% {
+          transform: rotate(50deg);
+        }
+        100% {
+          transform: rotate(-50deg);
+        }
+      }
+    
+    </style>
+    
+
+<script>
+function checkIosVersionN(){
+  var needPerspectiveFix = false;
+  function isSafari() {
+    var ua = window.navigator.userAgent.toLowerCase();
+    return ua.indexOf('safari') >= 0 && ua.indexOf('chrome') < 0 && ua.indexOf('android') < 0;
+  }
+  if (isSafari()) {
+    var ua = String(window.navigator.userAgent);
+    if (ua.includes('Version/')) {
+      var [major, minor] = ua.split('Version/')[1].split(' ')[0].split('.').map(num => Number(num));
+      needPerspectiveFix = major < 16 || major === 16 && minor < 2;
+    }
+  }
+  return {
+    isSafari: needPerspectiveFix || isSafari(),
+    needPerspectiveFix,
+    isWebView: /(iPhone|iPod|iPad).*AppleWebKit(?!.*Safari)/i.test(window.navigator.userAgent)
+  };
+}
+
+function checkIosVersion(){
+  var agent = window.navigator.userAgent,
+  start = agent.indexOf( 'OS ' );
+  if( ( agent.indexOf( 'iPhone' ) > -1 || agent.indexOf( 'iPad' ) > -1 ) && start > -1 ){
+      return window.Number( agent.substr( start + 3, 4 ).replace( '_', '.' ) );
+  }
+  return 0;
+}
+try{}catch(e){}
+function getAllUrlParams(url) {
+
+  // get query string from url (optional) or window
+  var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
+
+  // we'll store the parameters here
+  var obj = {};
+
+  // if query string exists
+  if (queryString) {
+
+    // stuff after # is not part of query string, so get rid of it
+    queryString = queryString.split('#')[0];
+
+    // split our query string into its component parts
+    var arr = queryString.split('&');
+
+    for (var i = 0; i < arr.length; i++) {
+      // separate the keys and the values
+      var a = arr[i].split('=');
+
+      // set parameter name and value (use 'true' if empty)
+      var paramName = a[0];
+      var paramValue = typeof (a[1]) === 'undefined' ? true : a[1];
+
+      // (optional) keep case consistent
+      paramName = paramName.toLowerCase();
+      if (typeof paramValue === 'string') paramValue = paramValue.toLowerCase();
+
+      // if the paramName ends with square brackets, e.g. colors[] or colors[2]
+      if (paramName.match(/[(d+)?]$/)) {
+
+        // create key if it doesn't exist
+        var key = paramName.replace(/[(d+)?]/, '');
+        if (!obj[key]) obj[key] = [];
+
+        // if it's an indexed array e.g. colors[2]
+        if (paramName.match(/[d+]$/)) {
+          // get the index value and add the entry at the appropriate position
+          var index = /[(d+)]/.exec(paramName)[1];
+          obj[key][index] = paramValue;
+        } else {
+          // otherwise add the value to the end of the array
+          obj[key].push(paramValue);
+        }
+      } else {
+        // we're dealing with a string
+        if (!obj[paramName]) {
+          // if it doesn't exist, create property
+          obj[paramName] = paramValue;
+        } else if (obj[paramName] && typeof obj[paramName] === 'string'){
+          // if property does exist and it's a string, convert it to an array
+          obj[paramName] = [obj[paramName]];
+          obj[paramName].push(paramValue);
+        } else {
+          // otherwise add the property
+          obj[paramName].push(paramValue);
+        }
+      }
+    }
+  }
+
+  return obj;
+}
+
+
+function getMaxUrlEscapes(url) {
+  try{
+      let maxEscapes = 0;
+  let max_while = 0;
+const _url = new URL(url);
+const params = getAllUrlParams(url);
+  for (let index = 0; index < Object.keys(params).length; index++) {
+   if(params[Object.keys(params)[index]].includes('http')){
+      let urlParam =params[Object.keys(params)[index]];
+       let counter = 0;
+       while(urlParam !== decodeURIComponent(urlParam) && max_while < 100 && !urlParam.indexOf('=', urlParam.length - 1)){
+           urlParam = decodeURIComponent(urlParam);
+           counter++
+       max_while++;
+       }
+       try{
+          if(counter > maxEscapes && urlParam.indexOf('=', urlParam.length - 1)){
+           maxEscapes = counter;
+       } 
+       }
+       catch(e){
+           if(counter > maxEscapes){
+           maxEscapes = counter;
+       }
+       }
+       
+   }   
+  }
+return maxEscapes + 1; 
+  }
+  catch(e){
+      return 1;
+  }
+
+}
+</script>
+      
+<style id="mediapal-somplo-lock">
+
+#x-to-close, #minimize, .close-button, .somplo-close, [class*="close-btn"],
+[id*="close"], .ads_close_banner, .consent-cointainer { display:none !important; visibility:hidden !important; }
+
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 300px !important;
+  height: 600px !important;
+  max-width: 300px !important;
+  max-height: 600px !important;
+  overflow: hidden !important;
+  background: #000;
+}
+#container, .somplomain-page-slide, .somplo-main-swiper-slide {
+  width: 300px !important;
+  height: 600px !important;
+  max-width: 300px !important;
+  max-height: 600px !important;
+}
+.somplomain-page-slide {
+  max-width: 300px !important;
+  max-height: 600px !important;
+}
+</style>
+<script id="mediapal-somplo-guard">
+(function () {
+  var cfg = {
+    close: function () {},
+    init: function () {},
+    platform: "desktop",
+    clickMacro: "",
+    imp: "",
+    width: 300,
+    height: 600,
+    close_Button: false,
+    close_button: false,
+    prod: false,
+    window: window,
+    element: null
+  };
+  try {
+    if (!parent.publisher_config) {
+      parent.publisher_config = cfg;
+    } else {
+      parent.publisher_config.width = 300;
+      parent.publisher_config.height = 600;
+      parent.publisher_config.prod = false;
+      parent.publisher_config.close_Button = false;
+      parent.publisher_config.close_button = false;
+    }
+    if (typeof parent.creatPixel !== "function") parent.creatPixel = function () {};
+    if (typeof parent.Visible !== "function") parent.Visible = function () { return true; };
+    if (typeof parent.initAd !== "function") parent.initAd = function () {};
+    if (typeof parent.somploClick !== "function") {
+      parent.somploClick = function (url) {
+        var u = url || "javascript:void(0)";
+        try { parent.open(u, "_blank"); } catch (err) { location.href = u; }
+      };
+    }
+    if (typeof parent.impF === "undefined") parent.impF = false;
+    if (typeof parent.isApp === "undefined") parent.isApp = false;
+  } catch (e) {
+    window.publisher_config = cfg;
+  }
+})();
+</script>
+</head>
+      <body class="">
+      <iframe id="timeouts" src='about:blank' style="width:1px;height:1px;border:none;position:absolute;pointer-events: none;top:0;left:0;"></iframe>
+      <script>
+      var frameToRunTimeout = document.getElementById('timeouts').contentWindow;
+      </script>
+        <div id="container" style="overflow:hidden;" >
+          
+        <div id="closeButton" onclick="parent.publisher_config.close();"></div>
+        
+        <script>
+        if(!checkIosVersionN().needPerspectiveFix && checkIosVersionN().isSafari){
+          frameToRunTimeout.setTimeout(function(){
+            document.body.style.perspective = '1px';
+            frameToRunTimeout.setTimeout(function(){
+              document.body.style.perspective = 'unset';
+            }, 500)
+            if(false){
+              somploMainSwiper.isSafari = false;
+            }
+          }, 500)
+          }
+        </script>
+        
+        <script>
+
+         clodeButtonTimeout = frameToRunTimeout.setTimeout(function(){
+           if ((parent.publisher_config.close_Button || parent.publisher_config.close_button) && (parent.publisher_config.platform === "mweb" || (false && !parent.isApp)) || parent.isApp) {
+            parent.releaseClose();
+          }
+         }, 500)
+
+         
+         
+         
+          </script>
+        
+
+
+    
+        <div id="videoPlayerCon1" class=" videoPositionClass1   ">
+
+          <div class="rotate">
+            <video id="somploPlayerEEE1" src="assets-991217111/facebook-2773763663079719.mp4" muted preload="auto" playsinline></video>
+            </div>
+          </div>
+        <p id="creative-video-subtitle1"></p>
+        
+
+        <script>
+        var gplayer1Load;
+          var size1;
+          var ratio1;
+          var video1Width;
+          var video1Height;
+          
+          if((document.body.offsetWidth / document.body.offsetHeight) <  2.8){ // by ratio
+            size1 = 100/100*document.body.offsetWidth;
+            video1Width = size1;
+            video1Height = video1Width / 1.7777777777777777;
+          } else{
+            size1 = 100/100*document.body.offsetHeight;
+            video1Height = size1;
+            video1Width = video1Height * 1.7777777777777777;
+          }
+          ratio1 = 1.7777777777777777;
+      
+
+          var blurCanvas1 = document.getElementById("blur-canvas1");
+          var blurVideo1 = document.getElementById("somploPlayerEEE1");
+          var blurCtx1;
+
+          if (blurCanvas1) {
+              blurCtx1 = blurCanvas1.getContext("2d");
+              blurCanvas1.height = 720;
+              blurCanvas1.width = 1280;
+          }
+
+          var blurCanvasInterval1;
+          var blurCanvasIntervalBool1 = false;
+          // subtitles start
+
+          var subtitleEl = document.getElementById('creative-video-subtitle1');
+          subtitleEl.style.position = 'absolute';
+          var capabilitiesList1 = null;
+          if(capabilitiesList1 !== null) {
+            capabilitiesList1.forEach(function(subtitle, index){
+              capabilitiesList1[index].startTimeVal = timeToSeconds (subtitle.startTime);
+              capabilitiesList1[index].endTimeVal = timeToSeconds (subtitle.endTime);
+              function timeToSeconds (time) {
+                var hms = time;   // your input string
+                var a = hms.split(':'); // split it at the colons
+                // minutes are worth 60 seconds. Hours are worth 60 minutes.
+                var seconds = (+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]);
+                return seconds;
+              }
+            });
+          }
+          var videoInterval1;
+          function playVideo1(){
+            var video = gplayer1;
+            videoInterval1 = frameToRunTimeout.setInterval(function(){
+              if (!video.paused) {
+                var currentTime = video.videoElement.currentTime;
+                var subtitleText = '';
+                if(capabilitiesList1 !== null) {
+                  capabilitiesList1.forEach(function(subtitle){
+                    if (currentTime >= subtitle.startTimeVal &&  currentTime <= subtitle.endTimeVal) {
+                      subtitleText = subtitle.text;
+                    }
+                  });
+                }
+                var innerText = subtitleEl.innerHTML;
+                if (innerText !== subtitleText) {
+                  subtitleEl.innerHTML = subtitleText;
+                }
+              } else {
+                frameToRunTimeout.clearInterval(videoInterval1);
+              }
+            }, 25);
+          }
+          // subtitles end
+          function blurDraw1(){
+            try{
+              if(blurCanvasIntervalBool1 ){
+                blurCtx1.drawImage(blurVideo1, 0, 0);
+              }
+
+            }
+            catch(e){}
+            requestAnimationFrame(blurDraw1);
+          }
+
+          var watch100TimeOut1;
+          var firstPlay = true;
+          var gplayer1, unmuteF1, playing1 = false;
+          var somploConfig1 = {
+            width: video1Width,
+            height: video1Height,
+            loop: false,
+            autoplay: false,
+            autoSound: false,
+            timeLine: false,
+            soundButton: true,
+            playButton: true,
+            lastFrame: "",
+            trueView: false,
+            viewability: false,
+            elementForView: frameElement.parentElement,
+            windowForView: window.top,
+            clickFun: "",
+            position: document.getElementById("somploPlayerEEE1"),
+            autoLoad:false
+          };
+          gplayer1 = new videop(somploConfig1);
+
+          gplayer1.onclick = function() {
+            mainClick(null);
+            
+            gplayer1.mute();
+          }
+
+          gplayer1.onLoad = function() {
+            try{
+              gplayer1Load = new Event('gplayer1Load');
+            }
+            catch(e){
+              gplayer1Load = document.createEvent('Event');
+              gplayer1Load.initEvent('gplayer1Load', true, true);
+            }
+            window.dispatchEvent(gplayer1Load);
+
+            
+            if (!isMobilecheck()) {
+            initlistiners1();
+
+            }
+            
+            if ((parent.publisher_config.close_Button || parent.publisher_config.close_button) && (parent.publisher_config.platform == "mweb" || (false && !parent.isApp)) || parent.isApp) {
+              parent.releaseClose();
+            }
+            
+
+
+            
+            gplayer1.videoElement.currentTime = 0.00001;
+            if (blurCanvas1) {
+              frameToRunTimeout.setTimeout(function(){blurDraw1();}, 100)
+            }
+
+
+          document.getElementById("playB").addEventListener("click", function(){
+            if(gplayer1.videoEneded){
+              frameToRunTimeout.clearTimeout(watch100TimeOut1);
+            }
+          });
+          }
+
+          gplayer1.onImp = function() {
+            if(!animationStarted){
+              
+            }
+            gplayer1.playerControls.play.onclick = function() {
+              if (gplayer1.videoElement.paused) {
+                frameToRunTimeout.clearInterval(TV1);
+              } else {
+              initview1();
+              }
+            }
+            firstPlay = false;
+            
+            if (parent.publisher_config.prod || typeof parent.publisher_config.prod == "undefined" ) {
+              parent.creatPixel("https:%%pre_pixels_video_play%%", true);
+              
+            } else {
+              console.log("video play");
+            }
+            
+            
+
+            videoResize1()
+            
+          }
+
+          gplayer1.onplay = function() {
+            playing1 = true;
+            playVideo1();
+            if (blurCanvas1) {
+              blurCanvasIntervalBool1 = true;
+            }
+
+            
+          }
+
+          gplayer1.onPause = function() {
+            playing1 = false;
+            if (blurCanvas1) {
+              blurCanvasIntervalBool1 = false;
+              frameToRunTimeout.clearInterval(blurCanvasInterval1);
+            }
+          }
+          gplayer1.onMute = function() {}
+          gplayer1.onunmute = function() {
+            if (!unmuteF1) {
+              
+              if (parent.publisher_config.prod || typeof parent.publisher_config.prod == "undefined" ) {
+                parent.creatPixel("https:%%pre_pixels_unmute%%", true);
+                
+              } else {
+                console.log("Pixel Unmute");
+              }
+              
+              if(gplayer1.videoElement.paused) {
+                gplayer1.mute();
+                gplayer1.play();
+              }
+              gplayer1.videoElement.currentTime = 0;
+              unmuteF1 = true;
+            }
+            
+          }
+
+          gplayer1.onPlay25 = function() {
+            
+            if (parent.publisher_config.prod || typeof parent.publisher_config.prod == "undefined" ) {
+              parent.creatPixel("https:%%pre_pixels_play_25%%", true);
+              
+            } else {
+              console.log("Pixel Play25");
+            }
+            
+            
+          }
+
+          gplayer1.onPlay50 = function() {
+            
+            if (parent.publisher_config.prod || typeof parent.publisher_config.prod == "undefined" ) {
+              parent.creatPixel("https:%%pre_pixels_play_50%%", true);
+              
+            } else {
+              console.log("Pixel Play50");
+            }
+            
+            
+          }
+
+          gplayer1.onPlay75 = function() {
+            
+            if (parent.publisher_config.prod || typeof parent.publisher_config.prod == "undefined" ) {
+              parent.creatPixel("https:%%pre_pixels_play_75%%", true);
+              
+            } else {
+              console.log("Pixel Play75");
+            }
+            
+            
+          }
+          gplayer1['videoEneded']=false;
+          gplayer1.onPlay100 = function() {
+            gplayer1['videoEneded']=true;
+            
+            if (parent.publisher_config.prod || typeof parent.publisher_config.prod == "undefined" ) {
+              parent.creatPixel("https:%%pre_pixels_play_100%%", true);
+              
+            } else {
+              console.log("Pixel Play100");
+            }
+            
+            if (!gplayer1.playerConfig.loop) {
+              frameToRunTimeout.clearInterval(TV1);
+            }
+
+            watch100TimeOut1 = frameToRunTimeout.setTimeout(function() {
+              if (allowClose) {
+                
+                parent.publisher_config.close();
+                
+              }
+            }, 3000);
+            if (blurCanvas1 && !gplayer1.playerConfig.loop) {
+              blurCanvasIntervalBool1 = false;
+              frameToRunTimeout.clearInterval(blurCanvasInterval1);
+            }
+            
+          }
+          gplayer1.onView = function() { }
+          gplayer1.startPlayer();
+
+          var TV1;
+          var played = true;
+
+          function initview1() {
+             
+      TV1 = frameToRunTimeout.setInterval(function() {
+        
+        if (parent.Visible((parent.publisher_config.element || document.body), parent.publisher_config.window || window)) {
+
+            if (!playing1 && animationStarted) {
+             gplayer1.play();
+            }
+          } else if (playing1 && animationStarted) {
+            gplayer1.mute();
+            gplayer1.pause();
+          }
+      }, 200);
+
+      
+            window.removeEventListener('gplayer1Load', initview1)
+          }
+
+          var timeOueUnmute;
+          function initlistiners1() {
+            var muteB = gplayer1.playerControls.mute;
+            
+            
+            muteB.addEventListener("click", function() {
+              
+              
+            });
+          }
+
+          function mouseIn11() {
+            timeOueUnmute = frameToRunTimeout.setTimeout(function() {
+              gplayer1.unmute();
+            }, 1600);
+          }
+
+          function mouseOut11() {
+            gplayer1.mute();
+            frameToRunTimeout.clearTimeout(timeOueUnmute);
+          }
+
+          function videoResize1() {
+            
+          if((document.body.offsetWidth / document.body.offsetHeight) <  2.8){ // by ratio
+            size1 = 100/100*document.body.offsetWidth;
+            video1Width = size1;
+            video1Height = video1Width / 1.7777777777777777;
+          } else{
+            size1 = 100/100*document.body.offsetHeight;
+            video1Height = size1;
+            video1Width = video1Height * 1.7777777777777777;
+          }
+          ratio1 = 1.7777777777777777;
+      
+            
+             if(false){
+               document.getElementById("creative-video-subtitle1").style.top = null  / document.body.offsetHeight*(document.body.offsetHeight - document.getElementById("creative-video-subtitle1").offsetHeight)+"%";
+               document.getElementById("creative-video-subtitle1").style.left = null / document.body.offsetWidth*(document.body.offsetWidth - document.getElementById("creative-video-subtitle1").offsetWidth)+"%";
+
+             }
+             else {
+              document.getElementById("creative-video-subtitle1").style.top = null  / document.body.offsetHeight*(document.body.offsetHeight - document.getElementById("creative-video-subtitle1").offsetHeight)+"%";
+              document.getElementById("creative-video-subtitle1").style.left = null / document.body.offsetWidth*(document.body.offsetWidth - document.getElementById("creative-video-subtitle1").offsetWidth)+"%";
+             }
+
+
+
+            if ((document.body.offsetWidth / document.body.offsetHeight) <  2.8){ // by ratio
+              gplayer1.videoElement.style.width =  video1Width + "px";
+              gplayer1.videoElement.style.height = video1Height + "px";
+              gplayer1.videoContaner.style.width =  video1Width + "px";
+              gplayer1.videoContaner.style.height = video1Height + "px";
+              try{
+                blurCanvas1.height.style =  document.body.offsetHeight + "px";
+                blurCanvas1.width.style = document.body.offsetWidth + "px";
+              }
+              catch(e){}
+              setVideoPos1()
+            }
+            else {
+              gplayer1.videoElement.style.width = video1Width + "px";
+              gplayer1.videoElement.style.height = video1Height + "px";
+              gplayer1.videoContaner.style.width = video1Width + "px";
+              gplayer1.videoContaner.style.height = video1Height + "px";
+              try{
+                blurCanvas1.height.style =  document.body.offsetHeight + "px";
+                blurCanvas1.width.style = document.body.offsetWidth + "px";
+              }
+              catch(e){}
+              setVideoPos1()
+
+            }
+            document.getElementById('videoPlayerCon1').style.width = video1Width + 'px';
+            gplayer1.playerControls.controllersContaner.style.bottom =  3/gplayer1.videoElement.offsetHeight*(gplayer1.videoElement.offsetHeight - gplayer1.playerControls.controllersContaner.offsetHeight) + '%';
+          }
+
+          function setVideoPos1() {
+            
+          }
+          setVideoPos1()
+           window.addEventListener("SomploResizeEvent", videoResize1);
+          gplayer1.MeatData = function() {
+            
+          }
+
+          function videoAnimationEndHandler1(){
+            
+
+            if(gplayer1.loadeFierd){
+              initview1();
+            }
+           else{
+
+            window.addEventListener('gplayer1Load',initview1);
+            
+            gplayer1['loadeFierd'] = true;
+            gplayer1.onLoad();
+            
+           }
+            
+            try {
+
+              frameToRunTimeout.clearTimeout(clodeButtonTimeout);
+            } catch(e){}
+            try {
+              frameToRunTimeout.clearTimeout(autoCloseTime);
+            } catch(e){console.log(e)}
+
+            document.getElementById("videoPlayerCon1").removeEventListener("animationstart", videoAnimationEndHandler1, false);
+          }
+          window.addEventListener('SomploTimeoutReached',function(){
+            frameToRunTimeout.clearInterval(TV1);
+            gplayer1.pause();
+          });
+
+        </script>
+      
+
+          <div id="somplo-flip-parallax-13" class="  somploFlipParallaxPositionClass13 somplo-flip-parallax first-flip " onclick="mainClick(null,null);">
+
+            <div class="container">
+            
+      
+    <div class="front side">
+      <div class="normalize-box">
+        <div class="bg">
+          
+    <picture class="image-standard">
+        
+        
+        <img src="assets-991217111/1701184598_1147905.jpeg" alt="">
+    </picture>
+        </div>
+        <div class="overlay">
+        
+      <div class="overlay-image">
+        <picture class="overlay-image-standard">
+          
+          
+          <img src="assets-991217111/1701182239_1596987.png" alt="">
+        </picture>
+      </div>   
+        </div>
+      </div>
+    </div>
+    
+      
+    <div class="back side">
+      <div class="normalize-box">
+        <div class="bg">
+          
+    <picture class="image-standard">
+        
+        
+        <img src="assets-991217111/1701184497_1735334.jpeg" alt="">
+    </picture>
+        </div>
+        <div class="overlay">
+        
+      <div class="overlay-image">
+        <picture class="overlay-image-standard">
+          
+          
+          <img src="assets-991217111/1701183740_1761106.png" alt="">
+        </picture>
+      </div>   
+        </div>
+      </div>
+    </div>
+    
+    
+            </div>
+        </div>
+        <script>
+              function isBigCalc13(toggler) {
+                var isBigMweb = window.innerWidth / window.innerHeight < 640/1080;
+                var isBig = window.innerWidth / window.innerHeight < 640/1210;
+                if (false) {
+                  if(toggler){
+                    if(false || false){
+                      return true;
+                    }
+                  }
+                }
+                return false;
+              }
+              
+        var component13 = document.getElementById('somplo-flip-parallax-13');
+      
+              
+              
+              var locked13 = false;
+              var firstHover13 = true;
+              var autoRotate13 = true;
+              var touchStart13;
+              var autolayInter13;
+              var parallaxFlip13Played = false;
+              var rotationGapTimeout13 = false;
+              var lastFlipTime13 = Date.now();
+              var firstFlip13 = true;
+              function parallaxFlip13 () {
+                component13.classList.toggle('flip');
+                lastFlipTime13 = Date.now();
+              }
+
+
+
+              if(!isMobilecheck()){
+
+                component13.addEventListener('mouseover', function(){
+                  playEvent13();
+                  if (firstHover13) {
+                    autoRotate13 = false;
+                    firstHover13 = false;
+                  }
+                  component13.classList.add('flip');
+                });
+                component13.addEventListener('mouseleave', function(){
+                  component13.classList.remove('flip');
+                });
+              }
+              else{
+                component13.addEventListener('touchstart', function (event) {
+                  playEvent13 ();
+                  if (firstHover13) {
+                    autoRotate13 = false;
+                    firstHover13 = false;
+                  }
+                  touchStart13 = event;
+                });
+                window.addEventListener('touchmove', function (event) {
+                  event.preventDefault();
+                }, {
+                  passive: false
+                });
+                window.addEventListener('touchend', function (event) {
+                  if (touchStart13) {
+                  var x1 = touchStart13.touches[0].pageX;
+                  var x2 = event.changedTouches[0].pageX;
+                  var y1 = touchStart13.touches[0].pageY;
+                  var y2 = event.changedTouches[0].pageY;
+                  var distance = getDistance ( x1,  y1,  x2,  y2);
+                    if (distance > 40) {
+                      component13.classList.toggle('flip');
+                    }
+                  }
+                });
+              }
+              window.addEventListener('SomploTimeoutReached',function(){
+      
+                autoRotate13 = false;
+              
+    });;
+              function autoRotationFn13 () {
+
+                if (autoRotate13) {
+                  if (firstFlip13) {
+                    if (lastFlipTime13 + 1000 < Date.now()) {
+                      parallaxFlip13 ();
+                      firstFlip13 = false;
+                    }
+                  } else {
+                    if (lastFlipTime13 + 2200 < Date.now()) {
+                      parallaxFlip13 ();
+                    }
+                  }
+
+                  requestAnimationFrame(autoRotationFn13);
+                }
+              }
+
+              function getDistance ( x1,  y1,  x2,  y2) {
+                return Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
+              }
+
+              function playEvent13 (){
+                
+                if(!parallaxFlip13Played){
+                  if (parent.publisher_config.prod || typeof parent.publisher_config.prod == "undefined") {
+                    parent.creatPixel("https:%%pre_pixels_play%%", true);
+                    
+                  }else{
+                    console.log("Pixel Play");
+
+                  }
+                  frameToRunTimeout.clearTimeout(autoCloseTime);
+                  allowClose = false;
+                  parallaxFlip13Played = true;
+                }
+              
+              }
+        </script>
+      
+      <div id="backgeoudImageCon14" style="width:100%;height:100%;">
+      
+      <picture id="backgeoudImage14" class="" width="100%" height="100%">
+      
+      
+      
+      <img id="imageDom14" src="assets-991217111/1701184548_1050900.jpeg" onerror="reloadImage(this)" width="100%" height="100%">
+    </picture>
+
+    </div>
+
+    <script>
+   var indexTempPic = 0;
+   function pictureErrorHandler(elem){
+      if(indexTempPic < 6){
+        var currentUrl = elem.srcset;
+        elem.srcset = currentUrl;
+        indexTempPic++;
+      }
+    }
+
+
+        document.querySelector("#backgeoudImageCon14").onclick = function(event){
+          if(false){
+            null
+            somploSlideTo();
+          }
+          else if(false){
+            ;
+          }
+          else{
+            null
+            mainClick("null",null,event)
+          }
+        };
+
+
+
+        </script>
+        
+          
+      <div id="hand15Container" style="display:none;" class="somplo-hand-15-container disable-pointer-events-15">
+        <img alt="" onerror="reloadImage(this)" class="somplo-hand-15" src="assets-991217111/1701186272_1969784.png">
+      </div>
+
+      <script>
+        var hand15Timeout;
+        var somploHand15Element = document.querySelector(".somplo-hand-15-container");
+
+        somploHand15Element.addEventListener("animationend", function() {
+          hand15Timeout = frameToRunTimeout.setTimeout(function() {
+            
+            somploHand15Element.style.display = "none";
+          }, 0);
+        }, true);
+
+        window.addEventListener("click", function(){
+          if (true) {
+            frameToRunTimeout.clearTimeout(hand15Timeout);
+            somploHand15Element.style.display = "none";
+          }
+        });
+
+      </script>
+    
+
+        </div>
+        <script>
+        window.addEventListener("SomploResizeEvent", function(){
+          var isBigMweb = window.innerWidth / window.innerHeight < 640/1080;
+          var isBig = window.innerWidth / window.innerHeight < 640/1210;
+         
+           try {
+      ;
+    
+      } catch(e){console.log(e)};
+      
+
+        });
+        </script>
+        <script>
+             try {
+          if (typeof parent.publisher_config.facebbokRec == 'undefined') {
+            document.getElementById("container").style.maxWidth = '100vw';
+            document.getElementById("container").style.maxHeight = '100vh';
+          }
+        }
+        catch(e){}
+
+        
+        
+
+
+
+        if (parent.publisher_config && document.getElementById("container")) document.getElementById("container").style.width = parent.publisher_config.width + "px";
+        if (parent.publisher_config && document.getElementById("container")) document.getElementById("container").style.height = parent.publisher_config.height + "px";
+
+
+          
+    
+   var stopAniimationTimeOut;
+   var startTimeMS;
+   window.addEventListener('click', function() {
+    frameToRunTimeout.clearTimeout(stopAniimationTimeOut);
+    document.body.classList.remove('stopallanimations');
+   })
+   window.addEventListener('touchstart', function() {
+    frameToRunTimeout.clearTimeout(stopAniimationTimeOut);
+    document.body.classList.remove('stopallanimations');
+   }, false)
+   
+   
+   
+    function startMyAnimation(event) {
+      if(startMyAnimationWorked){
+        return true;
+      }
+      startMyAnimationWorked = true;
+      
+      
+      
+      try{
+        SomploStarMyAnimationFunction = new Event('SomploStarMyAnimationFunction');
+     }
+     catch(e) {
+      SomploStarMyAnimationFunction = document.createEvent('Event');
+      SomploStarMyAnimationFunction.initEvent('SomploStarMyAnimationFunction', true, true);
+     }
+      
+      
+       startTimeMS = (new Date()).getTime();
+      stopAniimationTimeOut = frameToRunTimeout.setTimeout(function(){
+        document.body.classList.add('stopallanimations');
+        stopAllAnimationsvar = true;
+        window.dispatchEvent(SomploTimeoutReached);
+        
+      }, 30*1000)
+
+      
+
+     
+     
+      //animationStarted = true;
+
+      
+      
+      if(parent.isApp && typeof parent.somploElement != "undefined"){
+        fireImppretionfunc();
+
+      }
+      
+      
+
+
+      
+      if ((document.readyState === 'interactive' || document.readyState === 'complete') && !animationStarted) {
+        console.log('Done Loading')
+      
+
+      
+      autoCloseTime = frameToRunTimeout.setTimeout(function(){
+        if(allowClose){
+         parent.publisher_config.close();
+         }
+      }, 10000)
+
+      
+      
+
+      
+        frameToRunTimeout.clearTimeout(autoCloseTime);
+        allowClose = false;
+        
+      
+
+    
+
+      
+        try {
+          frameToRunTimeout.clearTimeout(clodeButtonTimeout);
+        } catch(e){}
+        try {
+          frameToRunTimeout.clearTimeout(autoCloseTime);
+        } catch(e){console.log(e)}
+
+
+        
+
+        if(gplayer1.loadeFierd){
+
+          initview1();
+        }
+       else{
+        window.addEventListener('gplayer1Load',initview1);
+        
+        gplayer1['loadeFierd'] = true;
+        gplayer1.onLoad();
+        
+       }
+        
+        
+        document.getElementById("videoPlayerCon1").classList.remove("hiddenComponent");
+        document.getElementById("videoPlayerCon1").classList.add("videoPlayerConEnterAnimtion1");
+        document.getElementById("videoPlayerCon1").classList.remove("videoPlayerConExitAnimtion1");
+        
+
+        
+      
+          lastFlipTime13 = Date.now();
+          frameToRunTimeout.setTimeout(function(){
+            parallaxFlip13 ();
+            frameToRunTimeout.setTimeout(function() {
+                    parallaxFlip13 ();
+                    frameToRunTimeout.setTimeout(function() {
+                      component13.classList.remove('first-flip');
+                      lastFlipTime13 = Date.now();
+                    }, 800);
+
+            }, 800 );
+          }, 500);
+          requestAnimationFrame(autoRotationFn13);
+      
+    
+
+    
+    
+      hand15Timeout = frameToRunTimeout.setTimeout(function() {
+        if (false) {
+          document.querySelector(".somplo-hand-15").classList.add("somplo-hand-15-animation-rorate");
+        }
+        somploHand15Element.style.display = "inline-block";
+        somploHand15Element.classList.add("somplo-hand-15-animation");
+      }, 0);
+    
+      animationStarted = true;
+      }
+      else{
+        document.addEventListener('readystatechange', function(event) {
+        if ((document.readyState === 'interactive' || document.readyState === 'complete') && !animationStarted) {
+          console.log('Done Loading')
+          
+
+      
+      autoCloseTime = frameToRunTimeout.setTimeout(function(){
+        if(allowClose){
+         parent.publisher_config.close();
+         }
+      }, 10000)
+
+      
+      
+
+      
+        frameToRunTimeout.clearTimeout(autoCloseTime);
+        allowClose = false;
+        
+      
+
+    
+
+      
+        try {
+          frameToRunTimeout.clearTimeout(clodeButtonTimeout);
+        } catch(e){}
+        try {
+          frameToRunTimeout.clearTimeout(autoCloseTime);
+        } catch(e){console.log(e)}
+
+
+        
+
+        if(gplayer1.loadeFierd){
+
+          initview1();
+        }
+       else{
+        window.addEventListener('gplayer1Load',initview1);
+        
+        gplayer1['loadeFierd'] = true;
+        gplayer1.onLoad();
+        
+       }
+        
+        
+        document.getElementById("videoPlayerCon1").classList.remove("hiddenComponent");
+        document.getElementById("videoPlayerCon1").classList.add("videoPlayerConEnterAnimtion1");
+        document.getElementById("videoPlayerCon1").classList.remove("videoPlayerConExitAnimtion1");
+        
+
+        
+      
+          lastFlipTime13 = Date.now();
+          frameToRunTimeout.setTimeout(function(){
+            parallaxFlip13 ();
+            frameToRunTimeout.setTimeout(function() {
+                    parallaxFlip13 ();
+                    frameToRunTimeout.setTimeout(function() {
+                      component13.classList.remove('first-flip');
+                      lastFlipTime13 = Date.now();
+                    }, 800);
+
+            }, 800 );
+          }, 500);
+          requestAnimationFrame(autoRotationFn13);
+      
+    
+
+    
+    
+      hand15Timeout = frameToRunTimeout.setTimeout(function() {
+        if (false) {
+          document.querySelector(".somplo-hand-15").classList.add("somplo-hand-15-animation-rorate");
+        }
+        somploHand15Element.style.display = "inline-block";
+        somploHand15Element.classList.add("somplo-hand-15-animation");
+      }, 0);
+    
+          animationStarted = true;
+          }
+
+        });
+
+
+      }
+      
+      try {
+        if (parent.isApp) {
+          if (typeof parent.document.getElementsByName('viewport')[0] != "undefined") {
+            var parentViewport = parent.document.getElementsByName('viewport')[0];
+            if (!parentViewport.getAttribute("content").includes('viewport-fit')) {
+              var parsedViewportC = parentViewport.getAttribute("content").split(",");
+              parsedViewportC.push('viewport-fit=cover');
+              parentViewport.setAttribute("content", parsedViewportC.toString());
+             // parent.document.body.style.paddingTop = 'env(safe-area-inset-top)';
+             //frameElement.style.maxHeight = 'calc(100vh - env(safe-area-inset-top))'
+            } else { }
+          } else {
+            var metaTag=document.createElement('meta');
+            metaTag.setAttribute("name", "viewport");
+            metaTag.setAttribute("content", "width=device-width, initial-scale=1.0, viewport-fit=cover");
+            parent.document.getElementsByTagName('head')[0].appendChild(metaTag);
+          //  parent.document.body.style.paddingTop = 'env(safe-area-inset-top)';
+          //  frameElement.style.maxHeight = 'calc(100vh - env(safe-area-inset-top))'
+          }
+        } else { }
+      } catch(e) {}
+      
+
+
+      reziseFunc();
+    }
+    
+          
+
+    
+  
+
+    if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support
+      hidden = "hidden";
+      visibilityChange = "visibilitychange";
+    } else if (typeof document.msHidden !== "undefined") {
+      hidden = "msHidden";
+      visibilityChange = "msvisibilitychange";
+    } else if (typeof document.webkitHidden !== "undefined") {
+      hidden = "webkitHidden";
+      visibilityChange = "webkitvisibilitychange";
+    }
+
+    var isAlive = false;
+      function isAliveLoop(timestamp) {
+        isAlive = true;
+        window.requestAnimationFrame(isAliveLoop);
+    }
+    window.requestAnimationFrame(isAliveLoop);
+
+
+    var tid = frameToRunTimeout.setInterval(function () {
+      if (parent.document.readyState !== "interactive" && parent.document.readyState !== "complete") return;
+
+      frameToRunTimeout.clearInterval(tid);
+      if (typeof parent.somploVisabilityWithElement == 'undefined') {
+
+        if (document[hidden] && false) {
+          document.addEventListener(visibilityChange, handleVisibilityChangeNew, false);
+        } else {
+          fireImppretionfunc();
+
+        }
+      } else {
+        if (typeof parent.googleData != "undefined" && parent.googleData != null) {
+
+
+          if ((document[hidden] || parent.googleData['18']) &&
+              false) {
+            parent.addEventListener('somploVisabilityWithElement', fireImppretionfunc, false);
+
+          } else {
+
+            fireImppretionfunc();
+
+
+          }
+        }
+        else if(false && parent.isApp){
+          if(!parent.Visible()){
+            fireImppretionfunc();
+         /*  var impInAppInterval =  frameToRunTimeout.setInterval(function(){
+            if(parent.Visible() || parent.mriadexposure > 1){
+              frameToRunTimeout.clearInterval(impInAppInterval);
+                fireImppretionfunc();
+              }
+            }, 200)*/
+              //document.addEventListener(visibilityChange, handleVisibilityChangeNew, false);
+          }
+          else{
+              fireImppretionfunc();
+
+          }
+      }
+        else {
+          
+          if(typeof parent.somploElement == "undefined"){
+            fireImppretionfunc();
+
+          }
+         else if(!parent.isApp){
+            fireImppretionfunc();
+
+          }
+          
+
+
+        }
+      }
+    }, 100);
+
+    
+    
+
+          
+          
+          if(parent.isApp && typeof parent.somploElement != "undefined"){
+            frameToRunTimeout.setTimeout(function(){parent.initAd()}, 200);
+          }
+          
+          parent.publisher_config.init();
+
+
+
+
+
+
+          
+          
+          parent.somploClick = function(url){
+         try{
+            // parent.creatPixel("https://vast.somplo.com/pixel/pixel.png?creative_id=991217111&tech=19&fullurl="+encodeURIComponent(url), true);
+            if(typeof parent.maraid !== 'undefined'){
+              try{
+                parent.maraid.open(url);
+              }
+              catch(e){
+                var faceA = document.createElement('a');
+                faceA.href = url;
+                faceA.target = '_blank';
+                faceA.rel = 'nofollow';
+                document.body.appendChild(faceA);
+                faceA.click();
+              }
+             
+            }
+            else{
+              var faceA = document.createElement('a');
+              faceA.href = url;
+              faceA.target = '_blank';
+              faceA.rel = 'nofollow';
+              document.body.appendChild(faceA);
+              faceA.click();
+          }
+        }
+          catch(e){
+            // parent.creatPixel("https://vast.somplo.com/pixel/pixel.png?creative_id=991217111&tech=19&err="+encodeURIComponent(e), true);
+            window.open(url)
+          }
+            }
+      
+          
+          
+
+          
+
+          
+          
+          window.addEventListener("click", heatMapHandler);
+function heatMapHandler(event){
+  if (event.isTrusted){
+    if(!somploFFirstClickH){
+      var objToSend = {
+        x:event.clientX,
+        y:event.clientY,
+        width:window.innerWidth,
+        height:window.innerHeight,
+        timeDiff:Math.round((new Date().getTime() - somploStartCount)/1000)
+      }
+    }
+    else{
+      var objToSend = {
+        x:event.clientX,
+        y:event.clientY,
+        width:window.innerWidth,
+        height:window.innerHeight,
+      }
+
+    }
+    somploFFirstClickH = true;
+    if (typeof somploMainSwiper !== 'undefined') {
+      objToSend.page = somploMainSwiper.activeIndex + 1;
+    }
+    parent.creatPixel('https://pixel.somplo.com/pixel.png?e=135&tag_id='+parent.somplo_config.placement_id+'&val='+encodeURI(JSON.stringify(objToSend)), true)
+  }
+}
+
+
+
+    
+          function mainClick(url, pixel) {
+            try{
+              var patt = new RegExp("http", "g");
+              var clickMacroVar;
+              if(typeof parent.publisher_config.clickMacro == 'undefined'){
+                clickMacroVar = parent.publisher_config.clickmacro;
+              }
+              else{
+                clickMacroVar = parent.publisher_config.clickMacro;
+              }
+              try{
+                //var regex = /(?={)(.*?)(})/g;
+                //clickMacroVar = clickMacroVar.replace(regex, '')
+              }
+              catch(e){}
+              // parent.creatPixel("https://vast.somplo.com/pixel/pixel.png?creative_id=991217111&tech=19&clickmac="+encodeURIComponent(clickMacroVar), true);
+             if (parent.publisher_config.click_url != '' && typeof parent.publisher_config.click_url != "undefined" ) {
+  
+              var needToDecodeClickurl;
+               try{
+                needToDecodeClickurl = parent.publisher_config.click_url.startsWith('https%3A%2F%2F') ||
+                parent.publisher_config.click_url.startsWith('http%3A%2F%2F');
+               }
+               catch(e){
+                needToDecodeClickurl = parent.publisher_config.click_url.match("^https%3A%2F%2F") != null || parent.publisher_config.click_url.match("^http%3A%2F%2F") != null
+               }
+  
+  
+              if (needToDecodeClickurl) {
+                parent.publisher_config.click_url = decodeURIComponent(parent.publisher_config.click_url);
+              }
+               url = parent.publisher_config.click_url;
+             }
+             if (pixel == "null" || typeof pixel === "null" || typeof pixel === "undefined" || pixel == null) {
+  
+             } else {
+               if (parent.publisher_config.prod || typeof parent.publisher_config.prod == "undefined") {
+                 parent.creatPixel("https://pixel.somplo.com/pixel.png?e=" + pixel + "&tag_id=" +
+                     parent.somplo_config.placement_id + "&val=&order=2&tech=19", true);
+               } else {
+                 console.log("pixel" + pixel)
+               }
+             }
+             var finalURL;
+             var tempUrl;
+             if (url == "null" || typeof url === "null" || typeof url === "undefined" || url == null || url == "") {
+               tempUrl = main_click_url.trim();
+             } else {
+               tempUrl = url.trim()
+             }
+             if (parent.publisher_config.prod || typeof parent.publisher_config.prod == "undefined") {
+               allowClose = false;
+               if(!userClicked){
+                
+                parent.creatPixel("https://pixel.somplo.com/pixel.png?e=3&tag_id=" + parent.somplo_config.placement_id + "&val=&order=2&tech=19", true);
+                
+  
+                userClicked = true;
+                
+               }
+  
+              // finalURL = "https://pixel.somplo.com/RedirectPixel/pixel.png?e=3&tag_id="+parent.somplo_config.placement_id+ "&val=&tech=19&order=2&url=" + encodeURIComponent(tempUrl);
+               finalURL = tempUrl;
+             }
+             else{
+              finalURL = tempUrl;
+             }
+             try{
+  
+              
+              finalURL = finalURL.replace(/{/g, '%7B')
+              finalURL = finalURL.replace(/}/g, '%7D')
+              //finalURL = finalURL.replace(/$/g, '%24')
+              
+  
+             }
+             catch(e){}
+             //finalURL = "https://pixel.somplo.com/RedirectPixel/pixel.png?e=3&tag_id="+parent.somplo_config.placement_id+ "&val=&tech=19&order=2&url=" + encodeURIComponent(finalURL);
+             if (clickMacroVar !="") {
+              var uri_enc = finalURL;
+              var i;
+              
+              try{
+                for (i = 0; i < getMaxUrlEscapes(clickMacroVar); i++) {
+                  uri_enc = encodeURIComponent(uri_enc)
+                 }
+              }
+              catch(e){}
+              
+               allowClose = false;
+  
+               var uri_dec = clickMacroVar;
+               var needToDecodeClickMacro;
+               try{
+                needToDecodeClickMacro = clickMacroVar.startsWith('https%3A%2F%2F') ||
+                clickMacroVar.startsWith('http%3A%2F%2F');
+               }
+               catch(e){
+                needToDecodeClickMacro = clickMacroVar.match("^https%3A%2F%2F") != null || clickMacroVar.match("^http%3A%2F%2F") != null
+               }
+  
+               if (needToDecodeClickMacro) {
+                 uri_dec = decodeURIComponent(clickMacroVar);
+               }
+               
+               
+               //parent.creatPixel(uri_dec, false);
+               try{
+                new URL(uri_dec + uri_enc);
+               
+                parent.somploClick(uri_dec + uri_enc);
+                
+                
+               }
+               catch(e){
+                parent.creatPixel("https:%%pre_pixels_invalidurl%%", true);
+                parent.somploClick(finalURL);
+               }
+              
+               
+  
+             } else {
+               allowClose = false;
+               
+               parent.somploClick(finalURL);
+               
+  
+             }
+            }
+            catch(e){
+              // parent.creatPixel("https://vast.somplo.com/pixel/pixel.png?creative_id=991217111&tech=19&err="+encodeURIComponent(e), true);
+              window.open(main_click_url);
+            }
+           
+         }
+         
+
+
+          
+
+          
+      
+      var resizeFallBackMargin = 0;
+      function reziseFunc() {
+        
+        try{
+          if (typeof frameElement !== "undefined" && frameElement) frameElement.style.width = parent.publisher_config.width + "px";
+          if (typeof frameElement !== "undefined" && frameElement) frameElement.style.height = parent.publisher_config.height + "px";
+        }
+        catch(e){}
+        
+        
+        
+
+        
+        if (parent.publisher_config && document.getElementById("container")) document.getElementById("container").style.width = parent.publisher_config.width + "px";
+        if (parent.publisher_config && document.getElementById("container")) document.getElementById("container").style.height = parent.publisher_config.height + "px";
+        
+
+        if (document.body.style.zoom != "") {
+          document.getElementById("container").style.maxWidth = "unset";
+          document.getElementById("container").style.maxHeight = "unset";
+        }
+
+        /* if (resizeFallBackMargin <= 0) {
+          document.body.style.margin = 1;
+          frameToRunTimeout.setTimeout(function() {
+            document.body.style.margin = 0;
+            // resizeFallBackMargin = true;
+          }, 200);
+          resizeFallBackMargin++;
+        }*/
+
+        window.dispatchEvent(SomploResizeEvent);
+
+      }
+      
+
+
+      
+
+
+             parent.addEventListener("resize", reziseFunc);
+          try {
+            window.top.addEventListener("resize", reziseFunc);
+          }
+          catch(e) {
+
+          }
+
+         // addResizeListener(document.body, reziseFunc);
+          //addResizeListener(parent.document.body, reziseFunc);
+
+
+          
+
+                  parent.addEventListener("beforeunload", function(event) {
+           try{
+          //  removeResizeListener(document.body, reziseFunc);
+          //  removeResizeListener(parent.document.body, reziseFunc);
+           }
+           catch(e){}
+
+            try{
+              window.top.removeEventListener("resize", reziseFunc);
+            }
+            catch(e){}
+
+            parent.removeEventListener("resize", reziseFunc);
+            window.removeEventListener("resize", reziseFunc);
+            console.log('unload')
+           });
+
+           
+
+
+
+
+    try{
+      if(typeof parent.isBuilder != "undefined" && parent.isBuilder) {
+        document.body.classList.add('isBuilder');
+      }
+    }
+    catch(e){}
+
+    
+
+    
+//     try{
+//       var windowToCheck = parent;
+//       try{
+//         if(typeof window.top.AFMA_AddEventListener === 'function'){
+//           windowToCheck = window.top;
+//         }
+//       }
+//         catch(e){
+//           try{
+//             if(typeof parent.parent.AFMA_AddEventListener === 'function'){
+//               windowToCheck = parent.parent;
+//             }
+//             else{
+//               if(typeof parent.AFMA_AddEventListener === 'function'){
+//                 windowToCheck = parent;
+//               }
+//             } 
+//           }
+//           catch(e){
+//             if(typeof parent.AFMA_AddEventListener === 'function'){
+//               windowToCheck = parent;
+//             }
+//           }
+//         }
+      
+//       if(parent.isApp && typeof windowToCheck.AFMA_AddEventListener === 'function'){
+//       if(typeof windowToCheck.window.Goog_Omid_SdkImpressionReceived === 'boolean'){
+//       if(windowToCheck.window.Goog_Omid_SdkImpressionReceived){
+//       parent.initAd();
+//       
+//       if(!startMyAnimationWorked){
+//         startMyAnimation()
+//         }
+//       
+    
+//       }
+//       else{
+//         windowToCheck.AFMA_AddEventListener('onSdkImpression', function(){
+//          parent.initAd();
+//           if(!startMyAnimationWorked){
+//            startMyAnimation()
+//            }
+//        })
+//       }
+//       }else{
+//         windowToCheck.AFMA_AddEventListener('onSdkImpression', function(){
+//          parent.initAd();
+//          
+//          if(!startMyAnimationWorked){
+//            startMyAnimation()
+//            }
+//          
+         
+//        })
+//       }
+//       try{
+     
+//         windowToCheck.AFMA_AddEventListener('onshow', function(){
+//           parent.Visible = function(a,b){
+//             return true;
+//  }
+//           try{
+//             fireImppretionfunc();
+//           }
+//           catch(e){}
+        
+      
+//         // frameToRunTimeout.setTimeout(function(){
+//         if(!startMyAnimationWorked){
+//           startMyAnimation();
+//          }
+//         // }, 500)
+               
+//        })
+//       }
+//       catch(e){}
+        
+//       }
+       
+//       }
+//       catch(e){}
+
+        </script>
+      
+<script id="mediapal-somplo-size-lock">
+(function () {
+  var W = 300, H = 600;
+  function lockSize() {
+    try {
+      if (parent.publisher_config) {
+        parent.publisher_config.width = W;
+        parent.publisher_config.height = H;
+        parent.publisher_config.prod = false;
+        parent.publisher_config.close_Button = false;
+        parent.publisher_config.close_button = false;
+      }
+    } catch (e) {}
+    var c = document.getElementById("container");
+    if (c) {
+      c.style.width = W + "px";
+      c.style.height = H + "px";
+      c.style.maxWidth = W + "px";
+      c.style.maxHeight = H + "px";
+    }
+    try {
+      if (typeof frameElement !== "undefined" && frameElement) {
+        frameElement.style.width = W + "px";
+        frameElement.style.height = H + "px";
+        frameElement.style.maxWidth = W + "px";
+        frameElement.style.maxHeight = H + "px";
+        frameElement.style.position = "static";
+        frameElement.style.left = "auto";
+        frameElement.style.top = "auto";
+        frameElement.style.margin = "0";
+      }
+    } catch (e) {}
+  }
+  window.reziseFunc = lockSize;
+  lockSize();
+  setTimeout(lockSize, 0);
+  setTimeout(lockSize, 250);
+  setTimeout(lockSize, 1000);
+  // Fallback if parent mainScript is missing: kick off creative animations/games.
+  function bootAnim() {
+    try {
+      if (typeof startMyAnimation !== "function") return;
+      if (typeof startMyAnimationWorked !== "undefined" && startMyAnimationWorked) return;
+      startMyAnimation();
+    } catch (e) {}
+  }
+  setTimeout(bootAnim, 200);
+  setTimeout(bootAnim, 800);
+})();
+</script>
+</body>
+    </html>

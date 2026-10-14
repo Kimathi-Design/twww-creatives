@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>MediaPal | CocaCola 3D - 320x480</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      overscroll-behavior: none;
+      touch-action: none;
+      background: #fff;
+      position: fixed;
+      inset: 0;
+    }
+    body {
+      display: grid;
+      place-items: center;
+    }
+    /*
+      Interstitial: full-bleed 320px wide (edge-to-edge).
+      Creative is 640×1040 → scale 320/640 = 0.5 → 320×520.
+    */
+    .stage {
+      width: 320px;
+      height: 520px;
+      overflow: hidden;
+      position: relative;
+      background: #fff;
+      touch-action: none;
+      overscroll-behavior: none;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+    .stage iframe {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 640px;
+      height: 1040px;
+      border: 0;
+      display: block;
+      background: #fff;
+      transform: scale(0.5);
+      transform-origin: top left;
+      touch-action: none;
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <iframe
+      src="../shared/creative.html"
+      title="Coca-Cola Custom"
+      scrolling="no"
+      width="640"
+      height="1040"
+    ></iframe>
+  </div>
+  <script>
+    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, { passive: false });
+  </script>
+</body>
+</html>

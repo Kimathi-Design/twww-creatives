@@ -1,0 +1,955 @@
+{
+  "build": 1771515367,
+  "creatives": [
+    {
+      "order": 0,
+      "settings": {
+        "ad": {
+          "assets": {
+            "custom_effect_custom": {
+              "uri": "effect_custom.png",
+              "width": 446,
+              "height": 446,
+              "meta": {
+                "CropLayer": {
+                  "size": {
+                    "width": 320,
+                    "height": 480
+                  },
+                  "position": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "clip": {
+                    "horizontal": true,
+                    "vertical": true
+                  },
+                  "backgroundSettings": {
+                    "type": "bg-color-transparent",
+                    "values": {
+                      "color": [
+                        "transparent"
+                      ]
+                    }
+                  }
+                },
+                "SourceLayer": {
+                  "size": {
+                    "width": 250,
+                    "height": 480
+                  },
+                  "position": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "rx": 0,
+                    "ry": 0
+                  },
+                  "anchor": {
+                    "x": "center",
+                    "y": "center"
+                  },
+                  "ar": 1.9224
+                },
+                "PlacementLayer": {
+                  "size": {
+                    "width": 320,
+                    "height": 480
+                  },
+                  "position": {
+                    "x": 0,
+                    "y": 0
+                  }
+                },
+                "OriginalFile": {
+                  "mime": "image/png",
+                  "size": {
+                    "width": 232,
+                    "height": 446
+                  }
+                },
+                "ShapeLayers": [],
+                "settings": {
+                  "anchor": "center",
+                  "position": "absolute",
+                  "unit": "auto"
+                },
+                "quality": 100,
+                "original_uri": "https://data-euw1.nexd.com/assets/library/K0QKaqFyHYPkjMzQ7ZYBXTM6BzS6CoRj/ac03f1e60a77bdb559b15a2e668ab021.png"
+              },
+              "afterload": false,
+              "source": [
+                {
+                  "src": "effect_custom.png",
+                  "type": "image/png"
+                }
+              ],
+              "assetId": "custom_effect_custom"
+            },
+            "logo": {
+              "uri": "logo.png",
+              "settings": [],
+              "transform": {
+                "sc": 0.5,
+                "unit": "%",
+                "top": -1,
+                "left": -1
+              },
+              "required": 2,
+              "width": 296,
+              "height": 301,
+              "meta": {
+                "CropLayer": {
+                  "size": {
+                    "width": 320,
+                    "height": 480
+                  },
+                  "position": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "clip": {
+                    "horizontal": true,
+                    "vertical": true
+                  },
+                  "backgroundSettings": {
+                    "type": "bg-color-transparent",
+                    "values": {
+                      "color": [
+                        "transparent"
+                      ]
+                    }
+                  }
+                },
+                "SourceLayer": {
+                  "size": {
+                    "width": 148,
+                    "height": 151
+                  },
+                  "position": {
+                    "x": -86,
+                    "y": -165
+                  },
+                  "offset": {
+                    "x": -1,
+                    "y": -1,
+                    "rx": 0,
+                    "ry": 0
+                  },
+                  "anchor": {
+                    "x": "left",
+                    "y": "top"
+                  },
+                  "ar": 1.0203
+                },
+                "PlacementLayer": {
+                  "size": {
+                    "width": 320,
+                    "height": 480
+                  },
+                  "position": {
+                    "x": 0,
+                    "y": 0
+                  }
+                },
+                "OriginalFile": {
+                  "mime": "image/png",
+                  "size": {
+                    "width": 296,
+                    "height": 302
+                  }
+                },
+                "ShapeLayers": [],
+                "settings": {
+                  "anchor": "center",
+                  "position": "absolute",
+                  "unit": "auto"
+                },
+                "quality": 100,
+                "original_uri": "https://data-euw1.nexd.com/assets/library/K0QKaqFyHYPkjMzQ7ZYBXTM6BzS6CoRj/71013d8337c90924a8d5b222172a2643.png"
+              },
+              "afterload": false,
+              "order": 1,
+              "cta": {
+                "action": "url",
+                "impressiontracker": [
+                  {
+                    "action": "impression",
+                    "uri": ""
+                  }
+                ],
+                "uri": "javascript:void(0)",
+                "analyticskey": "Overlay Logo"
+              },
+              "source": [
+                {
+                  "src": "logo.png",
+                  "type": "image/png"
+                }
+              ],
+              "assetId": "logo",
+              "isOverlay": true
+            },
+            "cta": {
+              "uri": null,
+              "required": 2,
+              "assetId": "cta",
+              "isOverlay": true
+            },
+            "floating_object": {
+              "uri": "floating_object.png",
+              "settings": [],
+              "required": 1,
+              "width": 384,
+              "height": 576,
+              "meta": {
+                "CropLayer": {
+                  "size": {
+                    "width": 320,
+                    "height": 480
+                  },
+                  "position": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "clip": {
+                    "horizontal": false,
+                    "vertical": false
+                  },
+                  "backgroundSettings": {
+                    "type": "bg-color-transparent",
+                    "values": {
+                      "color": [
+                        "transparent"
+                      ]
+                    }
+                  }
+                },
+                "SourceLayer": {
+                  "size": {
+                    "width": 158,
+                    "height": 50
+                  },
+                  "position": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "ar": 0.3143
+                },
+                "PlacementLayer": {
+                  "size": {
+                    "width": 320,
+                    "height": 480
+                  },
+                  "position": {
+                    "x": 0,
+                    "y": 0
+                  }
+                },
+                "OriginalFile": {
+                  "mime": "image/png",
+                  "size": {
+                    "width": 315,
+                    "height": 99
+                  }
+                },
+                "ShapeLayers": [],
+                "settings": {
+                  "anchor": "center",
+                  "position": "relative",
+                  "unit": "auto"
+                },
+                "quality": 100,
+                "original_uri": "https://data-euw1.nexd.com/assets/library/K0QKaqFyHYPkjMzQ7ZYBXTM6BzS6CoRj/2899a3ad6440ee8f1aed9dce3b736966.png"
+              },
+              "afterload": false,
+              "cta": {
+                "action": "url",
+                "impressiontracker": [
+                  {
+                    "action": "impression",
+                    "uri": ""
+                  }
+                ],
+                "uri": "javascript:void(0)",
+                "analyticskey": "Object"
+              },
+              "overlays": {
+                "wzRjBplqN3Sz6WQp": {
+                  "uri": "wzRjBplqN3Sz6WQp.png",
+                  "settings": [],
+                  "transform": {
+                    "sc": 0.25,
+                    "unit": "%",
+                    "bottom": 0.52
+                  },
+                  "required": 2,
+                  "width": 232,
+                  "height": 446,
+                  "meta": {
+                    "CropLayer": {
+                      "size": {
+                        "width": 320,
+                        "height": 480
+                      },
+                      "position": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "clip": {
+                        "horizontal": true,
+                        "vertical": true
+                      },
+                      "backgroundSettings": {
+                        "type": "bg-color-transparent",
+                        "values": {
+                          "color": [
+                            "transparent"
+                          ]
+                        }
+                      }
+                    },
+                    "SourceLayer": {
+                      "size": {
+                        "width": 58,
+                        "height": 111
+                      },
+                      "position": {
+                        "x": 0,
+                        "y": 69
+                      },
+                      "offset": {
+                        "x": 0,
+                        "y": 0.52,
+                        "rx": 0,
+                        "ry": 231
+                      },
+                      "anchor": {
+                        "x": "center",
+                        "y": "bottom"
+                      },
+                      "ar": 1.9224
+                    },
+                    "PlacementLayer": {
+                      "size": {
+                        "width": 320,
+                        "height": 480
+                      },
+                      "position": {
+                        "x": 0,
+                        "y": 0
+                      }
+                    },
+                    "OriginalFile": {
+                      "mime": "image/png",
+                      "size": {
+                        "width": 232,
+                        "height": 446
+                      }
+                    },
+                    "ShapeLayers": [],
+                    "settings": {
+                      "anchor": "center",
+                      "position": "absolute",
+                      "unit": "auto"
+                    },
+                    "quality": 100,
+                    "original_uri": "https://data-euw1.nexd.com/assets/library/K0QKaqFyHYPkjMzQ7ZYBXTM6BzS6CoRj/ac03f1e60a77bdb559b15a2e668ab021.png"
+                  },
+                  "afterload": false,
+                  "order": 1,
+                  "cta": {
+                    "action": "url",
+                    "impressiontracker": [
+                      {
+                        "action": "impression",
+                        "uri": ""
+                      }
+                    ],
+                    "uri": "",
+                    "analyticskey": "Object Overlay element 1"
+                  },
+                  "animations": [
+                    {
+                      "type": "move-in",
+                      "property": "position",
+                      "delay": 2300,
+                      "duration": 1700,
+                      "ease": "linear",
+                      "amplitude": 1,
+                      "side": "top",
+                      "axis": "y"
+                    },
+                    {
+                      "type": "rotate",
+                      "property": "rotate",
+                      "delay": 2300,
+                      "duration": 1700,
+                      "ease": "linear",
+                      "from": 0,
+                      "to": 6.283,
+                      "axis": "z"
+                    }
+                  ],
+                  "source": [
+                    {
+                      "src": "wzRjBplqN3Sz6WQp.png",
+                      "type": "image/png"
+                    }
+                  ],
+                  "assetId": "custom_wzRjBplqN3Sz6WQp",
+                  "isOverlay": true
+                },
+                "vUgbIP4ixEjckhJr": {
+                  "uri": "vUgbIP4ixEjckhJr.png",
+                  "settings": [],
+                  "transform": {
+                    "sc": 0.5,
+                    "unit": "%",
+                    "bottom": 0.94,
+                    "left": -0.8
+                  },
+                  "required": 2,
+                  "width": 426,
+                  "height": 501,
+                  "meta": {
+                    "CropLayer": {
+                      "size": {
+                        "width": 320,
+                        "height": 480
+                      },
+                      "position": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "clip": {
+                        "horizontal": true,
+                        "vertical": true
+                      },
+                      "backgroundSettings": {
+                        "type": "bg-color-transparent",
+                        "values": {
+                          "color": [
+                            "transparent"
+                          ]
+                        }
+                      }
+                    },
+                    "SourceLayer": {
+                      "size": {
+                        "width": 213,
+                        "height": 251
+                      },
+                      "position": {
+                        "x": -22,
+                        "y": 100
+                      },
+                      "offset": {
+                        "x": -0.8,
+                        "y": 0.94,
+                        "rx": 63,
+                        "ry": 29
+                      },
+                      "anchor": {
+                        "x": "left",
+                        "y": "bottom"
+                      },
+                      "ar": 1.1765
+                    },
+                    "PlacementLayer": {
+                      "size": {
+                        "width": 320,
+                        "height": 480
+                      },
+                      "position": {
+                        "x": 0,
+                        "y": 0
+                      }
+                    },
+                    "OriginalFile": {
+                      "mime": "image/png",
+                      "size": {
+                        "width": 425,
+                        "height": 500
+                      }
+                    },
+                    "ShapeLayers": [],
+                    "settings": {
+                      "anchor": "center",
+                      "position": "absolute",
+                      "unit": "auto"
+                    },
+                    "quality": 100,
+                    "original_uri": "https://data-euw1.nexd.com/assets/library/K0QKaqFyHYPkjMzQ7ZYBXTM6BzS6CoRj/c03196c3f001e96ecc8d51e9adc5052f.png"
+                  },
+                  "afterload": false,
+                  "order": 4,
+                  "cta": {
+                    "action": "url",
+                    "impressiontracker": [
+                      {
+                        "action": "impression",
+                        "uri": ""
+                      }
+                    ],
+                    "uri": "",
+                    "analyticskey": "Object Overlay element 4"
+                  },
+                  "source": [
+                    {
+                      "src": "vUgbIP4ixEjckhJr.png",
+                      "type": "image/png"
+                    }
+                  ],
+                  "assetId": "custom_vUgbIP4ixEjckhJr",
+                  "isOverlay": true
+                },
+                "e3GHhMMIf8uaroDg": {
+                  "uri": "E3GHhMMIf8uaroDg.png",
+                  "settings": [],
+                  "transform": {
+                    "sc": 0.3125,
+                    "unit": "%",
+                    "bottom": 0.56
+                  },
+                  "required": 2,
+                  "width": 160,
+                  "height": 335,
+                  "meta": {
+                    "CropLayer": {
+                      "size": {
+                        "width": 320,
+                        "height": 480
+                      },
+                      "position": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "clip": {
+                        "horizontal": true,
+                        "vertical": true
+                      },
+                      "backgroundSettings": {
+                        "type": "bg-color-transparent",
+                        "values": {
+                          "color": [
+                            "transparent"
+                          ]
+                        }
+                      }
+                    },
+                    "SourceLayer": {
+                      "size": {
+                        "width": 50,
+                        "height": 105
+                      },
+                      "position": {
+                        "x": 0,
+                        "y": 81
+                      },
+                      "offset": {
+                        "x": 0,
+                        "y": 0.56,
+                        "rx": 0,
+                        "ry": 213
+                      },
+                      "anchor": {
+                        "x": "center",
+                        "y": "bottom"
+                      },
+                      "ar": 2.0926
+                    },
+                    "PlacementLayer": {
+                      "size": {
+                        "width": 320,
+                        "height": 480
+                      },
+                      "position": {
+                        "x": 0,
+                        "y": 0
+                      }
+                    },
+                    "OriginalFile": {
+                      "mime": "image/png",
+                      "size": {
+                        "width": 162,
+                        "height": 339
+                      }
+                    },
+                    "ShapeLayers": [],
+                    "settings": {
+                      "anchor": "center",
+                      "position": "absolute",
+                      "unit": "auto"
+                    },
+                    "quality": 100,
+                    "original_uri": "https://data-euw1.nexd.com/assets/library/K0QKaqFyHYPkjMzQ7ZYBXTM6BzS6CoRj/2874693ddde8fc1f12c0d773797bdbd5.png"
+                  },
+                  "afterload": false,
+                  "order": 2,
+                  "cta": {
+                    "action": "url",
+                    "impressiontracker": [
+                      {
+                        "action": "impression",
+                        "uri": ""
+                      }
+                    ],
+                    "uri": "",
+                    "analyticskey": "Object Overlay element 2"
+                  },
+                  "animations": [
+                    {
+                      "type": "move-in",
+                      "property": "position",
+                      "delay": 1000,
+                      "duration": 2000,
+                      "ease": "inOutQuad",
+                      "amplitude": 1,
+                      "side": "top",
+                      "axis": "y"
+                    },
+                    {
+                      "type": "rotate",
+                      "property": "rotate",
+                      "delay": 1000,
+                      "duration": 2000,
+                      "ease": "linear",
+                      "from": 0,
+                      "to": 5.31,
+                      "axis": "z"
+                    }
+                  ],
+                  "source": [
+                    {
+                      "src": "E3GHhMMIf8uaroDg.png",
+                      "type": "image/png"
+                    }
+                  ],
+                  "assetId": "custom_E3GHhMMIf8uaroDg",
+                  "isOverlay": true
+                },
+                "aOH2gExAU6XZGv31": {
+                  "uri": "AOH2gExAU6XZGv31.png",
+                  "settings": [],
+                  "transform": {
+                    "sc": 0.416,
+                    "unit": "%",
+                    "bottom": 0.6
+                  },
+                  "required": 2,
+                  "width": 137,
+                  "height": 282,
+                  "meta": {
+                    "CropLayer": {
+                      "size": {
+                        "width": 320,
+                        "height": 480
+                      },
+                      "position": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "clip": {
+                        "horizontal": true,
+                        "vertical": true
+                      },
+                      "backgroundSettings": {
+                        "type": "bg-color-transparent",
+                        "values": {
+                          "color": [
+                            "transparent"
+                          ]
+                        }
+                      }
+                    },
+                    "SourceLayer": {
+                      "size": {
+                        "width": 57,
+                        "height": 117
+                      },
+                      "position": {
+                        "x": 0,
+                        "y": 85
+                      },
+                      "offset": {
+                        "x": 0,
+                        "y": 0.6,
+                        "rx": 0,
+                        "ry": 193
+                      },
+                      "anchor": {
+                        "x": "center",
+                        "y": "bottom"
+                      },
+                      "ar": 2.0577
+                    },
+                    "PlacementLayer": {
+                      "size": {
+                        "width": 320,
+                        "height": 480
+                      },
+                      "position": {
+                        "x": 0,
+                        "y": 0
+                      }
+                    },
+                    "OriginalFile": {
+                      "mime": "image/png",
+                      "size": {
+                        "width": 156,
+                        "height": 321
+                      }
+                    },
+                    "ShapeLayers": [],
+                    "settings": {
+                      "anchor": "center",
+                      "position": "absolute",
+                      "unit": "auto"
+                    },
+                    "quality": 100,
+                    "original_uri": "https://data-euw1.nexd.com/assets/library/K0QKaqFyHYPkjMzQ7ZYBXTM6BzS6CoRj/63fba956e1c1bb61e6d7ed9cc978d52f.png"
+                  },
+                  "afterload": false,
+                  "order": 3,
+                  "cta": {
+                    "action": "url",
+                    "impressiontracker": [
+                      {
+                        "action": "impression",
+                        "uri": ""
+                      }
+                    ],
+                    "uri": "",
+                    "analyticskey": "Object Overlay element 3"
+                  },
+                  "animations": [
+                    {
+                      "type": "move-in",
+                      "property": "position",
+                      "delay": 3500,
+                      "duration": 1500,
+                      "ease": "linear",
+                      "amplitude": 1,
+                      "side": "top",
+                      "axis": "y"
+                    },
+                    {
+                      "type": "rotate",
+                      "property": "rotate",
+                      "delay": 3500,
+                      "duration": 1500,
+                      "ease": "linear",
+                      "from": -2.04,
+                      "to": 1.08,
+                      "axis": "z"
+                    }
+                  ],
+                  "source": [
+                    {
+                      "src": "AOH2gExAU6XZGv31.png",
+                      "type": "image/png"
+                    }
+                  ],
+                  "assetId": "custom_AOH2gExAU6XZGv31",
+                  "isOverlay": true
+                }
+              },
+              "timeline": {
+                "duration": 5000,
+                "direction": "normal",
+                "iterations": 0
+              },
+              "source": [
+                {
+                  "src": "floating_object.png",
+                  "type": "image/png"
+                }
+              ],
+              "assetId": "fgWYV3w1EW5v",
+              "isFeed": true
+            },
+            "endcard": {
+              "uri": null,
+              "required": 0,
+              "assetId": "rUydS5eZdG19",
+              "isEndcard": true
+            },
+            "bg": {
+              "uri": "bg.jpg",
+              "required": 0,
+              "width": 640,
+              "height": 960,
+              "meta": {
+                "CropLayer": {
+                  "size": {
+                    "width": 320,
+                    "height": 480
+                  },
+                  "position": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "clip": {
+                    "horizontal": false,
+                    "vertical": false
+                  },
+                  "backgroundSettings": {
+                    "type": "bg-color",
+                    "values": {
+                      "color": [
+                        "#FFFFFF"
+                      ]
+                    }
+                  }
+                },
+                "SourceLayer": {
+                  "size": {
+                    "width": 320,
+                    "height": 480
+                  },
+                  "position": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "ar": 1.5
+                },
+                "PlacementLayer": {
+                  "size": {
+                    "width": 320,
+                    "height": 480
+                  },
+                  "position": {
+                    "x": 0,
+                    "y": 0
+                  }
+                },
+                "OriginalFile": {
+                  "mime": "image/jpeg",
+                  "size": {
+                    "width": 640,
+                    "height": 960
+                  }
+                },
+                "ShapeLayers": [],
+                "settings": {
+                  "anchor": "center",
+                  "position": "relative",
+                  "unit": "auto"
+                },
+                "quality": 100,
+                "original_uri": "https://data-euw1.nexd.com/assets/library/K0QKaqFyHYPkjMzQ7ZYBXTM6BzS6CoRj/c2b93688c602ea03570798958a10da6f.jpg"
+              },
+              "afterload": false,
+              "cta": {
+                "action": "url",
+                "impressiontracker": [
+                  {
+                    "action": "impression",
+                    "uri": ""
+                  }
+                ],
+                "uri": "javascript:void(0)",
+                "analyticskey": "Background image"
+              },
+              "source": [
+                {
+                  "src": "bg.jpg",
+                  "type": "image/jpg"
+                }
+              ],
+              "assetId": "sw2yiKAX3BQX"
+            }
+          },
+          "hotspots": [],
+          "cta": {
+            "action": "url",
+            "impressiontracker": [
+              {
+                "action": "impression",
+                "uri": ""
+              }
+            ],
+            "uri": "javascript:void(0)"
+          },
+          "gesture": {
+            "main": null,
+            "fallback": null,
+            "mobile": {
+              "main": {
+                "isCustom": true,
+                "fileName": "gesture_mobile.svg"
+              },
+              "fallback": null,
+              "transform": {
+                "sc": 0.5,
+                "unit": "%",
+                "bottom": 0.58
+              }
+            },
+            "desktop": {
+              "main": {
+                "isCustom": true,
+                "fileName": "gesture_desktop.svg"
+              },
+              "fallback": null,
+              "transform": {
+                "sc": 0.5,
+                "unit": "%",
+                "bottom": 0.66
+              }
+            }
+          },
+          "effects": {
+            "custom": false
+          },
+          "children": [],
+          "width": 320,
+          "height": 480,
+          "isDesktop": true,
+          "templateBase": "floatingObject",
+          "assetSizing": 1,
+          "creativeId": "goWUWsCtUd7xqMyN",
+          "frameworkVersion": "release-v6.1.109",
+          "webtagVersion": "release-v6.1.109",
+          "ctaBarEnabled": false,
+          "packageFilesToInclude": [],
+          "widgetOrder": 0,
+          "templateId": "voX0Hx",
+          "creativeName": "Maltesers | Catching Game",
+          "animGestureImg": true,
+          "templateSpeed": 100,
+          "playbackControlsEnabled": true,
+          "assetBackgroundColor": "#BECBDC",
+          "editTag": false,
+          "hasAssetBasedOverlays": true,
+          "splashOptimizationQuality": 35
+        },
+        "tag": {
+          "pack": "pack.acz",
+          "analytics": false,
+          "logging": false,
+          "interscroller": false,
+          "interstitial": false,
+          "dsp": "nexd",
+          "bordered": false,
+          "placement": null,
+          "anchor": null,
+          "paragraphpush": null,
+          "publicPath": "../assets/",
+          "inAppTraffic": false,
+          "customClose": null
+        },
+        "dynamic": null
+      }
+    }
+  ],
+  "singleBundle": false,
+  "systemEnv": "prd",
+  "publicPath": "../assets/",
+  "liveId": "W4B80hoj66wv",
+  "mediaDomain": "https://media.adcanvas.com/"
+}

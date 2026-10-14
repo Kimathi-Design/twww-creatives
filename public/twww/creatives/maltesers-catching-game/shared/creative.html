@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" class="adc-pending">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=320, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
+  <meta name="ad.size" content="width=320,height=480" />
+  <title>MediaPal | Maltesers Catching Game - 320x480</title>
+  <style>
+    html, body {
+      margin: 0; padding: 0;
+      width: 320px !important; height: 480px !important;
+      max-width: 320px !important; max-height: 480px !important;
+      overflow: hidden !important; overscroll-behavior: none; touch-action: none;
+      position: fixed; inset: 0; background: #fff;
+      -webkit-user-select: none; user-select: none;
+    }
+    .adc-ad, .adc-inner, .mainContent, canvas {
+      width: 320px !important; height: 480px !important;
+      touch-action: none; overscroll-behavior: none;
+    }
+    html.adc-pending body { opacity: 0 !important; pointer-events: none; }
+    html.adc-ready body { opacity: 1 !important; }
+    .adc-close, [class*="close-button"], [class*="closeButton"], [id*="close"],
+    img[src*="close"], svg[class*="close"] {
+      display: none !important; visibility: hidden !important;
+      opacity: 0 !important; pointer-events: none !important;
+    }
+  </style>
+  <script data-id="FORCE_ONE_DEVICE">
+(function () {
+  var UA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1';
+  try {
+    Object.defineProperty(navigator, 'userAgent', { configurable: true, get: function () { return UA; } });
+    Object.defineProperty(navigator, 'platform', { configurable: true, get: function () { return 'iPhone'; } });
+    Object.defineProperty(navigator, 'maxTouchPoints', { configurable: true, get: function () { return 5; } });
+    Object.defineProperty(window, 'devicePixelRatio', { configurable: true, get: function () { return 1; } });
+    Object.defineProperty(window, 'innerWidth', { configurable: true, get: function () { return 320; } });
+    Object.defineProperty(window, 'innerHeight', { configurable: true, get: function () { return 480; } });
+  } catch (e) {}
+})();
+</script>
+  <script data-id="ANALYTICS_BLOCK">
+(function () {
+  function isBlocked(url) {
+    return /analytics\.adcanvas\.com|aam\.a47b\.com|google-analytics|doubleclick|googletagmanager/i.test(String(url||''));
+  }
+  var _fetch = window.fetch;
+  if (_fetch) {
+    window.fetch = function (input, init) {
+      var url = typeof input === 'string' ? input : (input && input.url);
+      if (isBlocked(url)) return Promise.resolve(new Response('', {status: 204}));
+      return _fetch.apply(this, arguments);
+    };
+  }
+  var open = XMLHttpRequest.prototype.open;
+  XMLHttpRequest.prototype.open = function (method, url) {
+    if (isBlocked(url)) { this.send = function(){}; return; }
+    return open.apply(this, arguments);
+  };
+})();
+</script>
+  <script data-id="LOCK_AND_REVEAL">
+(function () {
+  var W = 320, H = 480, done = false;
+  function lock() {
+    try {
+      var n = window.nexd;
+      var fw = (n && n.framework) || window.curlify;
+      if (n && n.device) {
+        n.device.isDesktop = false;
+        n.device.isDesktopReal = false;
+        n.device.isMobile = true;
+      }
+      if (n && n.options) {
+        n.options.width = W;
+        n.options.height = H;
+        n.options.responsive = false;
+        n.options.interstitial = false;
+        n.options.wasinterstitial = false;
+        n.options.stayincontainer = true;
+      }
+      if (fw) {
+        fw.fullscreen = false;
+        fw.slotW = W; fw.slotH = H;
+        fw.viewWidth = W; fw.viewHeight = H;
+        fw.screenWidth = W; fw.screenHeight = H;
+        fw.layoutWidth = W; fw.layoutHeight = H;
+        if (fw.layoutScale) { fw.layoutScale.x = 1; fw.layoutScale.y = 1; }
+        if (fw.layoutOffset) { fw.layoutOffset.x = 0; fw.layoutOffset.y = 0; }
+      }
+      var unit = document.querySelector('.adc-ad, .adc-inner, .mainContent');
+      if (unit) { unit.style.width = W + 'px'; unit.style.height = H + 'px'; }
+      var c = document.querySelector('canvas');
+      if (c) { c.style.width = W + 'px'; c.style.height = H + 'px'; }
+    } catch (e) {}
+  }
+  function reveal() {
+    if (done) return;
+    if (!document.querySelector('canvas') && !document.querySelector('.adc-ad')) return;
+    lock(); done = true;
+    document.documentElement.classList.remove('adc-pending');
+    document.documentElement.classList.add('adc-ready');
+  }
+  document.addEventListener('nexd.framework.loaded', function () { lock(); setTimeout(reveal, 100); });
+  document.addEventListener('nexd.ad.rendered', function () { lock(); setTimeout(reveal, 40); });
+  var n = 0, iv = setInterval(function () {
+    lock(); reveal(); if (done || ++n > 100) clearInterval(iv);
+  }, 40);
+  setTimeout(function () {
+    if (!done) {
+      lock(); done = true;
+      document.documentElement.classList.remove('adc-pending');
+      document.documentElement.classList.add('adc-ready');
+    }
+  }, 3500);
+})();
+</script>
+</head>
+<body>
+  <ins class="adcads"
+    data-adc-id="W4B80hoj66wv"
+    data-unit="W4B80hoj66wv"
+    data-clickable="yes"
+    data-redir="no"
+    data-click-tracker="javascript:void(0)"
+    data-responsive="false"
+    data-interstitial="false"
+    data-stay-in-container="true"
+    data-preview-site="true"
+    data-has-cta-bar="false"
+    data-customclose="false"
+    data-closetimer="0"
+    data-width="320"
+    data-height="480"
+    data-settings="../lib/settings.json">
+    <script src="../lib/adtag.js" type="text/javascript" async></script>
+  </ins>
+</body>
+</html>

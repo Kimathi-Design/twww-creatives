@@ -1,0 +1,258 @@
+
+@font-face {
+  font-family: Rubik;
+  src: url('Rubik.ttf');
+}
+
+body {
+    margin:0;
+    padding:0;
+    font-family: Rubik;
+}
+
+#none {
+    cursor: default !important;
+}
+
+#ctaArea {
+  z-index: 555555;
+}
+
+#shade {
+    background: #E61A27;
+    opacity: 0.35;
+}
+
+#adArea {
+	background: #E61A27;
+/*    cursor:pointer;*/
+}
+
+.bg_add_fix {
+    margin-left: -25px;
+    margin-top: -25px;
+}
+
+#cpin{
+    position: absolute;
+    width: 300px;
+    height: 600px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-size: contain;
+    background-position: center;
+    transform-origin: 0 50%;
+}
+
+.tile {
+    position: absolute;
+    background-image: url(tile.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+/*    z-index: 100;*/
+}
+.tileSize {
+    width: 62px;
+    height: 67px;
+}
+.tilePic {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.c1 {
+    background-image: url(c1.png);
+}
+.c2 {
+    background-image: url(c2.png);
+}
+.c3 {
+    background-image: url(c3.png);
+}
+.c4 {
+    background-image: url(c4.png);
+}
+
+
+#ctaArea1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+/*    background-color: rgba(0,0,0,0.2);*/
+    bottom: 0%;
+    cursor: pointer;
+}
+
+
+#gameContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+/*    filter: blur(2px);*/
+}
+
+#grid {
+    position: absolute;
+/*    width: 268px;*/
+/*    height: 308px;*/
+    width: 278px;
+    height: 298px;
+/*    border: 1px solid #333;*/
+}
+
+#canvas {
+    position: absolute;
+    width: 278px;
+    height: 298px;
+    z-index: 150;
+}
+
+
+#score_box {
+    right: 0px;
+    margin: 8px;
+    margin-right: 12px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#cursorCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999999;
+}
+
+#cursor {
+    display: none;
+}
+
+#score_text1 {
+    color: white;
+    font-family: Rubik;
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+#time_bar {
+    bottom: 0px;
+}
+
+#time_counter {
+    left: 75px;
+    top: 37px;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 50px;
+    width: 477px;
+    height: 38px;
+}
+
+
+.coke {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#block {
+    margin-left: 27px;
+    margin-top: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#score_text2 {
+    color: white;
+    font-size: 66px;
+    text-align: center;
+    margin-top: -4px;
+}
+
+#coke2 {
+    top: 62px;
+}
+
+#ctaArea2 {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    bottom: 5%;
+    cursor: pointer;
+}
+
+#g2 {
+    margin-left: -492px;
+    margin-top: 285px;
+}
+
+#g3 {
+    margin-top: -287px;
+    margin-left: 500px;
+}
+
+
+.tileHl {
+    background-image: url(tile_hl.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+
+
+.center {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.wrapper {
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.abs {
+    position: absolute;
+}
+.rct {
+    width:300px !important;
+    height:600px !important;
+    position: absolute;
+}
+.opacity0 { opacity: 0; }
+.opacity1 { opacity: 1; }
+
+.zi1 { z-index: 800; }
+.zi2 { z-index: 900; }
+.zi5 { z-index: 5000; }
+.zi6 { z-index: 6000; }
+.zi7 { z-index: 7000; }
+.zi8 { z-index: 8000; }
+.zi9 { z-index: 9000; }
+.zi10 { z-index: 10000; }
+.zIndex99998 { z-index: 99998; }
+.zIndex99999 { z-index: 99999; }
+
+.hidden{
+	visibility: hidden;
+}
+.noEvents{
+  pointer-events: none;
+}
+.noVis{
+    visibility: none;
+}
+.noDisplay{
+    display: none;
+}
+

@@ -1,0 +1,4470 @@
+<html>
+      <head>
+<meta name="ad.size" content="width=300,height=600"><title>MediaPal | Coca-Cola Felix - 300x600</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=9" />
+        
+        
+        <link href="https://cdn.somplo.com" rel="preconnect" crossorigin>
+        
+
+
+        <style>
+          body {
+            margin:0;
+            background: #000;
+            overflow: hidden;
+          }
+          #container{
+            overflow:hidden;
+            position: relative;
+            
+          }
+          .stopallanimations *{
+            animation-delay: 0s !important;
+            animation-duration: 0s !important;
+          }
+          .somplomain-page-slide{
+            max-width:100vw;
+            max-height:100vh;
+          }
+          .disable-perspeftive .somplo-main-swiper-slide{
+            -webkit-perspective: initial !important;
+            -moz-perspective: initial !important;
+            -o-perspective: initial !important;
+            perspective: initial !important;
+            }
+        </style>
+
+        <script>
+        var startMyAnimationWorked = false;
+        var timeOutForView;
+        var viewpixFierd = false;
+        var ganimationStarted = false;
+        function handleVisibilityChangeNew() {
+          if (!document[hidden]) {
+    
+            fireImppretionfunc();
+    
+          }
+        }
+    
+        function fireImppretionfunc() {
+          if (typeof parent['impF'] == "undefined" || !parent.impF) {
+            initViewability();
+            
+            if (parent.publisher_config.prod || typeof parent.publisher_config.prod == "undefined") {
+              parent.creatPixel("https:%%pre_pixels_impression%%&tech=2", true);
+              
+            } else {
+              console.log("pixels_impression");
+            }
+          }
+    
+            
+    
+    
+    
+          parent.impF = true;
+        }
+        function initViewability() {
+          var intervalViewability = frameToRunTimeout.setInterval(function () {
+            if (parent.Visible(parent.publisher_config.element, parent.publisher_config.window)) {
+              if (!ganimationStarted) {
+                
+                if(!parent.isApp || typeof parent.somploElement == "undefined"){
+                  frameToRunTimeout.setTimeout(function(){parent.initAd()}, 100);
+                }
+                
+                ganimationStarted = true;
+              }
+              timeOutForView = frameToRunTimeout.setTimeout(function () {
+                if (!viewpixFierd) {
+                  if (parent.publisher_config.prod || typeof parent.publisher_config.prod == "undefined") {
+                    parent.creatPixel("https:%%pre_pixels_viewability%%&tech=2", true);
+                    if (parent.publisher_config.imp != '' && typeof parent.publisher_config.imp != "undefined" ) {
+                      parent.creatPixel(parent.publisher_config.imp, false);
+                     
+                    }
+                  } else {
+                    console.log("view")
+                  }
+                  frameToRunTimeout.clearInterval(intervalViewability);
+                  viewpixFierd = true;
+                }
+              }, 1000);
+            } else {
+              frameToRunTimeout.clearTimeout(timeOutForView);
+            }
+          }, 200);
+        }
+    
+        var impF = false;
+        var hidden, visibilityChange;
+
+        parent.creatPixel = function (url, cb){
+          var elem = (typeof frameElement !== "undefined" && frameElement && frameElement.parentElement) || (parent.document && parent.document.body) || document.body;
+          var rand = Math.round(Math.random() * 9999999999999);
+          if(cb){
+            url += '&cb='+rand;
+          }
+          if(typeof parent.publisher_config.prod == 'undefined' || parent.publisher_config.prod){
+            var img = document.createElement('img');
+            img.src = url;
+            img.width = 1;
+            img.height=1;
+            img.style.border = 'none';
+            img.style.position = 'absolute';
+            img.style.bottom = '0';
+            img.style.zIndex = '-9999';
+            elem.appendChild(img);
+          }
+          else{
+            console.log(url);
+          }
+
+
+
+        }
+
+        var somploStartCount = new Date().getTime();
+        var userClicked = false;
+        var isBig = false;
+        var allowTrans = true;
+        var isBigMweb = false;
+        var stopAllAnimationsvar = false;
+        var somploFFirstClickH = false;
+          var animationStarted = false;
+          var SomploResizeEvent;
+          var SomploTimeoutReached;
+          var SomploStarMyAnimationFunction;
+          try{
+             SomploResizeEvent = new Event('SomploResizeEvent');
+          }
+          catch(e) {
+            SomploResizeEvent = document.createEvent('Event');
+            SomploResizeEvent.initEvent('SomploResizeEvent', true, true);
+          }
+
+          try{
+            SomploTimeoutReached = new Event('SomploTimeoutReached');
+          }
+          catch(e) {
+            SomploTimeoutReached = document.createEvent('Event');
+            SomploTimeoutReached.initEvent('SomploTimeoutReached', true, true);
+          }
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", function() {
+              window.dispatchEvent(SomploResizeEvent);
+            });
+          } else {
+            window.dispatchEvent(SomploResizeEvent);
+          }
+          var indexTemp = 0;
+          function reloadImage(elem){
+            if(indexTemp < 6){
+              var currentUrl = elem.src;
+              elem.src = currentUrl;
+              indexTemp++;
+            }
+          }
+          function displayImagesIos(elem){
+            console.log(this);
+            if(!!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)){
+
+              //var current = elem.style.display ? elem.style.display : 'block';
+              elem.style.display = 'none';
+              frameToRunTimeout.setTimeout(function(){
+                elem.style.display = 'block';
+              }, 200)
+            }
+
+          }
+          var allowClose = true;
+          
+        if (parent.publisher_config.prod || typeof parent.publisher_config.prod == "undefined") {
+          parent.creatPixel("https:%%pre_pixels_initialization%%&tech=2", true);
+        } else {
+          console.log("init");
+        }
+          
+        </script>
+
+
+
+
+<script>isMobilecheck = function() {
+  var check = false;
+  (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
+  return check;
+};</script>
+        
+    
+      <link rel="stylesheet" href="assets-605943999/swiper.min.css">
+
+      <script src="assets-605943999/swiper.min.js"></script>
+
+    
+        
+        <script>
+        var mobile_click="null"
+        var main_click_url = "javascript:void(0)";
+          if(mobile_click !== "" && mobile_click !== "null"){
+            if (isMobilecheck()) {
+               main_click_url = "javascript:void(0)";
+            }
+          }
+          else{
+             main_click_url = "javascript:void(0)";
+          }
+          </script>
+        <script>
+        var timeonpage = 5;
+        var pagesTime = false ? JSON.parse('[{"singlePageTime": 5, "singlePageAnimationSpeed": 1, "startAnimationOnTransitionStart":null }]') : JSON.parse('[{"singlePageTime":4,"singlePageAnimationSpeed":1,"startAnimationOnTransitionStart":null},{"singlePageTime":13,"singlePageAnimationSpeed":1,"startAnimationOnTransitionStart":null},{"singlePageTime":5,"singlePageAnimationSpeed":1,"startAnimationOnTransitionStart":null}]');
+        var applayToAll = false;
+        var amountLoops = null
+        var hasLoops = null
+          var clodeButtonTimeout;
+          var autoCloseTime;
+
+          if(null){
+            allowClose=false;
+          }
+
+
+        </script>
+        <script src='assets-605943999/jquery-3.4.1.js' type='text/javascript'></script>
+
+        
+
+    <style type="text/css">
+      
+    .somplo-main-swiper-wrapper .swiper-slide-shadow-left,
+    .somplo-main-swiper-wrapper .swiper-slide-shadow-right,
+    .somplo-main-swiper-wrapper .swiper-cube-shadow{
+      display:none !important
+    }
+    .somplo-main-swiper-slide{
+      height:100%;
+      position: relative;
+    }
+    .somplo-main-swiper-slide .swiper-slide{
+      height:100%;
+      overflow: hidden;
+    }
+    .somplo-main-swiper-slide.swiper-container-cube .swiper-slide-active.swiper-slide {
+      overflow: initial;
+    }
+    
+      .somplomain-page-slide:not(.swiper-slide-active) *{
+        pointer-events: none !important;
+      }
+    
+        #closeButton {
+          margin: 0px 0px -32px;
+          position: fixed;
+          left: 0px;
+          top: 11px;
+          width: 32px;
+          height: 32px;
+          z-index: 99996;
+          background-image: url(assets-605943999/numbers2.png);
+          background-position: 0px 672px;
+          display: none !important;
+      }
+      body{
+        background: #ffffff;
+        padding: 0 !important;
+        margin:0;
+      }
+      .somplomain-page-slide{
+        background: #ffffff;
+      }
+      .hiddenComponent{
+        display:none !important;
+      }
+      #somploIcon{
+        position: fixed;
+        z-index: 99999;
+        width: 20px;
+        max-width: 11%;
+        opacity:0.7;
+        cursor: pointer;
+      }
+      #somploIcon:hover{
+        opacity:1;
+      }
+      .bottom-left{
+        bottom: 2px;
+        left: 2px;
+      }
+      .bottom-right{
+        bottom: 2px;
+        right: 2px;
+      }
+      .top-right{
+        top: 2px;
+        right: 2px;
+      }
+      .top-left{
+        top: 2px;
+        left: 2px;
+      }
+      
+        
+        #imageCon10{
+          position: absolute;
+          pointer-events: none;
+          z-index:10;
+          width : 100%;
+          height : 100%;
+          left : 0%;
+    top : 0%;
+    transform : translate(0%, 0%);
+    
+          
+          display:block;
+          max-width: 100vw;
+          max-height: 100vh;
+        }
+        #imageCon10 img {
+          transform: translateZ(0.1px);
+        }
+        #imageCon10 img {
+          filter: drop-shadow(none);
+        }
+        
+        #imageCon10 img{
+          pointer-events: initial;
+        }
+        
+
+        
+        
+        #imgAniCon10{
+          width:100%;
+          height:100%;
+          cursor: pointer;
+          transform : rotateZ(0deg);
+      transform-origin : center;
+        }
+        #image-enter-exit-container10 {
+          width: 100%;
+          height: 100%;
+          overflow: unset;
+        }
+        
+
+        
+
+        
+        
+        
+        
+      
+        
+        #imageCon11{
+          position: absolute;
+          pointer-events: none;
+          z-index:11;
+          width : 100%;
+          height : 100%;
+          left : 50%;
+    top : 50%;
+    transform : translate(-50%, -50%);
+    
+          
+          display:block;
+          max-width: 100vw;
+          max-height: 100vh;
+        }
+        #imageCon11 img {
+          transform: translateZ(0.1px);
+        }
+        #imageCon11 img {
+          filter: drop-shadow(none);
+        }
+        
+        #imageCon11 img{
+          pointer-events: initial;
+        }
+        
+
+        
+        
+        #imgAniCon11{
+          width:100%;
+          height:100%;
+          cursor: pointer;
+          transform : rotateZ(0deg);
+      transform-origin : center;
+        }
+        #image-enter-exit-container11 {
+          width: 100%;
+          height: 100%;
+          overflow: unset;
+        }
+        
+
+        
+
+        
+      .imageConEnterAnimtion11{
+        animation-name:imageConEnterAnimtion11Name;
+        animation-delay: 0s;
+        animation-duration: 1s;
+        
+              transform: translate(0%, 0%);
+              opacity: 0;
+            
+
+      animation-fill-mode: forwards;         /* When the spec is finished */
+
+
+    }
+
+
+  @keyframes imageConEnterAnimtion11Name {
+    
+            0% {
+                    -webkit-transform: translate(0%, 0%) scale(2);
+                            transform: translate(0%, 0%) scale(2);
+                    -webkit-filter: blur(2px);
+                            filter: blur(2px);
+                    opacity: 0;
+                  }
+                  100% {
+                    -webkit-transform: translate(0%, 0%) scale(1);
+                            transform: translate(0%, 0%) scale(1);
+                    -webkit-filter: blur(0px);
+                            filter: blur(0px);
+                    opacity: 1;
+                  }
+            
+
+  }
+
+  
+        
+        
+        
+      
+    
+    .shapesPositionClass13{
+      left : 50%;
+    top : 24%;
+    transform : translate(-50%, -24%);
+    
+    }
+    #shapesChild13 {
+      width:100%;
+      height:100%;
+      transform : rotateZ(0deg);
+      transform-origin : center;
+      
+    }
+    #shapes-enter-exit-container13 {
+      width: 100%;
+      height: 100%;
+    }
+      
+      
+      
+
+    .shapeContainerEnterAnimtion13{
+      animation-name:shapeContainerEnterAnimtion13Name;
+      animation-delay: 1s;
+      animation-duration: 1s;
+      
+        opacity:0;
+        transform: translate(0%, 0%);
+        
+
+    animation-fill-mode: forwards;         /* When the spec is finished */
+
+
+  }
+
+@keyframes shapeContainerEnterAnimtion13Name {
+  
+        0% {
+          opacity:0;
+        }
+
+        100% {
+          opacity:1;
+        }
+        
+
+}
+    
+      
+
+      
+
+      
+
+      #shapes-component-wrapper-13 {
+        position: absolute;
+        z-index: 13;
+        display:block;
+      }
+
+    
+        #shapes-component-wrapper-13 {
+          width: 100%;
+          height: 100%;
+        }
+      
+        
+        #imageCon14{
+          position: absolute;
+          pointer-events: none;
+          z-index:14;
+          width : 43%;
+          height : 15.81404958677686%;
+          left : 50%;
+    top : 2%;
+    transform : translate(-50%, -2%);
+    
+          
+          display:block;
+          max-width: 100vw;
+          max-height: 100vh;
+        }
+        #imageCon14 img {
+          transform: translateZ(0.1px);
+        }
+        #imageCon14 img {
+          filter: drop-shadow(none);
+        }
+        
+        #imageCon14 img{
+          pointer-events: initial;
+        }
+        
+
+        
+        
+        #imgAniCon14{
+          width:100%;
+          height:100%;
+          cursor: pointer;
+          transform : rotateZ(0deg);
+      transform-origin : center;
+        }
+        #image-enter-exit-container14 {
+          width: 100%;
+          height: 100%;
+          overflow: unset;
+        }
+        
+
+        
+
+        
+        
+        
+        
+      
+        
+        #imageCon30{
+          position: absolute;
+          pointer-events: none;
+          z-index:30;
+          width : 100%;
+          height : 100%;
+          left : 0%;
+    top : 0%;
+    transform : translate(0%, 0%);
+    
+          
+          display:block;
+          max-width: 100vw;
+          max-height: 100vh;
+        }
+        #imageCon30 img {
+          transform: translateZ(0.1px);
+        }
+        #imageCon30 img {
+          filter: drop-shadow(none);
+        }
+        
+        #imageCon30 img{
+          pointer-events: initial;
+        }
+        
+
+        
+        
+        #imgAniCon30{
+          width:100%;
+          height:100%;
+          cursor: pointer;
+          transform : rotateZ(0deg);
+      transform-origin : center;
+        }
+        #image-enter-exit-container30 {
+          width: 100%;
+          height: 100%;
+          overflow: unset;
+        }
+        
+
+        
+
+        
+        
+        
+        
+      
+    .disable-pointer-events-32 {
+      pointer-events: none;
+    }
+      
+      .somplo-hand-32-container {
+        position: absolute;
+        display: none;
+        z-index: 32;
+        display:block;
+        
+          width: 20%;
+          height: auto;
+        
+        
+      filter:unset;
+      
+      }
+
+      .somplo-hand-32 {
+        
+          width: 100%;
+          height: auto;
+        
+      }
+
+      .somplo-hand-32-animation {
+        animation-name: somplo-hand-32-steps;
+        animation-duration: 1.6s;
+        animation-iteration-count: 3;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: both;
+      }
+
+      @keyframes somplo-hand-32-steps {
+        
+        0% {
+          transform: scaleX(1) scaleY(1) translateY(-80%) translateX(0%);
+          left: 0%;
+           top: 80%;
+        }
+      
+        50% {
+          transform: scaleX(1) scaleY(1) translateY(-80%) translateX(-100%);
+          left: 100%;
+           top: 80%;
+        }
+      
+        100% {
+          transform: scaleX(1) scaleY(1) translateY(-80%) translateX(0%);
+          left: 0%;
+           top: 80%;
+        }
+      
+      }
+
+      .somplo-hand-32-animation-rorate {
+        animation-name: somplo-hand-32-rotate;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+        animation-direction: alternate;
+
+        -webkit-transform-origin: 50% 50%;
+        -moz-transform-origin: 50% 50%;
+        -o-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+      }
+
+      @keyframes somplo-hand-32-rotate {
+        0% {
+          transform: rotate(50deg);
+        }
+        100% {
+          transform: rotate(-50deg);
+        }
+      }
+    
+        
+        #imageCon34{
+          position: absolute;
+          pointer-events: none;
+          z-index:34;
+          width : 43%;
+          height : 15.81404958677686%;
+          left : 50%;
+    top : 2%;
+    transform : translate(-50%, -2%);
+    
+          
+          display:block;
+          max-width: 100vw;
+          max-height: 100vh;
+        }
+        #imageCon34 img {
+          transform: translateZ(0.1px);
+        }
+        #imageCon34 img {
+          filter: drop-shadow(none);
+        }
+        
+        #imageCon34 img{
+          pointer-events: initial;
+        }
+        
+
+        
+        
+        #imgAniCon34{
+          width:100%;
+          height:100%;
+          cursor: pointer;
+          transform : rotateZ(0deg);
+      transform-origin : center;
+        }
+        #image-enter-exit-container34 {
+          width: 100%;
+          height: 100%;
+          overflow: unset;
+        }
+        
+
+        
+
+        
+        
+        
+        
+      
+      #catchFallingObjectContainer36 {
+        display:block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        top: 0%;
+        transform: translate(-50%, 0%);
+        z-index: 36;
+      }
+
+      
+
+      #catchFallingObjectContainer36 #canvas36{
+        z-index: 36;
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      #catchFallingObjectContainerinstractions36{
+        display:block;
+        position: absolute;
+        
+        z-index: 36;
+        width: 100%;
+        height: 100%;
+        top:0;
+        left:0;
+      }
+      .fullSize36{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      #catchFallingObjectContainerinstractions36 picture{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+      
+      @font-face {
+        font-family:"Robotoscore36";
+        src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Me5WZLCzYlKw.ttf);
+        font-weight:regular;
+      }
+      @font-face {
+        font-family:"Robotocounter36";
+        src:url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Me5Q.ttf);
+        font-weight:regular;
+      }
+    
+      
+      #catchFallingObjectContainer36 #counterStartGame36{
+        display: block;
+        position: absolute;
+        font-family:"Robotocounter36", sans-serif;
+        font-size: 12px;
+        font-weight:regular;
+        color: rgba(0,0,0,1);
+        letter-spacing: 0px;
+        z-index: 36;
+        pointer-events: none;
+        white-space: nowrap;
+        line-height: 1;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      
+    
+      
+      #catchFallingObjectContainer36 #scoreDisplay36{
+        display: none;
+        position: absolute;
+        font-family:"Robotoscore36", sans-serif;
+        font-size: 12px;
+        font-weight:regular;
+        color: rgba(0,0,0,1);
+        letter-spacing : 0px;
+        z-index : 36;
+        pointer-events: none;
+        white-space: nowrap;
+        line-height: 0.91;
+        top:5%;
+        left:5%;
+        transform: translate(-5%, -5%);
+
+      }
+      
+
+
+    
+      
+      @font-face {
+        font-family:"Robotoinstruction36";
+        src:url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Me5Q.ttf);
+        font-weight:regular;
+      }
+
+
+      #textInstruction36{
+        position: absolute;
+        display: block;
+        font-family:"Robotoinstruction36", sans-serif;
+        font-weight:regular;
+        font-size: 12px;
+        color: rgba(255,255,255,1);
+        background-color: rgba(0,0,0,1);
+        letter-spacing : 0;
+        text-align: center;
+        direction: ltr;
+        z-index : 36;
+        pointer-events: none;
+        white-space: nowrap;
+        line-height: 1;
+
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+
+      }
+      
+    
+
+      
+        
+        #imageCon60{
+          position: absolute;
+          pointer-events: none;
+          z-index:60;
+          width : 100%;
+          height : 100%;
+          left : 0%;
+    top : 0%;
+    transform : translate(0%, 0%);
+    
+          
+          display:block;
+          max-width: 100vw;
+          max-height: 100vh;
+        }
+        #imageCon60 img {
+          transform: translateZ(0.1px);
+        }
+        #imageCon60 img {
+          filter: drop-shadow(none);
+        }
+        
+        #imageCon60 img{
+          pointer-events: initial;
+        }
+        
+
+        
+        
+        #imgAniCon60{
+          width:100%;
+          height:100%;
+          cursor: pointer;
+          transform : rotateZ(0deg);
+      transform-origin : center;
+        }
+        #image-enter-exit-container60 {
+          width: 100%;
+          height: 100%;
+          overflow: unset;
+        }
+        
+
+        
+
+        
+        
+        
+        
+      
+        
+        #imageCon63{
+          position: absolute;
+          pointer-events: none;
+          z-index:80;
+          width : 100%;
+          height : 100%;
+          left : 50%;
+    top : 58%;
+    transform : translate(-50%, -58%);
+    
+          
+          display:block;
+          max-width: 100vw;
+          max-height: 100vh;
+        }
+        #imageCon63 img {
+          transform: translateZ(0.1px) scale(0.92);
+          transform-origin: center 28%;
+          filter:
+            drop-shadow(0 3px 2px rgba(0, 0, 0, 0.75))
+            drop-shadow(0 8px 14px rgba(0, 0, 0, 0.55));
+        }
+        
+        #imageCon63 img{
+          pointer-events: initial;
+        }
+        
+
+        
+        
+        #imgAniCon63{
+          width:100%;
+          height:100%;
+          cursor: pointer;
+          transform : rotateZ(0deg);
+      transform-origin : center;
+        }
+        #image-enter-exit-container63 {
+          width: 100%;
+          height: 100%;
+          overflow: unset;
+        }
+        
+
+        
+
+        
+      .imageConEnterAnimtion63{
+        animation-name:imageConEnterAnimtion63Name;
+        animation-delay: 0s;
+        animation-duration: 1s;
+        
+              transform: translate(0%, 0%);
+              opacity: 0;
+            
+
+      animation-fill-mode: forwards;         /* When the spec is finished */
+
+
+    }
+
+
+  @keyframes imageConEnterAnimtion63Name {
+    
+            0% {
+                    -webkit-transform: translate(0%, 0%) scale(2);
+                            transform: translate(0%, 0%) scale(2);
+                    -webkit-filter: blur(2px);
+                            filter: blur(2px);
+                    opacity: 0;
+                  }
+                  100% {
+                    -webkit-transform: translate(0%, 0%) scale(1);
+                            transform: translate(0%, 0%) scale(1);
+                    -webkit-filter: blur(0px);
+                            filter: blur(0px);
+                    opacity: 1;
+                  }
+            
+
+  }
+
+  
+        
+        
+        
+      
+        
+        #imageCon66{
+          position: absolute;
+          pointer-events: none;
+          z-index:66;
+          width : 100%;
+          height : 100%;
+          left : -9%;
+    top : 0%;
+    transform : translate(0%, 0%);
+    
+          
+          display:block;
+          max-width: 100vw;
+          max-height: 100vh;
+        }
+        #imageCon66 img {
+          transform: translateZ(0.1px);
+        }
+        #imageCon66 img {
+          filter: drop-shadow(none);
+        }
+        
+        #imageCon66 img{
+          pointer-events: initial;
+        }
+        
+
+        
+        
+        #imgAniCon66{
+          width:100%;
+          height:100%;
+          cursor: pointer;
+          transform : rotateZ(0deg);
+      transform-origin : center;
+        }
+        #image-enter-exit-container66 {
+          width: 100%;
+          height: 100%;
+          overflow: unset;
+        }
+        
+
+        
+
+        
+      .imageConEnterAnimtion66{
+        animation-name:imageConEnterAnimtion66Name;
+        animation-delay: 0s;
+        animation-duration: 1s;
+        
+              transform: translate(0%, 0%);
+              opacity: 0;
+            
+
+      animation-fill-mode: forwards;         /* When the spec is finished */
+
+
+    }
+
+
+  @keyframes imageConEnterAnimtion66Name {
+    
+            0% {
+                    -webkit-transform: translate(0%, 0%) scale(2);
+                            transform: translate(0%, 0%) scale(2);
+                    -webkit-filter: blur(2px);
+                            filter: blur(2px);
+                    opacity: 0;
+                  }
+                  100% {
+                    -webkit-transform: translate(0%, 0%) scale(1);
+                            transform: translate(0%, 0%) scale(1);
+                    -webkit-filter: blur(0px);
+                            filter: blur(0px);
+                    opacity: 1;
+                  }
+            
+
+  }
+
+  
+        
+        
+        
+      
+      
+      .buttonPositionClass69{
+        left : 50%;
+    top : 91%;
+    transform : translate(-50%, -91%);
+    
+      }
+      
+
+      #buttonChild69 {
+        width:100%;
+        height:100%;
+        transform : rotateZ(0deg);
+      transform-origin : center;
+      }
+      #button-enter-exit-container69 {
+        width: 100%;
+        height: 100%;
+      }
+      
+      
+      
+  .buttonContainerEnterAnimtion69{
+    animation-name:buttonContainerEnterAnimtion69Name;
+    animation-delay: 0.8s;
+    animation-duration: 1s;
+    
+            opacity:0;
+            transform: translate(0%, calc(0% + 50px));
+            
+
+    animation-fill-mode: forwards;         /* When the spec is finished */
+
+
+  }
+  
+
+  @keyframes buttonContainerEnterAnimtion69Name {
+    
+            0% {
+                    -webkit-transform: translate(0%, calc(0% + 50px));
+                            transform: translate(0%, calc(0% + 50px));
+                    opacity: 0;
+                  }
+                  100% {
+                    -webkit-transform: translate(0%, 0%);
+                            transform: translate(0%, 0%);
+                    opacity: 1;
+                  }
+            
+
+  }
+  
+      
+      
+        @font-face {
+          font-family:"Roboto Slab";
+          src: url(https://fonts.gstatic.com/s/robotoslab/v25/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISWaG5iddG-1A.ttf);
+          font-weight: regular;
+        }
+
+
+        #buttonContainer69 {
+          position: absolute;
+          display:block;
+          z-index: 69;
+          
+        }
+
+        #buttonElement69 {
+          cursor: pointer;
+        }
+
+        #buttonContainer69 button {
+          background: rgba(231,0,2,1);
+          font-size: 13px;
+          direction:ltr;
+          padding: 9px 32px;
+          border-radius: 4px;
+          border: 0px rgba(255,255,255,1) solid;
+          color: rgba(255,255,255,1);
+          font-family:"Roboto Slab", serif;
+          font-weight:regular;
+          transform: rotate(0deg);
+          position: relative;
+          overflow: hidden;
+          white-space: nowrap;
+          line-height: 1;
+        }
+        
+      .animated-button69{
+        overflow: hidden;
+      }
+
+      .animated-button69:after {
+        animation: shine;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: 10;
+        animation-fill-mode: forwards;
+        content: "";
+        position: absolute;
+        top: -110%;
+        left: -210%;
+        width: 200%;
+        height: 200%;
+        opacity: 1;
+        /*transform: rotate(30deg);*/
+
+        background: rgba(255, 255, 255, 0.13);
+        background: linear-gradient( to right, rgba(255, 255, 255, 0.0) 0%, rgba(255, 255, 255, 0.0) 77%, rgba(255, 255, 255, 0.8) 92%, rgba(255, 255, 255, 0.0) 100% );
+      }
+
+      /* Hover state - trigger effect */
+
+      /* Active state */
+
+      .animated-button69:active:after {
+        opacity: 1;
+      }
+
+      @keyframes shine {
+        0% {
+          top: -100%;
+          left: -210%;
+        }
+
+        50% {
+          top: -30%;
+          left: -30%;
+        }
+
+        100% {
+          top: -30%;
+          left: -30%;
+        }
+      }
+    
+      
+        
+        #imageCon72{
+          position: absolute;
+          pointer-events: none;
+          z-index:72;
+          width : 43%;
+          height : 15.81404958677686%;
+          left : 50%;
+    top : 2%;
+    transform : translate(-50%, -2%);
+    
+          
+          display:block;
+          max-width: 100vw;
+          max-height: 100vh;
+        }
+        #imageCon72 img {
+          transform: translateZ(0.1px);
+        }
+        #imageCon72 img {
+          filter: drop-shadow(none);
+        }
+        
+        #imageCon72 img{
+          pointer-events: initial;
+        }
+        
+
+        
+        
+        #imgAniCon72{
+          width:100%;
+          height:100%;
+          cursor: pointer;
+          transform : rotateZ(0deg);
+      transform-origin : center;
+        }
+        #image-enter-exit-container72 {
+          width: 100%;
+          height: 100%;
+          overflow: unset;
+        }
+        
+
+        
+
+        
+        
+        
+        
+      
+    </style>
+    
+
+<script>
+function checkIosVersion(){
+  var agent = window.navigator.userAgent,
+  start = agent.indexOf( 'OS ' );
+  if( ( agent.indexOf( 'iPhone' ) > -1 || agent.indexOf( 'iPad' ) > -1 ) && start > -1 ){
+      return window.Number( agent.substr( start + 3, 4 ).replace( '_', '.' ) );
+  }
+  return 0;
+}
+try{}catch(e){}
+function getAllUrlParams(url) {
+
+  // get query string from url (optional) or window
+  var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
+
+  // we'll store the parameters here
+  var obj = {};
+
+  // if query string exists
+  if (queryString) {
+
+    // stuff after # is not part of query string, so get rid of it
+    queryString = queryString.split('#')[0];
+
+    // split our query string into its component parts
+    var arr = queryString.split('&');
+
+    for (var i = 0; i < arr.length; i++) {
+      // separate the keys and the values
+      var a = arr[i].split('=');
+
+      // set parameter name and value (use 'true' if empty)
+      var paramName = a[0];
+      var paramValue = typeof (a[1]) === 'undefined' ? true : a[1];
+
+      // (optional) keep case consistent
+      paramName = paramName.toLowerCase();
+      if (typeof paramValue === 'string') paramValue = paramValue.toLowerCase();
+
+      // if the paramName ends with square brackets, e.g. colors[] or colors[2]
+      if (paramName.match(/[(d+)?]$/)) {
+
+        // create key if it doesn't exist
+        var key = paramName.replace(/[(d+)?]/, '');
+        if (!obj[key]) obj[key] = [];
+
+        // if it's an indexed array e.g. colors[2]
+        if (paramName.match(/[d+]$/)) {
+          // get the index value and add the entry at the appropriate position
+          var index = /[(d+)]/.exec(paramName)[1];
+          obj[key][index] = paramValue;
+        } else {
+          // otherwise add the value to the end of the array
+          obj[key].push(paramValue);
+        }
+      } else {
+        // we're dealing with a string
+        if (!obj[paramName]) {
+          // if it doesn't exist, create property
+          obj[paramName] = paramValue;
+        } else if (obj[paramName] && typeof obj[paramName] === 'string'){
+          // if property does exist and it's a string, convert it to an array
+          obj[paramName] = [obj[paramName]];
+          obj[paramName].push(paramValue);
+        } else {
+          // otherwise add the property
+          obj[paramName].push(paramValue);
+        }
+      }
+    }
+  }
+
+  return obj;
+}
+
+
+function getMaxUrlEscapes(url) {
+  try{
+      let maxEscapes = 0;
+  let max_while = 0;
+const _url = new URL(url);
+const params = getAllUrlParams(url);
+  for (let index = 0; index < Object.keys(params).length; index++) {
+   if(params[Object.keys(params)[index]].includes('http')){
+      let urlParam =params[Object.keys(params)[index]];
+       let counter = 0;
+       while(urlParam !== decodeURIComponent(urlParam) && max_while < 100){
+           urlParam = decodeURIComponent(urlParam);
+           counter++
+       max_while++;
+       }
+       try{
+          if(counter > maxEscapes && urlParam.indexOf('=', urlParam.length - 1)){
+           maxEscapes = counter;
+       } 
+       }
+       catch(e){
+           if(counter > maxEscapes){
+           maxEscapes = counter;
+       }
+       }
+       
+   }   
+  }
+return maxEscapes + 1; 
+  }
+  catch(e){
+      return 1;
+  }
+
+}
+</script>
+      
+<style id="mediapal-somplo-lock">
+
+#x-to-close, #minimize, .close-button, .somplo-close, [class*="close-btn"],
+[id*="close"], .ads_close_banner, .consent-cointainer { display:none !important; visibility:hidden !important; }
+
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 300px !important;
+  height: 600px !important;
+  max-width: 300px !important;
+  max-height: 600px !important;
+  overflow: hidden !important;
+  background: #000;
+}
+#container, .somplomain-page-slide, .somplo-main-swiper-slide {
+  width: 300px !important;
+  height: 600px !important;
+  max-width: 300px !important;
+  max-height: 600px !important;
+}
+.somplomain-page-slide {
+  max-width: 300px !important;
+  max-height: 600px !important;
+}
+</style>
+<script id="mediapal-somplo-guard">
+(function () {
+  var cfg = {
+    close: function () {},
+    init: function () {},
+    platform: "desktop",
+    clickMacro: "",
+    imp: "",
+    width: 300,
+    height: 600,
+    close_Button: false,
+    close_button: false,
+    prod: false,
+    window: window,
+    element: null
+  };
+  try {
+    if (!parent.publisher_config) {
+      parent.publisher_config = cfg;
+    } else {
+      parent.publisher_config.width = 300;
+      parent.publisher_config.height = 600;
+      parent.publisher_config.prod = false;
+      parent.publisher_config.close_Button = false;
+      parent.publisher_config.close_button = false;
+    }
+    if (typeof parent.creatPixel !== "function") parent.creatPixel = function () {};
+    if (typeof parent.Visible !== "function") parent.Visible = function () { return true; };
+    if (typeof parent.initAd !== "function") parent.initAd = function () {};
+    if (typeof parent.somploClick !== "function") {
+      parent.somploClick = function (url) {
+        var u = url || "javascript:void(0)";
+        try { parent.open(u, "_blank"); } catch (err) { location.href = u; }
+      };
+    }
+    if (typeof parent.impF === "undefined") parent.impF = false;
+    if (typeof parent.isApp === "undefined") parent.isApp = false;
+  } catch (e) {
+    window.publisher_config = cfg;
+  }
+})();
+</script>
+</head>
+      <body class="">
+      <iframe id="timeouts" src='about:blank' style="width:1px;height:1px;border:none;position:absolute;pointer-events: none;top:0;left:0;"></iframe>
+      <script>
+      var frameToRunTimeout = document.getElementById('timeouts').contentWindow;
+      </script>
+        <div id="container" style="overflow:hidden;" >
+          
+        <div id="closeButton" onclick="parent.publisher_config.close();"></div>
+        
+        <script>
+        if(checkIosVersion() >= 16.2){
+          frameToRunTimeout.setTimeout(function(){
+            document.body.style.perspective = '1px';
+            frameToRunTimeout.setTimeout(function(){
+              document.body.style.perspective = 'unset';
+            }, 500)
+            if(true){
+              somploMainSwiper.isSafari = false;
+            }
+          }, 500)
+          }
+        </script>
+        
+        <script>
+
+         clodeButtonTimeout = frameToRunTimeout.setTimeout(function(){
+           if ((parent.publisher_config.close_Button || parent.publisher_config.close_button) && (parent.publisher_config.platform === "mweb" || (false && !parent.isApp)) || parent.isApp) {
+            parent.releaseClose();
+          }
+         }, 500)
+
+         
+         
+         
+          </script>
+        
+
+
+    
+      <div class="somplo-main-swiper-slide swiper-no-swiping">
+        <div class="swiper-wrapper somplo-main-swiper-wrapper">
+    <div class="swiper-slide somplomain-page-slide">
+      <div id="imageCon10" class="  ">
+      <div id="image-enter-exit-container10">
+      <div id="imgAniCon10" class="continer-for-animation10">
+          
+    <picture>
+        
+        <img
+        onerror="reloadImage(this)"
+        id="image10"
+
+        src="assets-605943999/1_bg1_1687249898.jpeg"
+        width="100%" height="100%">
+    </picture>
+        </div>
+      </div>
+    </div>
+    <script>
+    document.querySelector("#imageCon10 img").onclick = function(event){
+
+      
+
+      if(false){
+        null
+        somploSlideTo();
+      }
+      else if(false){
+        ;
+      }
+      else{
+
+        
+        mainClick("null",null,event)
+      }
+
+
+    }
+
+          function imageInitLoacation10(){
+
+          }
+
+    </script>
+      
+      <div id="imageCon11" class=" hiddenComponent ">
+      <div id="image-enter-exit-container11">
+      <div id="imgAniCon11" class="continer-for-animation11">
+          
+    <picture>
+        
+        <img
+        onerror="reloadImage(this)"
+        id="image11"
+
+        src="assets-605943999/1_text1_1686823001.png"
+        width="100%" height="100%">
+    </picture>
+        </div>
+      </div>
+    </div>
+    <script>
+    document.querySelector("#imageCon11 img").onclick = function(event){
+
+      
+
+      if(false){
+        null
+        somploSlideTo();
+      }
+      else if(false){
+        ;
+      }
+      else{
+
+        
+        mainClick("null",null,event)
+      }
+
+
+    }
+
+          function imageInitLoacation11(){
+
+          }
+
+    </script>
+      
+        
+
+    <div id="counter12" class="  counterPositionClass12 hiddenComponent counterEnterAnimtion12" onclick="mainClick(null, null);">
+
+      <div class="counter12-wrap">
+        <span class="prefix"></span>
+        <span class="number">4</span>
+        <span class="suffix"></span>
+      </div>
+    </div>
+    
+        <style>
+        
+        
+        @font-face {
+          font-family:"Roboto12";
+          src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9vAx05IsDqlA.ttf);
+          font-weight:500;
+        }
+        .counterPositionClass12{
+          top:25%;
+          left:50%;
+          transform: translate(-50%, -25%);
+        }
+        
+        #counter12 {
+          position: absolute;
+          font-family:"Roboto12", sans-serif;
+          font-size: 80px;
+          color: rgba(230,0,4,1);
+          letter-spacing : 0px;
+          z-index : 12;
+          display:block;
+        }
+
+        .counter12-wrap {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        #counter12.full-width .counter12-wrap {
+          width: 100%;
+          display: block;
+          text-align: center;
+        }
+    
+        
+        
+      .counterEnterAnimtion12{
+        animation-name:counterEnterAnimtion12Name;
+        animation-delay: 1s;
+        animation-duration: 1s;
+        
+        opacity:0;
+        transform: translate(-50%, -25%);
+        
+
+        animation-fill-mode: forwards;         /* When the spec is finished */
+
+
+      }
+      
+
+      @keyframes counterEnterAnimtion12Name {
+        
+        0% {
+          opacity:0;
+        }
+
+        100% {
+          opacity:1;
+        }
+        
+
+      }
+      
+        </style>
+        <script>
+        
+    window.addEventListener("SomploResizeEvent", function(){
+      setCounterPosition12 ();
+    });
+    function setCounterPosition12 () {
+      var counter12 = document.querySelector('#counter12');
+      var counterWidth = counter12.offsetWidth - 0;
+      var counterHeight = counter12.offsetHeight;
+      var emptyHorizontalSpace = window.innerWidth - counterWidth;
+      var emptyVerticalSpace = window.innerHeight - counterHeight;
+      var horizontal = 50
+      var vertical = 25;
+      if (false) {
+        var isBigMweb = window.innerWidth / window.innerHeight < 640/1080;
+        var isBig = window.innerWidth / window.innerHeight < 640/1210;
+        if(false){
+          if(false || false){
+            horizontal = 50;
+            vertical =  50
+          }
+        }
+      }
+      {
+        var left = emptyHorizontalSpace * horizontal * 0.01;
+        var top = emptyVerticalSpace * vertical * 0.01;
+      }
+    }
+      function counterInit12 () {
+        var counter12 = document.querySelector('#counter12');
+        var counter12AnimationStop = false;
+        var easing = function (k) {
+            return k;
+        };
+
+        setCounterPosition12 ();
+
+
+        if (counter12) {
+          window.addEventListener("SomploResizeEvent", function(){
+            if (!true) {
+              var width = window.innerWidth * 0.01 * 100;
+              counter12.style.width = width + 'px';
+              counter12.classList.add('full-width');
+            }
+          });
+          var startNumber = 4;
+          var endNumber = 1;
+          var numberDiff = endNumber - startNumber;
+          var startTime = Date.now();
+          var duration = 4000;
+          var endTime = Date.now() + duration;
+          var numberBox = counter12.querySelector('.number');
+
+          function animation () {
+
+            setCounterPosition12 ();
+              var currentTime = Date.now();
+              if (currentTime < endTime) {
+                var timeDiff = endTime - currentTime;
+                var progress = timeDiff /  duration;
+                var currentNumber = endNumber -  Math.round(easing(progress) * numberDiff);
+                numberBox.innerText = currentNumber;
+                if (!counter12AnimationStop) {
+                  requestAnimationFrame(animation);
+                }
+              }  else {
+                var progress = 0;
+                var currentNumber = endNumber -  Math.round(easing(progress) * numberDiff);
+                numberBox.innerText = currentNumber;
+                if(false){
+                  if (!counter12AnimationStop) {
+                    somploMainSwiper.slideTo();
+                  }
+                }
+                else if(false){
+                  
+                }
+              }
+          }
+          window.addEventListener('SomploTimeoutReached',function(){
+      
+           counter12AnimationStop = true;
+          
+    });
+          if (!counter12AnimationStop) {
+            requestAnimationFrame(animation);
+          }
+        }
+      }
+
+    ;
+        </script>
+
+    
+      <div id="shapes-component-wrapper-13" onclick="clickEvent13()"
+          class=" shapesPositionClass13 hiddenComponent">
+        <div id="shapes-enter-exit-container13">
+          <div id="shapesChild13">
+          <svg viewBox="0 0 200 200" width="100%" height="100%" preserveAspectRatio="xMidYMid" class="shapes-component-13">
+
+            
+          
+          
+          <circle cx="100" cy="100" r="97"
+            fill="rgba(255,20,20,0)" stroke="rgba(0,0,0,1)" stroke-width="6"/>
+        
+
+          </svg>
+        </div>
+        </div>
+      </div>
+
+      <script>
+        
+      function shapeResizeFunction13() {
+        var shapeContainer = $("#shapes-component-wrapper-13");
+        var width = document.body.offsetWidth * 0.4;
+        var height = document.body.offsetHeight * 0.4;
+        if (width > height) {
+          width = height;
+        } else {
+          height = width;
+        }
+
+        shapeContainer.width(width);
+        shapeContainer.height(height);
+       // shapeContainer.css("left", 0.5 * (document.body.offsetWidth - width));
+       // shapeContainer.css("top", 0.24 * (document.body.offsetHeight - height));
+      }
+
+      window.addEventListener("SomploResizeEvent", shapeResizeFunction13);
+    
+
+        function clickEvent13 () {
+          if(false){
+            somploSlideTo(null);
+          }
+
+         else if(false){
+            
+          }
+
+          else if (false) {
+            mainClick(null, null);
+          }
+          else{
+            mainClick(null, null);
+          }
+
+        }
+      </script>
+    
+      <div id="imageCon14" class="  ">
+      <div id="image-enter-exit-container14">
+      <div id="imgAniCon14" class="continer-for-animation14">
+          
+    <picture>
+        
+        <img
+        onerror="reloadImage(this)"
+        id="image14"
+
+        src="assets-605943999/1_logo_1687248859.png"
+        width="100%" height="100%">
+    </picture>
+        </div>
+      </div>
+    </div>
+    <script>
+    document.querySelector("#imageCon14 img").onclick = function(event){
+
+      
+
+      if(false){
+        null
+        somploSlideTo();
+      }
+      else if(false){
+        ;
+      }
+      else{
+
+        
+        mainClick("null",null,event)
+      }
+
+
+    }
+
+          function imageInitLoacation14(){
+
+          }
+
+    </script>
+      </div><div class="swiper-slide somplomain-page-slide">
+      <div id="imageCon30" class="  ">
+      <div id="image-enter-exit-container30">
+      <div id="imgAniCon30" class="continer-for-animation30">
+          
+    <picture>
+        
+        <img
+        onerror="reloadImage(this)"
+        id="image30"
+
+        src="assets-605943999/1_bg2_1687248812.jpeg"
+        width="100%" height="100%">
+    </picture>
+        </div>
+      </div>
+    </div>
+    <script>
+    document.querySelector("#imageCon30 img").onclick = function(event){
+
+      
+
+      if(false){
+        null
+        somploSlideTo();
+      }
+      else if(false){
+        ;
+      }
+      else{
+
+        
+        mainClick("null",null,event)
+      }
+
+
+    }
+
+          function imageInitLoacation30(){
+
+          }
+
+    </script>
+      
+      <div id="hand32Container" style="display:none;" class="somplo-hand-32-container disable-pointer-events-32">
+        <img alt="" onerror="reloadImage(this)" class="somplo-hand-32" src="assets-605943999/1_gesture_1686823982.png">
+      </div>
+
+      <script>
+        var hand32Timeout;
+        var somploHand32Element = document.querySelector(".somplo-hand-32-container");
+
+        somploHand32Element.addEventListener("animationend", function() {
+          hand32Timeout = frameToRunTimeout.setTimeout(function() {
+            
+            somploHand32Element.style.display = "none";
+          }, 0);
+        }, true);
+
+        window.addEventListener("click", function(){
+          if (true) {
+            frameToRunTimeout.clearTimeout(hand32Timeout);
+            somploHand32Element.style.display = "none";
+          }
+        });
+
+      </script>
+    
+      <div id="imageCon34" class="  ">
+      <div id="image-enter-exit-container34">
+      <div id="imgAniCon34" class="continer-for-animation34">
+          
+    <picture>
+        
+        <img
+        onerror="reloadImage(this)"
+        id="image34"
+
+        src="assets-605943999/1_logo_1687248859.png"
+        width="100%" height="100%">
+    </picture>
+        </div>
+      </div>
+    </div>
+    <script>
+    document.querySelector("#imageCon34 img").onclick = function(event){
+
+      
+
+      if(false){
+        null
+        somploSlideTo();
+      }
+      else if(false){
+        ;
+      }
+      else{
+
+        
+        mainClick("null",null,event)
+      }
+
+
+    }
+
+          function imageInitLoacation34(){
+
+          }
+
+    </script>
+      
+
+
+        <div id="catchFallingObjectContainer36" class="">
+          <canvas id="canvas36" > </canvas>
+          <div id="scoreDisplay36">
+            Score  <span id="scoreValue36"> 0 </span>
+          </div>
+
+
+          
+          <div id="counterStartGame36"> </div>
+        </div>
+
+
+        <script>
+
+          var gameCatchFallCon36 = document.querySelector('#catchFallingObjectContainer36')
+
+          var counterStartGame36 = gameCatchFallCon36.querySelector('#counterStartGame36')
+          var scoreGame36 =  gameCatchFallCon36.querySelector('#scoreDisplay36')
+          scoreGame36.style.display = 'none';
+          gameCatchFallCon36.addEventListener('click', function () {
+            mainClick("",null );
+          });
+          var game36;
+          var playAnimation36 = true; //!false;
+            
+
+      function isExitGame36(game){
+
+        
+      if(game.score >= 20){
+        playAnimation36 = false;somploSlideTo(2)
+      }
+    ;
+        
+      }
+    
+            
+
+  var createResizerObject36 = function(canvas) {
+
+    var setXY = function(obj){
+      obj.x = (canvas.width - obj.width) * obj.percentX / 100 ;
+      if(obj.percentStep){
+        obj.y = (canvas.height - 0) * obj.percentY / 100 ;
+      }else{
+        obj.y = (canvas.height - obj.height) * obj.percentY / 100 ;
+      }
+
+
+    };
+    var resize = function(obj){
+
+      var propWidth  = canvas.width / obj.image.width;
+      var propHeight = canvas.height / obj.image.height;
+      if( (propHeight) > (propWidth) ){
+        obj.width = Math.round(canvas.width * obj.size / 100);
+
+        var height100 = obj.image.height * propWidth;
+
+        obj.height = Math.round(height100 * obj.size / 100);
+      }else{
+        obj.height = Math.round(canvas.height * obj.size / 100);
+        var width100 = obj.image.width * propHeight;
+
+        obj.width = Math.round(width100 * obj.size / 100);
+      }
+
+      setXY(obj);
+
+    };
+    return {
+      setXY : setXY,
+      resize: resize
+    }
+  }
+
+  var imageLoader36 = {
+    imageStack:[],
+    imageCache: [],
+    loading: true,
+
+    initGameObject: function(){
+      var fallingObjectTypes = [{"src":"assets-605943999/1_Frame23_1686831477.png","minSpeed":46,"maxSpeed":58,"size":22,"score":1,"count":1},{"src":"assets-605943999/1_Frame25_1686831495.png","minSpeed":25,"maxSpeed":39,"size":16,"score":1,"count":1},{"src":"assets-605943999/Frame26_1688370716.png","minSpeed":14,"maxSpeed":25,"size":22,"score":1,"count":1}];
+      var imageLoader = this;
+      function createFallingListOfType(fallings, fall){
+        var imageFalling = imageLoader.getImage(fall.src);
+        for(var orderFalling = 0; orderFalling < fall.count; orderFalling++){
+          var falling = {
+            image: imageFalling,
+            score: fall.score,
+            size: fall.size,
+            percentStep: fall.minSpeed + (fall.maxSpeed - fall.minSpeed) * Math.random(),
+            order: orderFalling / fall.count,
+            percentX: Math.random() * 100,
+            percentY: -(orderFalling / fall.count) * 100
+          };
+          fallings.push(falling);
+        }
+        return fallings
+      }
+      var fallings = fallingObjectTypes.reduce(createFallingListOfType, []);
+
+      var statesCatcher = [{"typeEvent":"score","limitEvent":3,"image":{"src":"assets-605943999/1_platemedium_1686822578.png","height":111,"width":376,"weight":13826}},{"typeEvent":"score","limitEvent":7,"image":{"src":"assets-605943999/1_platefull_1686822566.png","height":111,"width":376,"weight":20104}}];
+
+      var catcher ={
+        status: -1,
+        size: 41,
+        percentX :50,
+        percentY : 89,
+        image:imageLoader.getImage('assets-605943999/1_plateempty_1686822553.png'),
+        states: statesCatcher,
+        statusImages:statesCatcher
+          .filter(function(state){
+            return state.image && state.image.src
+          })
+          .map(function(state){
+            return imageLoader.getImage(state.image.src);
+          })
+      }
+      this.getCatcher = function() { return catcher}
+      this.getFallings = function() {return fallings}
+    },
+    checkLoaded: function(){
+      if (this.imageCache.every(function(item){return item !== null})) {
+        this.loading = false;
+        this.initGameObject();
+      }
+    },
+
+    registerOnload: function(callback){
+      this.loadingCallback = callback;
+    },
+    getImage : function(src){
+      var findex = this.imageStack.indexOf(src);
+      if(findex === -1) return null;
+      return this.imageCache[findex];
+    },
+    loadImage: function(src) {
+
+      if(this.imageStack.indexOf(src) > -1) return;
+
+      this.imageStack.push(src);
+      this.imageCache.push(null);
+
+      var image = new Image();
+      image.src = src;
+      var checkLoaded = this.checkLoaded.bind(this);
+      var stack = this.imageStack;
+      var cache = this.imageCache;
+
+      image.onload = function()  {
+
+          var findex = stack.indexOf(src);
+          if(findex === -1) return;
+          cache[findex] = image;
+          checkLoaded();
+      };
+
+    }
+  }
+
+    function createGame36(canvas){
+      var resizer = createResizerObject36(canvas);
+      var ctx = canvas.getContext("2d");
+      ctx.imageSmoothingEnabled = false;
+
+      var catcher = imageLoader36.getCatcher();
+      var fallings = imageLoader36.getFallings();
+
+      var improveRender = 4;
+      var game = {
+        setVerticalCatcher:function(vertical){
+          catcher.percentY = vertical;
+        },
+        updateImageCatcher: function(time, score){
+          var i = catcher.states.length;
+          var image = null;
+          while(i--){
+            var eventCatch = catcher.states[i];
+
+            var flagTime = eventCatch.typeEvent === 'time' && eventCatch.limitEvent <= time;
+            var flagScore = eventCatch.typeEvent === 'score' && eventCatch.limitEvent <= score;
+            if(flagTime || flagScore ){
+              catcher.states.splice(i, 1);
+              image = catcher.statusImages[i];
+              catcher.statusImages.splice(i, 1);
+            }
+          }
+          if(image){
+            catcher.image = image;
+            resizer.resize(catcher);
+          }
+        },
+        setHorizontalCatcher: function(horizontal){
+          if((canvas.width - catcher.width) < 1) return;
+          var x = horizontal - catcher.width / 2
+          if (x + catcher.width > canvas.width) {
+            x = canvas.width -  catcher.width;
+          }
+          if (x < 0) {
+            x = 0;
+          }
+          catcher.percentX = x * 100 / (canvas.width - catcher.width);
+          resizer.setXY(catcher);
+        },
+        canKeepCatcher : function(fallObject){
+          var rightCatch = catcher.x + catcher.width;
+          var rightFruit = fallObject.x + fallObject.width;
+          var bottomFruit =  fallObject.y + fallObject.height;
+          var between = rightFruit - catcher.x;
+          //Math.min(this.status.length - 1, this.status + 1);
+          return bottomFruit > catcher.y && (bottomFruit < catcher.y + catcher.height) && !(between < 0 || between > (catcher.width + fallObject.width))
+        },
+        resetFallingObject:function(obj){
+          obj.percentY = -obj.height * 100 / (canvas.height - obj.height);
+          obj.percentX = Math.random() * 100;
+          resizer.setXY(obj);
+        },
+
+        drawObject : function(object){
+          ctx.drawImage(object.image, object.x, object.y, object.width, object.height);
+        },
+
+        addFallingItem: function(fallObject) {
+          this.fallings.push(new Falling(fallObject, canvas))
+        },
+        updateScore : function(score){
+          this.score += score;
+          if(false){
+            scoreGame36.style.display = 'block';
+            document.getElementById("scoreValue" + 36).textContent = this.score;
+          }
+        },
+        score: null,
+
+
+        nextStepFallingObject: function(obj, timeOneStep){
+          obj.percentY += obj.percentStep * timeOneStep;
+        },
+        drawFallings: function(timeOneStep){
+          for (let index = 0; index < fallings.length; index++) {
+            var fallingObject = fallings[index];
+
+            if(this.canKeepCatcher(fallingObject)){
+              this.resetFallingObject(fallingObject);
+              this.updateScore(fallingObject.score);
+            }
+            if(fallingObject.y > canvas.height){
+
+              this.resetFallingObject(fallingObject);
+            }
+            this.nextStepFallingObject(fallingObject, timeOneStep)
+            resizer.setXY(fallingObject)
+            this.drawObject(fallingObject)
+          }
+        },
+        drawCatch: function(){
+          this.updateImageCatcher(this.time, this.score);
+          this.drawObject(catcher);
+        },
+        clearRect: function(){
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+        },
+
+        isValidForDraw: function(){
+
+          var isAllValueMoreZero = [catcher.width, catcher.height].every(
+            function(testNumber){
+
+              return  testNumber > 0;
+            }
+          )
+          //catchObject.image &&
+          return isAllValueMoreZero;
+        },
+        resize: function(){
+          canvas.setAttribute("width",  canvas.offsetWidth * improveRender);
+          canvas.setAttribute("height", canvas.offsetHeight * improveRender);
+
+          [catcher].concat(fallings).forEach( function (obj)  {
+            resizer.resize(obj);
+          });
+        }
+      }
+
+      function connectListenersGame(){
+        var playEvent = false;
+        emitPlayEvent = function () {
+          if(!playEvent){
+            if (parent.publisher_config.prod || typeof parent.publisher_config.prod == "undefined") {
+              parent.creatPixel("https:%%pre_pixels_play%%", true);
+            }else{
+              console.log("Pixel Play");
+            }
+            clearTimeout(autoCloseTime);
+            allowClose = false;
+            playEvent = true;
+          }
+        }
+        var onMove = function(event){
+          emitPlayEvent();
+          openResizeFlag36 = false;
+          var improveRender = 4;
+          var el = canvas.getBoundingClientRect();
+          var x = (event.clientX - el.left) * improveRender;
+          game.setHorizontalCatcher(x);
+        };
+        var onUp = function(){
+          frameToRunTimeout.setTimeout(function(){
+            openResizeFlag36 = true;
+            resizeFunc36();
+          }, 200)
+        }
+
+
+        canvas.addEventListener("mousemove",  onMove);
+        canvas.addEventListener("touchmove", function(event){
+          onMove(event.targetTouches[0]);
+        });
+
+        canvas.addEventListener("mouseup",  onUp);
+        canvas.addEventListener("touchend", function(event){
+          onUp();
+        });
+
+      }
+      connectListenersGame();
+      return game;
+    }
+    var images = [{"src":"assets-605943999/1_plateempty_1686822553.png","height":111,"width":376,"weight":12321},{"src":"assets-605943999/1_Frame23_1686831477.png","height":179,"width":141,"weight":10462,"duration":null},{"src":"assets-605943999/1_Frame25_1686831495.png","height":187,"width":169,"weight":10344},{"src":"assets-605943999/Frame26_1688370716.png","height":158,"width":103,"weight":30053},{"src":"assets-605943999/1_platemedium_1686822578.png","height":111,"width":376,"weight":13826},{"src":"assets-605943999/1_platefull_1686822566.png","height":111,"width":376,"weight":20104}];
+
+    images.forEach(function(image) {
+      imageLoader36.loadImage(image.src)
+    })
+
+    
+            
+    function resizeFunc36(){
+      if(game36){
+
+        if(document.body.classList.contains('newBigClass') && false ){
+          game36.setVerticalCatcher(90);
+        }
+        if(game36.resize) {
+          game36.resize();
+        }
+      }
+
+    }
+
+    
+
+            resizeFunc36();
+            var openResizeFlag36 = true;
+
+            window.addEventListener("SomploResizeEvent", function(){
+
+              if(openResizeFlag36){
+                resizeFunc36();
+              }
+
+            });
+
+
+        </script>
+
+      </div><div class="swiper-slide somplomain-page-slide">
+      <div id="imageCon60" class="  ">
+      <div id="image-enter-exit-container60">
+      <div id="imgAniCon60" class="continer-for-animation60">
+          
+    <picture>
+        
+        <img
+        onerror="reloadImage(this)"
+        id="image60"
+
+        src="assets-605943999/1_bg3_1687248825.jpeg"
+        width="100%" height="100%">
+    </picture>
+        </div>
+      </div>
+    </div>
+    <script>
+    document.querySelector("#imageCon60 img").onclick = function(event){
+
+      
+
+      if(false){
+        null
+        somploSlideTo();
+      }
+      else if(false){
+        ;
+      }
+      else{
+
+        
+        mainClick("null",null,event)
+      }
+
+
+    }
+
+          function imageInitLoacation60(){
+
+          }
+
+    </script>
+      
+      <div id="imageCon63" class=" hiddenComponent ">
+      <div id="image-enter-exit-container63">
+      <div id="imgAniCon63" class="continer-for-animation63">
+          
+    <picture>
+        
+        <img
+        onerror="reloadImage(this)"
+        id="image63"
+
+        src="assets-605943999/1_t3_1687248970.png"
+        width="100%" height="100%">
+    </picture>
+        </div>
+      </div>
+    </div>
+    <script>
+    document.querySelector("#imageCon63 img").onclick = function(event){
+
+      
+
+      if(false){
+        null
+        somploSlideTo();
+      }
+      else if(false){
+        ;
+      }
+      else{
+
+        
+        mainClick("null",null,event)
+      }
+
+
+    }
+
+          function imageInitLoacation63(){
+
+          }
+
+    </script>
+      
+      <div id="imageCon66" class=" hiddenComponent ">
+      <div id="image-enter-exit-container66">
+      <div id="imgAniCon66" class="continer-for-animation66">
+          
+    <picture>
+        
+        <img
+        onerror="reloadImage(this)"
+        id="image66"
+
+        src="assets-605943999/300x600_1688370316.png"
+        width="100%" height="100%">
+    </picture>
+        </div>
+      </div>
+    </div>
+    <script>
+    document.querySelector("#imageCon66 img").onclick = function(event){
+
+      
+
+      if(false){
+        null
+        somploSlideTo();
+      }
+      else if(false){
+        ;
+      }
+      else{
+
+        
+        mainClick("null",null,event)
+      }
+
+
+    }
+
+          function imageInitLoacation66(){
+
+          }
+
+    </script>
+      
+        <div id="buttonContainer69" class=" buttonPositionClass69 hiddenComponent ">
+          <div id="button-enter-exit-container69">
+            <div id="buttonChild69">
+              <button id="buttonElement69">LEARN MORE</button>
+            </div>
+          </div>
+
+        </div>
+          <script>
+            if (!false) {
+              document.querySelector("#buttonContainer69 button").onclick = function(event){
+
+                
+
+                if(false){
+                  null
+                  somploSlideTo();
+                }
+                else if(false){
+                  
+                }
+                else{
+                  null
+                  mainClick("null",null,event);
+                }
+              };
+            }
+
+            function resize69Function() {
+
+
+              var isBigMweb = window.innerWidth / window.innerHeight < 640/1080;
+              var isBig = window.innerWidth / window.innerHeight < 640/1210;
+
+              if(false){
+              }
+              else{
+              }
+
+            }
+
+            resize69Function();
+
+
+            function animationEndHendler(){
+
+            }
+          </script>
+      
+      <div id="imageCon72" class="  ">
+      <div id="image-enter-exit-container72">
+      <div id="imgAniCon72" class="continer-for-animation72">
+          
+    <picture>
+        
+        <img
+        onerror="reloadImage(this)"
+        id="image72"
+
+        src="assets-605943999/1_logo_1687248859.png"
+        width="100%" height="100%">
+    </picture>
+        </div>
+      </div>
+    </div>
+    <script>
+    document.querySelector("#imageCon72 img").onclick = function(event){
+
+      
+
+      if(false){
+        null
+        somploSlideTo();
+      }
+      else if(false){
+        ;
+      }
+      else{
+
+        
+        mainClick("null",null,event)
+      }
+
+
+    }
+
+          function imageInitLoacation72(){
+
+          }
+
+    </script>
+      </div>
+        </div>
+      </div>
+
+    <script>
+    function changePageSpeed (value) {
+      somploMainSwiper.params.speed = value * 1000
+      somploMainSwiper.originalParams.speed = value * 1000
+    };
+    window.addEventListener("SomploTimeoutReached", function() {
+
+      if(false) {
+        somploMainSwiper.params.speed = 1
+        somploMainSwiper.originalParams.speed = 1
+        if (false) {
+          if(somploMainSwiper.activeIndex != 2){
+            somploSlideTo(2);
+          }
+
+        } else if (false) {
+          somploSlideTo(0);
+        }
+      }
+      else{
+        allowTrans = false;
+      }
+    });
+      var somploMainSwiper = new Swiper('.somplo-main-swiper-slide', {
+        speed: 1000 * 1,
+        effect: "fade",
+        centeredSlides: true,
+        autoplay:false,
+        stopOnLastSlide: true,
+        loop: false,
+        allowSlidePrev: false,
+        init:false
+      });
+      if(checkIosVersion() >= 16.2){
+        somploMainSwiper.isSafari = false;
+      }
+      var mainSwiperAutoPlay;
+      var PagesReachedEnd = false;
+      window.addEventListener('SomploTimeoutReached',function(){
+        PagesReachedEnd = true;
+      });
+
+      somploMainSwiper.on('reachEnd', function(){
+        PagesReachedEnd = true
+        frameToRunTimeout.clearInterval(mainSwiperAutoPlay);
+      })
+      
+
+      var tabChanges = false;
+
+      function somploSlideNext(event){
+        if(!tabChanges && event){
+          tabChanges = true;
+          if (parent.publisher_config.prod || typeof parent.publisher_config.prod == "undefined") {
+            parent.creatPixel("https:%%pre_pixels_tab_change%%", true);
+            
+          }else{
+            console.log("Pixel Tab Change");
+          }
+        }
+        pagesStopMyAnimationFunctions[somploMainSwiper.activeIndex]();
+        var args = {currentPage:somploMainSwiper.activeIndex, toPage:somploMainSwiper.activeIndex+1};
+        animationEndArray[somploMainSwiper.activeIndex].currentArgs['currentPage'] = somploMainSwiper.activeIndex;
+          animationEndArray[somploMainSwiper.activeIndex].currentArgs['toPage'] = somploMainSwiper.activeIndex+1;
+          if(SlideChangeHandler() > 0){
+            somploMainSwiper.slides[somploMainSwiper.activeIndex].addEventListener("animationend", SlideChangeHandler, false);
+          }
+      }
+
+      function somploSlidePrev(event){
+        if(!tabChanges && event){
+          tabChanges = true;
+          if (parent.publisher_config.prod || typeof parent.publisher_config.prod == "undefined") {
+            parent.creatPixel("https:%%pre_pixels_tab_change%%", true);
+            
+          }else{
+            console.log("Pixel Tab Change");
+          }
+        }
+        pagesStopMyAnimationFunctions[somploMainSwiper.activeIndex]();
+        var args = {currentPage:somploMainSwiper.activeIndex, toPage:somploMainSwiper.activeIndex-1};
+        animationEndArray[somploMainSwiper.activeIndex].currentArgs['currentPage'] = somploMainSwiper.activeIndex;
+        animationEndArray[somploMainSwiper.activeIndex].currentArgs['toPage'] = somploMainSwiper.activeIndex-1;
+        if(SlideChangeHandler() > 0){
+          somploMainSwiper.slides[somploMainSwiper.activeIndex].addEventListener("animationend", SlideChangeHandler, false);
+        }
+      }
+
+      function somploSlideTo(toPage, event=false){
+        if(!tabChanges && event){
+          tabChanges = true;
+          if (parent.publisher_config.prod || typeof parent.publisher_config.prod == "undefined") {
+            parent.creatPixel("https:%%pre_pixels_tab_change%%", true);
+            
+          }else{
+            console.log("Pixel Tab Change");
+          }
+        }
+          pagesStopMyAnimationFunctions[somploMainSwiper.activeIndex]();
+          var args = {currentPage:somploMainSwiper.activeIndex, toPage:toPage};
+          animationEndArray[somploMainSwiper.activeIndex].currentArgs['currentPage'] = somploMainSwiper.activeIndex;
+          animationEndArray[somploMainSwiper.activeIndex].currentArgs['toPage'] = toPage;
+          if(SlideChangeHandler() > 0){
+            somploMainSwiper.slides[somploMainSwiper.activeIndex].addEventListener("animationend", SlideChangeHandler, false);
+          }
+
+      }
+
+     function SlideChangeHandler(args){
+      args = animationEndArray[somploMainSwiper.activeIndex].currentArgs;
+        if(animationEndArray[args.currentPage].animationEndCounter == Object.keys(animationEndArray[args.currentPage]).length-2){
+          frameToRunTimeout.clearInterval(mainSwiperAutoPlay);
+          animationEndArray[args.currentPage].animationEndCounter = 0;
+          somploMainSwiper.slides[args.currentPage].removeEventListener("animationend", SlideChangeHandler, false);
+          somploMainSwiper.slides[args.currentPage].currentArgs = {};
+
+          somploMainSwiper.slideTo(args.toPage)
+
+
+        }else{
+          animationEndArray[args.currentPage].animationEndCounter++;
+        }
+        return Object.keys(animationEndArray[args.currentPage]).length-2;
+
+      }
+
+      
+    var pagesStartMyAnimationFunctions = [];
+    var autoplayPerPage = [];
+    var counterLoop = 0;
+    
+      var pageTime0;
+        pagesStartMyAnimationFunctions[0] = function() {
+          if (true) {
+            changePageSpeed(1);
+             pageTime0 = 4;
+            if (false
+             && somploMainSwiper.activeIndex == 2
+             && counterLoop == null
+            ) {
+              allowTrans = false;
+            }
+           if(30*1000 - (Date.now() - startTimeMS) < pageTime0*1000 || ((0 === 2) && counterLoop == null)){
+            allowTrans = false;
+           }
+            autoplayPerPage[0] = frameToRunTimeout.setTimeout(function () {
+              if(!document.body.classList.contains('stopallanimations')){
+                if ((0 === 2) && null && (counterLoop < null || null == null)) {
+                  counterLoop++;
+                    somploSlideTo(0);
+                } else {
+                  somploSlideNext();
+                }
+              }
+            }, pageTime0*1000);
+          }
+          
+
+      
+      autoCloseTime = frameToRunTimeout.setTimeout(function(){
+        if(allowClose){
+         parent.publisher_config.close();
+         }
+      }, 10000)
+
+      
+      
+
+      
+        frameToRunTimeout.clearTimeout(autoCloseTime);
+        allowClose = false;
+        
+      
+
+    
+      
+      function imageStartAnimationFunction10 () {
+        var parentEl = document.getElementById("imageCon10");
+        if(false){
+          var childEl = document.getElementById("imgAniCon10");
+          frameToRunTimeout.setTimeout(function(){
+            parentEl.classList.add("custom-animation-parent10")
+            childEl.classList.add("custom-animation-child10")
+          }, 0);
+        }
+        parentEl.classList.remove("hiddenComponent");
+        document.getElementById("image-enter-exit-container10").classList.add("imageConEnterAnimtion10");
+        document.getElementById("image-enter-exit-container10").classList.remove("imageConExitAnimtion10");
+        
+
+        frameToRunTimeout.setTimeout(function(){
+          document.querySelector("#imgAniCon10").classList.add("animated-image10");
+        },  10);
+      }
+      imageStartAnimationFunction10 ();
+      
+      function imageStartAnimationFunction11 () {
+        var parentEl = document.getElementById("imageCon11");
+        if(false){
+          var childEl = document.getElementById("imgAniCon11");
+          frameToRunTimeout.setTimeout(function(){
+            parentEl.classList.add("custom-animation-parent11")
+            childEl.classList.add("custom-animation-child11")
+          }, 1120);
+        }
+        parentEl.classList.remove("hiddenComponent");
+        document.getElementById("image-enter-exit-container11").classList.add("imageConEnterAnimtion11");
+        document.getElementById("image-enter-exit-container11").classList.remove("imageConExitAnimtion11");
+        
+
+        frameToRunTimeout.setTimeout(function(){
+          document.querySelector("#imgAniCon11").classList.add("animated-image11");
+        },  1000);
+      }
+      imageStartAnimationFunction11 ();
+      
+
+
+            document.getElementById("counter12").classList.remove("hiddenComponent");
+            document.getElementById("counter12").classList.add("counterEnterAnimtion12");
+            document.getElementById("counter12").classList.remove("counterExitAnimtion12");
+            
+
+            counterInit12 ();
+
+            
+      function shapesStartAnimationFunction13 () {
+        var parentEl = document.getElementById("shapes-component-wrapper-13");
+        if(false){
+          var childEl = document.getElementById("shapesChild13");
+          frameToRunTimeout.setTimeout(function(){
+            parentEl.classList.add("custom-animation-parent13")
+            childEl.classList.add("custom-animation-child13")
+          }, 2120);
+        }
+
+        parentEl.classList.remove("hiddenComponent");
+        document.getElementById("shapes-enter-exit-container13").classList.add("shapeContainerEnterAnimtion13");
+        document.getElementById("shapes-enter-exit-container13").classList.remove("shapeContainerExitAnimtion13");
+        
+        frameToRunTimeout.setTimeout(function(){
+            document.querySelector("#shapesChild13").classList.add("animated-shapes13");
+          }, 2000);
+      };
+      shapesStartAnimationFunction13 ();
+    
+      function imageStartAnimationFunction14 () {
+        var parentEl = document.getElementById("imageCon14");
+        if(false){
+          var childEl = document.getElementById("imgAniCon14");
+          frameToRunTimeout.setTimeout(function(){
+            parentEl.classList.add("custom-animation-parent14")
+            childEl.classList.add("custom-animation-child14")
+          }, 0);
+        }
+        parentEl.classList.remove("hiddenComponent");
+        document.getElementById("image-enter-exit-container14").classList.add("imageConEnterAnimtion14");
+        document.getElementById("image-enter-exit-container14").classList.remove("imageConExitAnimtion14");
+        
+
+        frameToRunTimeout.setTimeout(function(){
+          document.querySelector("#imgAniCon14").classList.add("animated-image14");
+        },  10);
+      }
+      imageStartAnimationFunction14 ();
+      
+
+      
+    };
+      var pageTime1;
+        pagesStartMyAnimationFunctions[1] = function() {
+          if (true) {
+            changePageSpeed(1);
+             pageTime1 = 13;
+            if (false
+             && somploMainSwiper.activeIndex == 2
+             && counterLoop == null
+            ) {
+              allowTrans = false;
+            }
+           if(30*1000 - (Date.now() - startTimeMS) < pageTime1*1000 || ((1 === 2) && counterLoop == null)){
+            allowTrans = false;
+           }
+            autoplayPerPage[1] = frameToRunTimeout.setTimeout(function () {
+              if(!document.body.classList.contains('stopallanimations')){
+                if ((1 === 2) && null && (counterLoop < null || null == null)) {
+                  counterLoop++;
+                    somploSlideTo(0);
+                } else {
+                  somploSlideNext();
+                }
+              }
+            }, pageTime1*1000);
+          }
+          
+      
+      function imageStartAnimationFunction30 () {
+        var parentEl = document.getElementById("imageCon30");
+        if(false){
+          var childEl = document.getElementById("imgAniCon30");
+          frameToRunTimeout.setTimeout(function(){
+            parentEl.classList.add("custom-animation-parent30")
+            childEl.classList.add("custom-animation-child30")
+          }, 0);
+        }
+        parentEl.classList.remove("hiddenComponent");
+        document.getElementById("image-enter-exit-container30").classList.add("imageConEnterAnimtion30");
+        document.getElementById("image-enter-exit-container30").classList.remove("imageConExitAnimtion30");
+        
+
+        frameToRunTimeout.setTimeout(function(){
+          document.querySelector("#imgAniCon30").classList.add("animated-image30");
+        },  10);
+      }
+      imageStartAnimationFunction30 ();
+      
+      hand32Timeout = frameToRunTimeout.setTimeout(function() {
+        if (false) {
+          document.querySelector(".somplo-hand-32").classList.add("somplo-hand-32-animation-rorate");
+        }
+        somploHand32Element.style.display = "inline-block";
+        somploHand32Element.classList.add("somplo-hand-32-animation");
+      }, 0);
+    
+      function imageStartAnimationFunction34 () {
+        var parentEl = document.getElementById("imageCon34");
+        if(false){
+          var childEl = document.getElementById("imgAniCon34");
+          frameToRunTimeout.setTimeout(function(){
+            parentEl.classList.add("custom-animation-parent34")
+            childEl.classList.add("custom-animation-child34")
+          }, 0);
+        }
+        parentEl.classList.remove("hiddenComponent");
+        document.getElementById("image-enter-exit-container34").classList.add("imageConEnterAnimtion34");
+        document.getElementById("image-enter-exit-container34").classList.remove("imageConExitAnimtion34");
+        
+
+        frameToRunTimeout.setTimeout(function(){
+          document.querySelector("#imgAniCon34").classList.add("animated-image34");
+        },  10);
+      }
+      imageStartAnimationFunction34 ();
+      
+        
+    counterStartGame36.style.display = 'block'
+    var showInstruction = false;
+    var showCounter = false;
+
+    function initInstruction36(){
+      if(!showInstruction) return;
+      frameToRunTimeout.setTimeout(function(){
+        showInstruction = false;
+        document.getElementById('catchFallingObjectContainerinstractions36').style.display = 'none';
+      }, 3000)
+    }
+
+    function initCounter36(){
+
+      var startCounter = 10;
+      var endCounter = 0;
+      var distance = Math.abs(endCounter - startCounter);
+      if(distance === 0 || !showCounter){
+        counterStartGame36.style.display = 'none';
+        showCounter = false;
+        return;
+      }
+
+      var stepTimerCounter = 2000 / distance ;
+      var stepOneCount = Math.sign(endCounter - startCounter);
+
+      var textCounter = '' + startCounter + '';
+      counterStartGame36.textContent = startCounter;
+
+      if(stepOneCount){
+
+        var valueCounter = startCounter
+        var preloadGame = setInterval(
+          function(){
+            if(valueCounter === endCounter){
+              counterStartGame36.style.display = 'none';
+              //playGame();
+              showCounter = false;
+              clearInterval(preloadGame);
+              return;
+            }
+            valueCounter += stepOneCount;
+
+            counterStartGame36.textContent = valueCounter;
+
+          },
+          stepTimerCounter
+        )
+      }else{
+
+        //playGame();
+      }
+
+    }
+
+
+
+
+    var startingGame36  = function(){
+
+      var canvas = document.querySelector('#catchFallingObjectContainer36 #canvas36');
+
+      game36 = createGame36(canvas);
+      playAnimation36 = true;
+      game36.resize();
+
+      var Ref = null;
+      var startTimeStamp = null, lastTime = null;
+      var exitEvent = null
+
+      initInstruction36();
+      initCounter36();
+
+      function gameLoop(currentTime)  {
+
+        if(exitEvent){
+          exitEvent.emit();
+          return;
+        }
+        if(playAnimation36){
+
+
+          if(!showInstruction && !showCounter){
+
+            if(!startTimeStamp){
+              startTimeStamp = currentTime;
+              lastTime = currentTime
+            }
+            if(game36.score === null) {
+              game36.updateScore(0);
+            }
+            game36.time = (currentTime - startTimeStamp)/1000;
+            if(game36.isValidForDraw()){
+              game36.clearRect();
+              game36.drawFallings( (currentTime - lastTime) / 1000);
+              game36.drawCatch();
+            }
+
+            isExitGame36(game36);
+          }
+          lastTime = currentTime;
+          Ref = requestAnimationFrame(gameLoop);
+        }else{
+          window.cancelAnimationFrame(Ref);
+        }
+
+
+      };
+
+
+      function initGame (){
+
+
+        Ref = requestAnimationFrame(gameLoop);
+      }
+      initGame();
+    }
+    startingGame36();
+
+    
+
+        window.addEventListener('SomploTimeoutReached',function(){
+      
+          playAnimation36 = false;
+    });
+      
+
+      
+    };
+      var pageTime2;
+        pagesStartMyAnimationFunctions[2] = function() {
+          if (true) {
+            changePageSpeed(1);
+             pageTime2 = 5;
+            if (false
+             && somploMainSwiper.activeIndex == 2
+             && counterLoop == null
+            ) {
+              allowTrans = false;
+            }
+           if(30*1000 - (Date.now() - startTimeMS) < pageTime2*1000 || ((2 === 2) && counterLoop == null)){
+            allowTrans = false;
+           }
+            autoplayPerPage[2] = frameToRunTimeout.setTimeout(function () {
+              if(!document.body.classList.contains('stopallanimations')){
+                if ((2 === 2) && null && (counterLoop < null || null == null)) {
+                  counterLoop++;
+                    somploSlideTo(0);
+                } else {
+                  somploSlideNext();
+                }
+              }
+            }, pageTime2*1000);
+          }
+          
+      
+      function imageStartAnimationFunction60 () {
+        var parentEl = document.getElementById("imageCon60");
+        if(false){
+          var childEl = document.getElementById("imgAniCon60");
+          frameToRunTimeout.setTimeout(function(){
+            parentEl.classList.add("custom-animation-parent60")
+            childEl.classList.add("custom-animation-child60")
+          }, 0);
+        }
+        parentEl.classList.remove("hiddenComponent");
+        document.getElementById("image-enter-exit-container60").classList.add("imageConEnterAnimtion60");
+        document.getElementById("image-enter-exit-container60").classList.remove("imageConExitAnimtion60");
+        
+
+        frameToRunTimeout.setTimeout(function(){
+          document.querySelector("#imgAniCon60").classList.add("animated-image60");
+        },  10);
+      }
+      imageStartAnimationFunction60 ();
+      
+      function imageStartAnimationFunction63 () {
+        var parentEl = document.getElementById("imageCon63");
+        if(false){
+          var childEl = document.getElementById("imgAniCon63");
+          frameToRunTimeout.setTimeout(function(){
+            parentEl.classList.add("custom-animation-parent63")
+            childEl.classList.add("custom-animation-child63")
+          }, 1120);
+        }
+        parentEl.classList.remove("hiddenComponent");
+        document.getElementById("image-enter-exit-container63").classList.add("imageConEnterAnimtion63");
+        document.getElementById("image-enter-exit-container63").classList.remove("imageConExitAnimtion63");
+        
+
+        frameToRunTimeout.setTimeout(function(){
+          document.querySelector("#imgAniCon63").classList.add("animated-image63");
+        },  1000);
+      }
+      imageStartAnimationFunction63 ();
+      
+      function imageStartAnimationFunction66 () {
+        var parentEl = document.getElementById("imageCon66");
+        if(false){
+          var childEl = document.getElementById("imgAniCon66");
+          frameToRunTimeout.setTimeout(function(){
+            parentEl.classList.add("custom-animation-parent66")
+            childEl.classList.add("custom-animation-child66")
+          }, 1120);
+        }
+        parentEl.classList.remove("hiddenComponent");
+        document.getElementById("image-enter-exit-container66").classList.add("imageConEnterAnimtion66");
+        document.getElementById("image-enter-exit-container66").classList.remove("imageConExitAnimtion66");
+        
+
+        frameToRunTimeout.setTimeout(function(){
+          document.querySelector("#imgAniCon66").classList.add("animated-image66");
+        },  1000);
+      }
+      imageStartAnimationFunction66 ();
+      
+        function buttonStartAnimationFunction69 () {
+          var parentEl = document.getElementById("buttonContainer69");
+          if(false){
+            var childEl = document.getElementById("buttonChild69");
+            frameToRunTimeout.setTimeout(function(){
+              parentEl.classList.add("custom-animation-parent69")
+              childEl.classList.add("custom-animation-child69")
+            }, 1920);
+          }
+
+          parentEl.classList.remove("hiddenComponent");
+          document.getElementById("button-enter-exit-container69").classList.add("buttonContainerEnterAnimtion69");
+          document.getElementById("button-enter-exit-container69").classList.remove("buttonContainerExitAnimtion69");
+          
+          frameToRunTimeout.setTimeout(function(){
+              document.querySelector("#buttonContainer69 button").classList.add("animated-button69");
+            }, 1800);
+        };
+        buttonStartAnimationFunction69 ();
+        
+      function imageStartAnimationFunction72 () {
+        var parentEl = document.getElementById("imageCon72");
+        if(false){
+          var childEl = document.getElementById("imgAniCon72");
+          frameToRunTimeout.setTimeout(function(){
+            parentEl.classList.add("custom-animation-parent72")
+            childEl.classList.add("custom-animation-child72")
+          }, 0);
+        }
+        parentEl.classList.remove("hiddenComponent");
+        document.getElementById("image-enter-exit-container72").classList.add("imageConEnterAnimtion72");
+        document.getElementById("image-enter-exit-container72").classList.remove("imageConExitAnimtion72");
+        
+
+        frameToRunTimeout.setTimeout(function(){
+          document.querySelector("#imgAniCon72").classList.add("animated-image72");
+        },  10);
+      }
+      imageStartAnimationFunction72 ();
+      
+
+      
+    };
+
+    
+      
+    var animationEndArray = [];
+
+    var pagesStopMyAnimationFunctions = [];
+    
+      var aniamrionEndArrayPage0 = {animationEndCounter:0, currentArgs:{}};
+      animationEndArray.push(aniamrionEndArrayPage0);
+        pagesStopMyAnimationFunctions[0] = function() {
+          if(!document.body.classList.contains('stopallanimations')){
+          frameToRunTimeout.clearTimeout(autoplayPerPage[0])
+      
+        function imageStopAnimationFunction10 () {
+          var parentEl = document.getElementById("imageCon10");
+          var childEl = document.getElementById("imgAniCon10");
+
+          
+          document.getElementById("image-enter-exit-container10").classList.remove("imageConEnterAnimtion10");
+          document.querySelector("#imgAniCon10").classList.remove("animated-image10");
+          var slideChanged = false;
+          
+        };
+        imageStopAnimationFunction10 ();
+      
+        function imageStopAnimationFunction11 () {
+          var parentEl = document.getElementById("imageCon11");
+          var childEl = document.getElementById("imgAniCon11");
+
+          
+          document.getElementById("image-enter-exit-container11").classList.remove("imageConEnterAnimtion11");
+          document.querySelector("#imgAniCon11").classList.remove("animated-image11");
+          var slideChanged = false;
+          
+          frameToRunTimeout.setTimeout(function(){
+            if(amountLoops != counterLoop && !stopAllAnimationsvar && hasLoops){
+              parentEl.classList.add("hiddenComponent");
+              parentEl.classList.remove("custom-animation-parent11");
+              childEl.classList.remove("custom-animation-child11");
+            }
+
+          }, (typeof pagesTime[1] == 'undefined' ? pagesTime[0].singlePageTime : pagesTime[1].singlePageTime) * 1000)
+          
+        };
+        imageStopAnimationFunction11 ();
+      
+      
+      document.getElementById("counter12").classList.remove("counterEnterAnimtion12");
+      
+     function shapesStopAnimationFunction13 () {
+        var parentEl = document.getElementById("shapes-component-wrapper-13");
+        var childEl = document.getElementById("shapesChild13");
+        
+        document.getElementById("shapes-enter-exit-container13").classList.remove("shapeContainerEnterAnimtion13");
+        document.querySelector("#shapesChild13").classList.remove("animated-shapes13");
+        
+        frameToRunTimeout.setTimeout(function(){
+          if(amountLoops != counterLoop && !stopAllAnimationsvar && hasLoops){
+            parentEl.classList.add("hiddenComponent");
+          parentEl.classList.remove("custom-animation-parent13");
+          childEl.classList.remove("custom-animation-child13");
+          }
+        }, (typeof pagesTime[1] == 'undefined' ? pagesTime[0].singlePageTime : pagesTime[1].singlePageTime) * 1000)
+        
+        var slideChanged = false;
+        // somploMainSwiper.on('onSlideChangeEnd', function () {
+        //   if (!slideChanged) {
+        //     slideChanged = true;
+        //       parentEl.classList.remove("custom-animation-parent13");
+        //       childEl.classList.remove("custom-animation-child13");
+
+        //       parentEl.classList.add("hiddenComponent");
+        //   }
+        // });
+      }
+      shapesStopAnimationFunction13();
+    
+        function imageStopAnimationFunction14 () {
+          var parentEl = document.getElementById("imageCon14");
+          var childEl = document.getElementById("imgAniCon14");
+
+          
+          document.getElementById("image-enter-exit-container14").classList.remove("imageConEnterAnimtion14");
+          document.querySelector("#imgAniCon14").classList.remove("animated-image14");
+          var slideChanged = false;
+          
+        };
+        imageStopAnimationFunction14 ();
+      }};
+      var aniamrionEndArrayPage1 = {animationEndCounter:0, currentArgs:{}};
+      animationEndArray.push(aniamrionEndArrayPage1);
+        pagesStopMyAnimationFunctions[1] = function() {
+          if(!document.body.classList.contains('stopallanimations')){
+          frameToRunTimeout.clearTimeout(autoplayPerPage[1])
+      
+        function imageStopAnimationFunction30 () {
+          var parentEl = document.getElementById("imageCon30");
+          var childEl = document.getElementById("imgAniCon30");
+
+          
+          document.getElementById("image-enter-exit-container30").classList.remove("imageConEnterAnimtion30");
+          document.querySelector("#imgAniCon30").classList.remove("animated-image30");
+          var slideChanged = false;
+          
+        };
+        imageStopAnimationFunction30 ();
+      
+        function imageStopAnimationFunction34 () {
+          var parentEl = document.getElementById("imageCon34");
+          var childEl = document.getElementById("imgAniCon34");
+
+          
+          document.getElementById("image-enter-exit-container34").classList.remove("imageConEnterAnimtion34");
+          document.querySelector("#imgAniCon34").classList.remove("animated-image34");
+          var slideChanged = false;
+          
+        };
+        imageStopAnimationFunction34 ();
+      playAnimation36 = false}};
+      var aniamrionEndArrayPage2 = {animationEndCounter:0, currentArgs:{}};
+      animationEndArray.push(aniamrionEndArrayPage2);
+        pagesStopMyAnimationFunctions[2] = function() {
+          if(!document.body.classList.contains('stopallanimations')){
+          frameToRunTimeout.clearTimeout(autoplayPerPage[2])
+      
+        function imageStopAnimationFunction60 () {
+          var parentEl = document.getElementById("imageCon60");
+          var childEl = document.getElementById("imgAniCon60");
+
+          
+          document.getElementById("image-enter-exit-container60").classList.remove("imageConEnterAnimtion60");
+          document.querySelector("#imgAniCon60").classList.remove("animated-image60");
+          var slideChanged = false;
+          
+        };
+        imageStopAnimationFunction60 ();
+      
+        function imageStopAnimationFunction63 () {
+          var parentEl = document.getElementById("imageCon63");
+          var childEl = document.getElementById("imgAniCon63");
+
+          
+          document.getElementById("image-enter-exit-container63").classList.remove("imageConEnterAnimtion63");
+          document.querySelector("#imgAniCon63").classList.remove("animated-image63");
+          var slideChanged = false;
+          
+          frameToRunTimeout.setTimeout(function(){
+            if(amountLoops != counterLoop && !stopAllAnimationsvar && hasLoops){
+              parentEl.classList.add("hiddenComponent");
+              parentEl.classList.remove("custom-animation-parent63");
+              childEl.classList.remove("custom-animation-child63");
+            }
+
+          }, (typeof pagesTime[3] == 'undefined' ? pagesTime[0].singlePageTime : pagesTime[3].singlePageTime) * 1000)
+          
+        };
+        imageStopAnimationFunction63 ();
+      
+        function imageStopAnimationFunction66 () {
+          var parentEl = document.getElementById("imageCon66");
+          var childEl = document.getElementById("imgAniCon66");
+
+          
+          document.getElementById("image-enter-exit-container66").classList.remove("imageConEnterAnimtion66");
+          document.querySelector("#imgAniCon66").classList.remove("animated-image66");
+          var slideChanged = false;
+          
+          frameToRunTimeout.setTimeout(function(){
+            if(amountLoops != counterLoop && !stopAllAnimationsvar && hasLoops){
+              parentEl.classList.add("hiddenComponent");
+              parentEl.classList.remove("custom-animation-parent66");
+              childEl.classList.remove("custom-animation-child66");
+            }
+
+          }, (typeof pagesTime[3] == 'undefined' ? pagesTime[0].singlePageTime : pagesTime[3].singlePageTime) * 1000)
+          
+        };
+        imageStopAnimationFunction66 ();
+      
+      function buttonStopAnimationFunction69 () {
+        var parentEl = document.getElementById("buttonContainer69");
+        var childEl = document.getElementById("buttonChild69");
+        
+        document.getElementById("button-enter-exit-container69").classList.remove("buttonContainerEnterAnimtion69");
+        document.querySelector("#buttonContainer69 button").classList.remove("animated-button69");
+        
+        frameToRunTimeout.setTimeout(function(){
+          if(amountLoops != counterLoop && !stopAllAnimationsvar && hasLoops){
+          parentEl.classList.add("hiddenComponent");
+          parentEl.classList.remove("custom-animation-parent69");
+          childEl.classList.remove("custom-animation-child69");
+          }
+        }, (typeof pagesTime[3] == 'undefined' ? pagesTime[0].singlePageTime : pagesTime[3].singlePageTime) * 1000)
+        
+        var slideChanged = false;
+      }
+      buttonStopAnimationFunction69();
+      
+        function imageStopAnimationFunction72 () {
+          var parentEl = document.getElementById("imageCon72");
+          var childEl = document.getElementById("imgAniCon72");
+
+          
+          document.getElementById("image-enter-exit-container72").classList.remove("imageConEnterAnimtion72");
+          document.querySelector("#imgAniCon72").classList.remove("animated-image72");
+          var slideChanged = false;
+          
+        };
+        imageStopAnimationFunction72 ();
+      }};
+
+    </script>
+    
+
+        </div>
+        <script>
+        window.addEventListener("SomploResizeEvent", function(){
+          var isBigMweb = window.innerWidth / window.innerHeight < 640/1080;
+          var isBig = window.innerWidth / window.innerHeight < 640/1210;
+         
+          try {
+      
+        if (false) {
+          var container = document.getElementById('container');
+          if (container) {
+            if (container.offsetWidth != 0 && container.offsetHeight != 0) {
+              element = document.querySelector('#imageCon10');
+              if (element) {
+                
+      function imageContainerResize (element, container) {
+        var elementProportion = 0.5;
+        var containerProportion = container.offsetWidth / container.offsetHeight;
+
+        var elementWidth = container.offsetWidth;
+        var elementHeight = container.offsetHeight;
+        if (!false) {
+          if (true) {
+            if (containerProportion < elementProportion) {
+              elementWidth = elementWidth * 100 * 0.01;
+              elementHeight = elementWidth / elementProportion;
+            } else {
+              elementHeight = elementHeight * 100 * 0.01;
+              elementWidth = elementHeight *  elementProportion;
+            }
+          } else {
+            elementWidth = container.offsetWidth * 100 *  0.01;
+            elementHeight = container.offsetHeight * 100 *  0.01;
+          }
+        }
+        element.style.width = elementWidth + 'px';
+        element.style.height = elementHeight + 'px';
+      }
+    
+                imageContainerResize(element, container);
+              }
+            }
+          }
+        }
+      
+      
+        } catch(e){console.log(e)};
+        try {
+      
+        if (false) {
+          var container = document.getElementById('container');
+          if (container) {
+            if (container.offsetWidth != 0 && container.offsetHeight != 0) {
+              element = document.querySelector('#imageCon11');
+              if (element) {
+                
+      function imageContainerResize (element, container) {
+        var elementProportion = 0.5;
+        var containerProportion = container.offsetWidth / container.offsetHeight;
+
+        var elementWidth = container.offsetWidth;
+        var elementHeight = container.offsetHeight;
+        if (!false) {
+          if (true) {
+            if (containerProportion < elementProportion) {
+              elementWidth = elementWidth * 100 * 0.01;
+              elementHeight = elementWidth / elementProportion;
+            } else {
+              elementHeight = elementHeight * 100 * 0.01;
+              elementWidth = elementHeight *  elementProportion;
+            }
+          } else {
+            elementWidth = container.offsetWidth * 100 *  0.01;
+            elementHeight = container.offsetHeight * 100 *  0.01;
+          }
+        }
+        element.style.width = elementWidth + 'px';
+        element.style.height = elementHeight + 'px';
+      }
+    
+                imageContainerResize(element, container);
+              }
+            }
+          }
+        }
+      
+      
+        } catch(e){console.log(e)};
+        try {
+      
+        if (false) {
+          var container = document.getElementById('container');
+          if (container) {
+            if (container.offsetWidth != 0 && container.offsetHeight != 0) {
+              element = document.querySelector('#imageCon14');
+              if (element) {
+                
+      function imageContainerResize (element, container) {
+        var elementProportion = 1.3595505617977528;
+        var containerProportion = container.offsetWidth / container.offsetHeight;
+
+        var elementWidth = container.offsetWidth;
+        var elementHeight = container.offsetHeight;
+        if (!false) {
+          if (true) {
+            if (containerProportion < elementProportion) {
+              elementWidth = elementWidth * 43 * 0.01;
+              elementHeight = elementWidth / elementProportion;
+            } else {
+              elementHeight = elementHeight * 43 * 0.01;
+              elementWidth = elementHeight *  elementProportion;
+            }
+          } else {
+            elementWidth = container.offsetWidth * 43 *  0.01;
+            elementHeight = container.offsetHeight * 100 *  0.01;
+          }
+        }
+        element.style.width = elementWidth + 'px';
+        element.style.height = elementHeight + 'px';
+      }
+    
+                imageContainerResize(element, container);
+              }
+            }
+          }
+        }
+      
+      
+        } catch(e){console.log(e)};
+        try {
+      
+        if (false) {
+          var container = document.getElementById('container');
+          if (container) {
+            if (container.offsetWidth != 0 && container.offsetHeight != 0) {
+              element = document.querySelector('#imageCon30');
+              if (element) {
+                
+      function imageContainerResize (element, container) {
+        var elementProportion = 0.5;
+        var containerProportion = container.offsetWidth / container.offsetHeight;
+
+        var elementWidth = container.offsetWidth;
+        var elementHeight = container.offsetHeight;
+        if (!false) {
+          if (true) {
+            if (containerProportion < elementProportion) {
+              elementWidth = elementWidth * 100 * 0.01;
+              elementHeight = elementWidth / elementProportion;
+            } else {
+              elementHeight = elementHeight * 100 * 0.01;
+              elementWidth = elementHeight *  elementProportion;
+            }
+          } else {
+            elementWidth = container.offsetWidth * 100 *  0.01;
+            elementHeight = container.offsetHeight * 100 *  0.01;
+          }
+        }
+        element.style.width = elementWidth + 'px';
+        element.style.height = elementHeight + 'px';
+      }
+    
+                imageContainerResize(element, container);
+              }
+            }
+          }
+        }
+      
+      
+        } catch(e){console.log(e)};
+        try {
+      
+        if (false) {
+          var container = document.getElementById('container');
+          if (container) {
+            if (container.offsetWidth != 0 && container.offsetHeight != 0) {
+              element = document.querySelector('#imageCon34');
+              if (element) {
+                
+      function imageContainerResize (element, container) {
+        var elementProportion = 1.3595505617977528;
+        var containerProportion = container.offsetWidth / container.offsetHeight;
+
+        var elementWidth = container.offsetWidth;
+        var elementHeight = container.offsetHeight;
+        if (!false) {
+          if (true) {
+            if (containerProportion < elementProportion) {
+              elementWidth = elementWidth * 43 * 0.01;
+              elementHeight = elementWidth / elementProportion;
+            } else {
+              elementHeight = elementHeight * 43 * 0.01;
+              elementWidth = elementHeight *  elementProportion;
+            }
+          } else {
+            elementWidth = container.offsetWidth * 43 *  0.01;
+            elementHeight = container.offsetHeight * 100 *  0.01;
+          }
+        }
+        element.style.width = elementWidth + 'px';
+        element.style.height = elementHeight + 'px';
+      }
+    
+                imageContainerResize(element, container);
+              }
+            }
+          }
+        }
+      
+      
+        } catch(e){console.log(e)};
+        try {
+      
+        if (false) {
+          var container = document.getElementById('container');
+          if (container) {
+            if (container.offsetWidth != 0 && container.offsetHeight != 0) {
+              element = document.querySelector('#imageCon60');
+              if (element) {
+                
+      function imageContainerResize (element, container) {
+        var elementProportion = 0.5;
+        var containerProportion = container.offsetWidth / container.offsetHeight;
+
+        var elementWidth = container.offsetWidth;
+        var elementHeight = container.offsetHeight;
+        if (!false) {
+          if (true) {
+            if (containerProportion < elementProportion) {
+              elementWidth = elementWidth * 100 * 0.01;
+              elementHeight = elementWidth / elementProportion;
+            } else {
+              elementHeight = elementHeight * 100 * 0.01;
+              elementWidth = elementHeight *  elementProportion;
+            }
+          } else {
+            elementWidth = container.offsetWidth * 100 *  0.01;
+            elementHeight = container.offsetHeight * 100 *  0.01;
+          }
+        }
+        element.style.width = elementWidth + 'px';
+        element.style.height = elementHeight + 'px';
+      }
+    
+                imageContainerResize(element, container);
+              }
+            }
+          }
+        }
+      
+      
+        } catch(e){console.log(e)};
+        try {
+      
+        if (false) {
+          var container = document.getElementById('container');
+          if (container) {
+            if (container.offsetWidth != 0 && container.offsetHeight != 0) {
+              element = document.querySelector('#imageCon63');
+              if (element) {
+                
+      function imageContainerResize (element, container) {
+        var elementProportion = 0.5;
+        var containerProportion = container.offsetWidth / container.offsetHeight;
+
+        var elementWidth = container.offsetWidth;
+        var elementHeight = container.offsetHeight;
+        if (!false) {
+          if (true) {
+            if (containerProportion < elementProportion) {
+              elementWidth = elementWidth * 100 * 0.01;
+              elementHeight = elementWidth / elementProportion;
+            } else {
+              elementHeight = elementHeight * 100 * 0.01;
+              elementWidth = elementHeight *  elementProportion;
+            }
+          } else {
+            elementWidth = container.offsetWidth * 100 *  0.01;
+            elementHeight = container.offsetHeight * 100 *  0.01;
+          }
+        }
+        element.style.width = elementWidth + 'px';
+        element.style.height = elementHeight + 'px';
+      }
+    
+                imageContainerResize(element, container);
+              }
+            }
+          }
+        }
+      
+      
+        } catch(e){console.log(e)};
+        try {
+      
+        if (false) {
+          var container = document.getElementById('container');
+          if (container) {
+            if (container.offsetWidth != 0 && container.offsetHeight != 0) {
+              element = document.querySelector('#imageCon66');
+              if (element) {
+                
+      function imageContainerResize (element, container) {
+        var elementProportion = 0.5;
+        var containerProportion = container.offsetWidth / container.offsetHeight;
+
+        var elementWidth = container.offsetWidth;
+        var elementHeight = container.offsetHeight;
+        if (!false) {
+          if (true) {
+            if (containerProportion < elementProportion) {
+              elementWidth = elementWidth * 100 * 0.01;
+              elementHeight = elementWidth / elementProportion;
+            } else {
+              elementHeight = elementHeight * 100 * 0.01;
+              elementWidth = elementHeight *  elementProportion;
+            }
+          } else {
+            elementWidth = container.offsetWidth * 100 *  0.01;
+            elementHeight = container.offsetHeight * 100 *  0.01;
+          }
+        }
+        element.style.width = elementWidth + 'px';
+        element.style.height = elementHeight + 'px';
+      }
+    
+                imageContainerResize(element, container);
+              }
+            }
+          }
+        }
+      
+      
+        } catch(e){console.log(e)};
+        try {
+        resize69Function();
+        
+        } catch(e){console.log(e)};
+        try {
+      
+        if (false) {
+          var container = document.getElementById('container');
+          if (container) {
+            if (container.offsetWidth != 0 && container.offsetHeight != 0) {
+              element = document.querySelector('#imageCon72');
+              if (element) {
+                
+      function imageContainerResize (element, container) {
+        var elementProportion = 1.3595505617977528;
+        var containerProportion = container.offsetWidth / container.offsetHeight;
+
+        var elementWidth = container.offsetWidth;
+        var elementHeight = container.offsetHeight;
+        if (!false) {
+          if (true) {
+            if (containerProportion < elementProportion) {
+              elementWidth = elementWidth * 43 * 0.01;
+              elementHeight = elementWidth / elementProportion;
+            } else {
+              elementHeight = elementHeight * 43 * 0.01;
+              elementWidth = elementHeight *  elementProportion;
+            }
+          } else {
+            elementWidth = container.offsetWidth * 43 *  0.01;
+            elementHeight = container.offsetHeight * 100 *  0.01;
+          }
+        }
+        element.style.width = elementWidth + 'px';
+        element.style.height = elementHeight + 'px';
+      }
+    
+                imageContainerResize(element, container);
+              }
+            }
+          }
+        }
+      
+      
+        } catch(e){console.log(e)};
+        
+
+        });
+        </script>
+        <script>
+             try {
+          if (typeof parent.publisher_config.facebbokRec == 'undefined') {
+            document.getElementById("container").style.maxWidth = '100vw';
+            document.getElementById("container").style.maxHeight = '100vh';
+          }
+        }
+        catch(e){}
+
+        
+            parent.addEventListener("resize", reziseFunc);
+        try {
+          window.top.addEventListener("resize", reziseFunc);
+        }
+        catch(e) {
+
+        }
+
+
+
+        if (parent.publisher_config && document.getElementById("container")) document.getElementById("container").style.width = parent.publisher_config.width + "px";
+        if (parent.publisher_config && document.getElementById("container")) document.getElementById("container").style.height = parent.publisher_config.height + "px";
+
+
+          
+    
+   var stopAniimationTimeOut;
+   var startTimeMS;
+   window.addEventListener('click', function() {
+    frameToRunTimeout.clearTimeout(stopAniimationTimeOut);
+    document.body.classList.remove('stopallanimations');
+   })
+   window.addEventListener('touchstart', function() {
+    frameToRunTimeout.clearTimeout(stopAniimationTimeOut);
+    document.body.classList.remove('stopallanimations');
+   }, false)
+   
+   
+   
+    function startMyAnimation(event) {
+      if(startMyAnimationWorked){
+        return true;
+      }
+      startMyAnimationWorked = true;
+      
+      try{
+        SomploStarMyAnimationFunction = new Event('SomploStarMyAnimationFunction');
+     }
+     catch(e) {
+      SomploStarMyAnimationFunction = document.createEvent('Event');
+      SomploStarMyAnimationFunction.initEvent('SomploStarMyAnimationFunction', true, true);
+     }
+      
+      
+       startTimeMS = (new Date()).getTime();
+      stopAniimationTimeOut = frameToRunTimeout.setTimeout(function(){
+        document.body.classList.add('stopallanimations');
+        stopAllAnimationsvar = true;
+        window.dispatchEvent(SomploTimeoutReached);
+        frameToRunTimeout.clearInterval(mainSwiperAutoPlay);
+      }, 30*1000)
+
+      
+
+     
+     
+      //animationStarted = true;
+
+      
+      
+      if(parent.isApp && typeof parent.somploElement != "undefined"){
+        fireImppretionfunc();
+
+      }
+      
+      
+      pagesStartMyAnimationFunctions[0]();
+
+      somploMainSwiper.init();
+      if(somploMainSwiper.params.effect === "cube"){
+        if(somploMainSwiper.isSafari){
+        somploMainSwiper.on('transitionStart', function(){document.body.classList.remove('disable-perspeftive')})
+        somploMainSwiper.on('transitionEnd', function(){document.body.classList.add('disable-perspeftive')})
+  
+        
+          document.body.classList.add('disable-perspeftive')
+        }
+      }
+     
+      if(checkIosVersion() >= 16.2){
+        somploMainSwiper.isSafari = false;
+      }
+
+     // somploMainSwiper.on("transitionEnd", function(){window.dispatchEvent(SomploResizeEvent)})
+      somploMainSwiper.on("transitionStart", function(){
+    //    window.dispatchEvent(SomploResizeEvent)
+        frameToRunTimeout.setTimeout(function(){
+         // pagesStopMyAnimationFunctions[somploMainSwiper.previousIndex]();
+          pagesStartMyAnimationFunctions[somploMainSwiper.activeIndex]();
+
+          if (somploMainSwiper.activeIndex == pagesStartMyAnimationFunctions.length - 1) {
+            somploMainSwiper.stopAutoplay();
+          }
+        }, (applayToAll ? (pagesTime[0].startAnimationOnTransitionStart ? 0 : pagesTime[0].singlePageAnimationSpeed) : (typeof pagesTime[somploMainSwiper.activeIndex - 1] == 'undefined' ? (pagesTime[0].startAnimationOnTransitionStart ? 0 : pagesTime[0].singlePageAnimationSpeed) : (pagesTime[somploMainSwiper.activeIndex].startAnimationOnTransitionStart ? 0 : pagesTime[somploMainSwiper.activeIndex -1].singlePageAnimationSpeed))) * 1000)
+      });
+
+      
+
+
+      
+      if ((document.readyState === 'interactive' || document.readyState === 'complete') && !animationStarted) {
+        console.log('Done Loading')
+      
+      animationStarted = true;
+      }
+      else{
+        document.addEventListener('readystatechange', function(event) {
+        if ((document.readyState === 'interactive' || document.readyState === 'complete') && !animationStarted) {
+          console.log('Done Loading')
+          
+          animationStarted = true;
+          }
+
+        });
+
+
+      }
+      
+      try {
+        if (parent.isApp) {
+          if (typeof parent.document.getElementsByName('viewport')[0] != "undefined") {
+            var parentViewport = parent.document.getElementsByName('viewport')[0];
+            if (!parentViewport.getAttribute("content").includes('viewport-fit')) {
+              var parsedViewportC = parentViewport.getAttribute("content").split(",");
+              parsedViewportC.push('viewport-fit=cover');
+              parentViewport.setAttribute("content", parsedViewportC.toString());
+             // parent.document.body.style.paddingTop = 'env(safe-area-inset-top)';
+             //frameElement.style.maxHeight = 'calc(100vh - env(safe-area-inset-top))'
+            } else { }
+          } else {
+            var metaTag=document.createElement('meta');
+            metaTag.setAttribute("name", "viewport");
+            metaTag.setAttribute("content", "width=device-width, initial-scale=1.0, viewport-fit=cover");
+            parent.document.getElementsByTagName('head')[0].appendChild(metaTag);
+          //  parent.document.body.style.paddingTop = 'env(safe-area-inset-top)';
+          //  frameElement.style.maxHeight = 'calc(100vh - env(safe-area-inset-top))'
+          }
+        } else { }
+      } catch(e) {}
+      
+
+
+      reziseFunc();
+    }
+    
+          
+
+    
+  
+
+    if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support
+      hidden = "hidden";
+      visibilityChange = "visibilitychange";
+    } else if (typeof document.msHidden !== "undefined") {
+      hidden = "msHidden";
+      visibilityChange = "msvisibilitychange";
+    } else if (typeof document.webkitHidden !== "undefined") {
+      hidden = "webkitHidden";
+      visibilityChange = "webkitvisibilitychange";
+    }
+
+    var isAlive = false;
+      function isAliveLoop(timestamp) {
+        isAlive = true;
+        window.requestAnimationFrame(isAliveLoop);
+    }
+    window.requestAnimationFrame(isAliveLoop);
+
+
+    var tid = frameToRunTimeout.setInterval(function () {
+      if (parent.document.readyState !== "interactive" && parent.document.readyState !== "complete") return;
+
+      frameToRunTimeout.clearInterval(tid);
+      if (typeof parent.somploVisabilityWithElement == 'undefined') {
+
+        if (document[hidden] && true) {
+          document.addEventListener(visibilityChange, handleVisibilityChangeNew, false);
+        } else {
+          fireImppretionfunc();
+
+        }
+      } else {
+        if (typeof parent.googleData != "undefined" && parent.googleData != null) {
+
+
+          if ((document[hidden] || parent.googleData['18']) &&
+              true) {
+            parent.addEventListener('somploVisabilityWithElement', fireImppretionfunc, false);
+
+          } else {
+
+            fireImppretionfunc();
+
+
+          }
+        }
+        else if(false && parent.isApp){
+          if(!parent.Visible()){
+            fireImppretionfunc();
+         /*  var impInAppInterval =  frameToRunTimeout.setInterval(function(){
+            if(parent.Visible() || parent.mriadexposure > 1){
+              frameToRunTimeout.clearInterval(impInAppInterval);
+                fireImppretionfunc();
+              }
+            }, 200)*/
+              //document.addEventListener(visibilityChange, handleVisibilityChangeNew, false);
+          }
+          else{
+              fireImppretionfunc();
+
+          }
+      }
+        else {
+          
+          if(typeof parent.somploElement == "undefined"){
+            fireImppretionfunc();
+
+          }
+         else if(!parent.isApp){
+            fireImppretionfunc();
+
+          }
+          
+
+
+        }
+      }
+    }, 100);
+
+    
+    
+
+          
+          
+          if(parent.isApp && typeof parent.somploElement != "undefined"){
+            frameToRunTimeout.setTimeout(function(){parent.initAd()}, 200);
+          }
+          
+          parent.publisher_config.init();
+
+
+
+
+
+
+          
+          
+          parent.somploClick = function(url){
+         try{
+            // parent.creatPixel("https://vast.somplo.com/pixel/pixel.png?creative_id=605943999&tech=2&fullurl="+encodeURIComponent(url), true);
+            if(typeof parent.maraid !== 'undefined'){
+              try{
+                parent.maraid.open(url);
+              }
+              catch(e){
+                var faceA = document.createElement('a');
+                faceA.href = url;
+                faceA.target = '_blank';
+                faceA.rel = 'nofollow';
+                document.body.appendChild(faceA);
+                faceA.click();
+              }
+             
+            }
+            else{
+              var faceA = document.createElement('a');
+              faceA.href = url;
+              faceA.target = '_blank';
+              faceA.rel = 'nofollow';
+              parent.document.body.appendChild(faceA);
+              faceA.click();
+          }
+        }
+          catch(e){
+            // parent.creatPixel("https://vast.somplo.com/pixel/pixel.png?creative_id=605943999&tech=2&err="+encodeURIComponent(e), true);
+            window.open(url)
+          }
+            }
+      
+          
+          
+
+          
+
+          
+          
+          window.addEventListener("click", heatMapHandler);
+function heatMapHandler(event){
+  if (event.isTrusted){
+    if(!somploFFirstClickH){
+      var objToSend = {
+        x:event.clientX,
+        y:event.clientY,
+        width:window.innerWidth,
+        height:window.innerHeight,
+        timeDiff:Math.round((new Date().getTime() - somploStartCount)/1000)
+      }
+    }
+    else{
+      var objToSend = {
+        x:event.clientX,
+        y:event.clientY,
+        width:window.innerWidth,
+        height:window.innerHeight,
+      }
+
+    }
+    somploFFirstClickH = true;
+    if (typeof somploMainSwiper !== 'undefined') {
+      objToSend.page = somploMainSwiper.activeIndex + 1;
+    }
+    parent.creatPixel('https://pixel.somplo.com/pixel.png?e=135&tag_id='+parent.somplo_config.placement_id+'&val='+encodeURI(JSON.stringify(objToSend)), true)
+  }
+}
+
+
+
+    
+          function mainClick(url, pixel) {
+            try{
+              var patt = new RegExp("http", "g");
+              var clickMacroVar;
+              if(typeof parent.publisher_config.clickMacro == 'undefined'){
+                clickMacroVar = parent.publisher_config.clickmacro;
+              }
+              else{
+                clickMacroVar = parent.publisher_config.clickMacro;
+              }
+              try{
+                //var regex = /(?={)(.*?)(})/g;
+                //clickMacroVar = clickMacroVar.replace(regex, '')
+              }
+              catch(e){}
+              // parent.creatPixel("https://vast.somplo.com/pixel/pixel.png?creative_id=605943999&tech=2&clickmac="+encodeURIComponent(clickMacroVar), true);
+             if (parent.publisher_config.click_url != '' && typeof parent.publisher_config.click_url != "undefined" ) {
+  
+              var needToDecodeClickurl;
+               try{
+                needToDecodeClickurl = parent.publisher_config.click_url.startsWith('https%3A%2F%2F') ||
+                parent.publisher_config.click_url.startsWith('http%3A%2F%2F');
+               }
+               catch(e){
+                needToDecodeClickurl = parent.publisher_config.click_url.match("^https%3A%2F%2F") != null || parent.publisher_config.click_url.match("^http%3A%2F%2F") != null
+               }
+  
+  
+              if (needToDecodeClickurl) {
+                parent.publisher_config.click_url = decodeURIComponent(parent.publisher_config.click_url);
+              }
+               url = parent.publisher_config.click_url;
+             }
+             if (pixel == "null" || typeof pixel === "null" || typeof pixel === "undefined" || pixel == null) {
+  
+             } else {
+               if (parent.publisher_config.prod || typeof parent.publisher_config.prod == "undefined") {
+                 parent.creatPixel("https://pixel.somplo.com/pixel.png?e=" + pixel + "&tag_id=" +
+                     parent.somplo_config.placement_id + "&val=&order=2&tech=2", true);
+               } else {
+                 console.log("pixel" + pixel)
+               }
+             }
+             var finalURL;
+             var tempUrl;
+             if (url == "null" || typeof url === "null" || typeof url === "undefined" || url == null || url == "") {
+               tempUrl = main_click_url.trim();
+             } else {
+               tempUrl = url.trim()
+             }
+             if (parent.publisher_config.prod || typeof parent.publisher_config.prod == "undefined") {
+               allowClose = false;
+               if(!userClicked){
+                
+                parent.creatPixel("https://pixel.somplo.com/pixel.png?e=3&tag_id=" + parent.somplo_config.placement_id + "&val=&order=2&tech=2", true);
+                
+  
+                userClicked = true;
+                
+               }
+  
+              // finalURL = "https://pixel.somplo.com/RedirectPixel/pixel.png?e=3&tag_id="+parent.somplo_config.placement_id+ "&val=&tech=2&order=2&url=" + encodeURIComponent(tempUrl);
+               finalURL = tempUrl;
+             }
+             else{
+              finalURL = tempUrl;
+             }
+             try{
+  
+              
+              finalURL = finalURL.replace(/{/g, '%7B')
+              finalURL = finalURL.replace(/}/g, '%7D')
+              //finalURL = finalURL.replace(/$/g, '%24')
+              
+  
+             }
+             catch(e){}
+             //finalURL = "https://pixel.somplo.com/RedirectPixel/pixel.png?e=3&tag_id="+parent.somplo_config.placement_id+ "&val=&tech=2&order=2&url=" + encodeURIComponent(finalURL);
+             if (clickMacroVar !="") {
+              var uri_enc = finalURL;
+              var i;
+              
+              try{
+                for (i = 0; i < getMaxUrlEscapes(clickMacroVar); i++) {
+                  uri_enc = encodeURIComponent(uri_enc)
+                 }
+              }
+              catch(e){}
+              
+               allowClose = false;
+  
+               var uri_dec = clickMacroVar;
+               var needToDecodeClickMacro;
+               try{
+                needToDecodeClickMacro = clickMacroVar.startsWith('https%3A%2F%2F') ||
+                clickMacroVar.startsWith('http%3A%2F%2F');
+               }
+               catch(e){
+                needToDecodeClickMacro = clickMacroVar.match("^https%3A%2F%2F") != null || clickMacroVar.match("^http%3A%2F%2F") != null
+               }
+  
+               if (needToDecodeClickMacro) {
+                 uri_dec = decodeURIComponent(clickMacroVar);
+               }
+               
+               
+               //parent.creatPixel(uri_dec, false);
+               try{
+                new URL(uri_dec + uri_enc);
+                parent.somploClick(uri_dec + uri_enc);
+               }
+               catch(e){
+              //  parent.creatPixel("https:%%pre_pixels_invalidurl%%", true);
+                parent.somploClick(finalURL);
+               }
+              
+               
+  
+             } else {
+               allowClose = false;
+               
+               parent.somploClick(finalURL);
+               
+  
+             }
+            }
+            catch(e){
+              // parent.creatPixel("https://vast.somplo.com/pixel/pixel.png?creative_id=605943999&tech=2&err="+encodeURIComponent(e), true);
+              window.open(main_click_url);
+            }
+           
+         }
+         
+
+
+          
+
+          
+      
+      var resizeFallBackMargin = 0;
+      function reziseFunc() {
+        
+        if (typeof frameElement !== "undefined" && frameElement) frameElement.style.width = parent.publisher_config.width + "px";
+        if (typeof frameElement !== "undefined" && frameElement) frameElement.style.height = parent.publisher_config.height + "px";
+        
+        
+
+        
+        if (parent.publisher_config && document.getElementById("container")) document.getElementById("container").style.width = parent.publisher_config.width + "px";
+        if (parent.publisher_config && document.getElementById("container")) document.getElementById("container").style.height = parent.publisher_config.height + "px";
+        
+
+        if (document.body.style.zoom != "") {
+          document.getElementById("container").style.maxWidth = "unset";
+          document.getElementById("container").style.maxHeight = "unset";
+        }
+
+        /* if (resizeFallBackMargin <= 0) {
+          document.body.style.margin = 1;
+          frameToRunTimeout.setTimeout(function() {
+            document.body.style.margin = 0;
+            // resizeFallBackMargin = true;
+          }, 200);
+          resizeFallBackMargin++;
+        }*/
+
+        window.dispatchEvent(SomploResizeEvent);
+
+      }
+      
+
+
+      
+
+
+             parent.addEventListener("resize", reziseFunc);
+          try {
+            window.top.addEventListener("resize", reziseFunc);
+          }
+          catch(e) {
+
+          }
+
+         // addResizeListener(document.body, reziseFunc);
+          //addResizeListener(parent.document.body, reziseFunc);
+
+
+          
+
+                  parent.addEventListener("beforeunload", function(event) {
+           try{
+          //  removeResizeListener(document.body, reziseFunc);
+          //  removeResizeListener(parent.document.body, reziseFunc);
+           }
+           catch(e){}
+
+            try{
+              window.top.removeEventListener("resize", reziseFunc);
+            }
+            catch(e){}
+
+            parent.removeEventListener("resize", reziseFunc);
+            console.log('unload')
+           });
+
+           
+
+
+
+
+    try{
+      if(typeof parent.isBuilder != "undefined" && parent.isBuilder) {
+        document.body.classList.add('isBuilder');
+      }
+    }
+    catch(e){}
+
+    
+
+    
+//     try{
+//       var windowToCheck = parent;
+//       try{
+//         if(typeof window.top.AFMA_AddEventListener === 'function'){
+//           windowToCheck = window.top;
+//         }
+//       }
+//         catch(e){
+//           try{
+//             if(typeof parent.parent.AFMA_AddEventListener === 'function'){
+//               windowToCheck = parent.parent;
+//             }
+//             else{
+//               if(typeof parent.AFMA_AddEventListener === 'function'){
+//                 windowToCheck = parent;
+//               }
+//             } 
+//           }
+//           catch(e){
+//             if(typeof parent.AFMA_AddEventListener === 'function'){
+//               windowToCheck = parent;
+//             }
+//           }
+//         }
+      
+//       if(parent.isApp && typeof windowToCheck.AFMA_AddEventListener === 'function'){
+//       if(typeof windowToCheck.window.Goog_Omid_SdkImpressionReceived === 'boolean'){
+//       if(windowToCheck.window.Goog_Omid_SdkImpressionReceived){
+//       parent.initAd();
+//       
+//       if(!startMyAnimationWorked){
+//         startMyAnimation()
+//         }
+//       
+    
+//       }
+//       else{
+//         windowToCheck.AFMA_AddEventListener('onSdkImpression', function(){
+//          parent.initAd();
+//           if(!startMyAnimationWorked){
+//            startMyAnimation()
+//            }
+//        })
+//       }
+//       }else{
+//         windowToCheck.AFMA_AddEventListener('onSdkImpression', function(){
+//          parent.initAd();
+//          
+//          if(!startMyAnimationWorked){
+//            startMyAnimation()
+//            }
+//          
+         
+//        })
+//       }
+//       try{
+     
+//         windowToCheck.AFMA_AddEventListener('onshow', function(){
+//           parent.Visible = function(a,b){
+//             return true;
+//  }
+//           try{
+//             fireImppretionfunc();
+//           }
+//           catch(e){}
+        
+      
+//         // frameToRunTimeout.setTimeout(function(){
+//         if(!startMyAnimationWorked){
+//           startMyAnimation();
+//          }
+//         // }, 500)
+               
+//        })
+//       }
+//       catch(e){}
+        
+//       }
+       
+//       }
+//       catch(e){}
+
+        </script>
+      
+<script id="mediapal-somplo-size-lock">
+(function () {
+  var W = 300, H = 600;
+  function lockSize() {
+    try {
+      if (parent.publisher_config) {
+        parent.publisher_config.width = W;
+        parent.publisher_config.height = H;
+        parent.publisher_config.prod = false;
+        parent.publisher_config.close_Button = false;
+        parent.publisher_config.close_button = false;
+      }
+    } catch (e) {}
+    var c = document.getElementById("container");
+    if (c) {
+      c.style.width = W + "px";
+      c.style.height = H + "px";
+      c.style.maxWidth = W + "px";
+      c.style.maxHeight = H + "px";
+    }
+    try {
+      if (typeof frameElement !== "undefined" && frameElement) {
+        frameElement.style.width = W + "px";
+        frameElement.style.height = H + "px";
+        frameElement.style.maxWidth = W + "px";
+        frameElement.style.maxHeight = H + "px";
+        frameElement.style.position = "static";
+        frameElement.style.left = "auto";
+        frameElement.style.top = "auto";
+        frameElement.style.margin = "0";
+      }
+    } catch (e) {}
+  }
+  window.reziseFunc = lockSize;
+  lockSize();
+  setTimeout(lockSize, 0);
+  setTimeout(lockSize, 250);
+  setTimeout(lockSize, 1000);
+  // Fallback if parent mainScript is missing: kick off creative animations/games.
+  function bootAnim() {
+    try {
+      if (typeof startMyAnimation !== "function") return;
+      if (typeof startMyAnimationWorked !== "undefined" && startMyAnimationWorked) return;
+      startMyAnimation();
+    } catch (e) {}
+  }
+  setTimeout(bootAnim, 200);
+  setTimeout(bootAnim, 800);
+})();
+</script>
+</body>
+    </html>
