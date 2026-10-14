@@ -1505,6 +1505,28 @@ function bannerFrameStyle(banner: {
   };
 }
 
+function reloadBannerFrames(srcs: ReadonlySet<string>) {
+  const frames = document.querySelectorAll<HTMLIFrameElement>(
+    "iframe[data-banner-src]"
+  );
+  frames.forEach((frame) => {
+    const src = frame.dataset.bannerSrc;
+    if (!src || !srcs.has(src)) return;
+    try {
+      frame.contentWindow?.location.reload();
+      return;
+    } catch {
+      /* sandboxed / cross-origin fallback */
+    }
+    const onBlank = () => {
+      frame.removeEventListener("load", onBlank);
+      frame.src = src;
+    };
+    frame.addEventListener("load", onBlank);
+    frame.src = "about:blank";
+  });
+}
+
 function LiveBannerCanvas({
   banners,
 }: {
@@ -1566,9 +1588,23 @@ function LiveBannerCanvas({
     };
   }, [banners]);
 
+  const refreshBanners = () => {
+    reloadBannerFrames(new Set(banners.map((b) => b.src)));
+  };
+
   return (
     <>
-      <div className="twww-banner-title-spacer" aria-hidden />
+      <div className="twww-banner-toolbar">
+        <button
+          type="button"
+          className="twww-banner-refresh"
+          onClick={refreshBanners}
+          aria-label="Reset banners to first load"
+          title="Refresh banners"
+        >
+          <RefreshCw className="twww-banner-refresh__icon" aria-hidden />
+        </button>
+      </div>
       <div
         ref={canvasRef}
         className="twww-banner-canvas"
