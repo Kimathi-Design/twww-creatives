@@ -2,13 +2,23 @@
 
 import { IMAGES, CLIENTS, CONTACT } from "@/lib/ats-content";
 
+/** Public origin for standalone banner links in the deck + PDF. */
+export const SITE_ORIGIN = (
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://twww-creatives.vercel.app"
+).replace(/\/$/, "");
+
+export function standaloneBannerUrl(src: string) {
+  if (/^https?:\/\//i.test(src)) return src;
+  return `${SITE_ORIGIN}${src.startsWith("/") ? src : `/${src}`}`;
+}
+
 export const ATS_ASSETS = {
   logoColor: IMAGES.coke,
   logoWhite: IMAGES.coke,
   mediapal: IMAGES.mediapal,
   icon: IMAGES.icon,
   appleIcon: IMAGES.appleIcon,
-  crispPdf: `/${"TWWW_MediaPal_Proposal.pdf"}`,
+  crispPdf: `/${"TWWW_Creatives_Slides.pdf"}`,
   editablePdf: `/${"TWWW_MediaPal_Proposal_Editable.pdf"}`,
   images: {
     cover: IMAGES.cover,

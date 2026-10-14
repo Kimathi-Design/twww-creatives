@@ -33,6 +33,7 @@ import {
   Play,
   Radio,
   RefreshCw,
+  ExternalLink,
   Route,
   Share2,
   ShoppingCart,
@@ -72,6 +73,7 @@ import {
   SLIDE_COUNT,
   WHY,
 } from "@/lib/ats-content";
+import { standaloneBannerUrl } from "@/lib/ats-assets";
 import "./ats.css";
 import "./twww-brand.css";
 
@@ -1503,29 +1505,6 @@ function bannerFrameStyle(banner: {
   };
 }
 
-function reloadBannerFrames(srcs: ReadonlySet<string>) {
-  const frames = document.querySelectorAll<HTMLIFrameElement>(
-    "iframe[data-banner-src]"
-  );
-  frames.forEach((frame) => {
-    const src = frame.dataset.bannerSrc;
-    if (!src || !srcs.has(src)) return;
-    try {
-      // Force a hard reload (same-URL assign/replace is often a no-op).
-      frame.contentWindow?.location.reload();
-      return;
-    } catch {
-      /* sandboxed / cross-origin fallback */
-    }
-    const onBlank = () => {
-      frame.removeEventListener("load", onBlank);
-      frame.src = src;
-    };
-    frame.addEventListener("load", onBlank);
-    frame.src = "about:blank";
-  });
-}
-
 function LiveBannerCanvas({
   banners,
 }: {
@@ -1533,7 +1512,7 @@ function LiveBannerCanvas({
 }) {
   const canvasRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
-  const captionReserve = 102;
+  const captionReserve = 128;
 
   useEffect(() => {
     const el = canvasRef.current;
@@ -1587,23 +1566,9 @@ function LiveBannerCanvas({
     };
   }, [banners]);
 
-  const refreshBanners = () => {
-    reloadBannerFrames(new Set(banners.map((b) => b.src)));
-  };
-
   return (
     <>
-      <div className="twww-banner-toolbar">
-        <button
-          type="button"
-          className="twww-banner-refresh"
-          onClick={refreshBanners}
-          aria-label="Reset banners to first load"
-        >
-          <RefreshCw className="twww-banner-refresh__icon" aria-hidden />
-          Refresh
-        </button>
-      </div>
+      <div className="twww-banner-title-spacer" aria-hidden />
       <div
         ref={canvasRef}
         className="twww-banner-canvas"
@@ -1611,6 +1576,7 @@ function LiveBannerCanvas({
       >
         {banners.map((banner) => {
           const stage = bannerStageSize(banner);
+          const standalone = standaloneBannerUrl(banner.src);
           return (
             <div
               key={banner.src}
@@ -1634,6 +1600,19 @@ function LiveBannerCanvas({
               <div className="twww-banner-canvas__caption">
                 <strong>{banner.type}</strong>
                 <span>{banner.use}</span>
+                <a
+                  className="twww-banner-open"
+                  href={standalone}
+                  data-banner-standalone={standalone}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <ExternalLink
+                    className="twww-banner-open__icon"
+                    aria-hidden
+                  />
+                  Open
+                </a>
               </div>
             </div>
           );

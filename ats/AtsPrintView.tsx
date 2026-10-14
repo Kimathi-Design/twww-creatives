@@ -1,7 +1,12 @@
 "use client";
 
 import { useEffect } from "react";
-import { ATS_SLIDE_COUNT, renderAtsSlide } from "@/ats/AtsSlides";
+import {
+  ATS_SLIDE_COUNT,
+  LiveBannerPreload,
+  renderAtsSlide,
+} from "@/ats/AtsSlides";
+import { CREATIVE_DECIDE, CREATIVE_GAMES } from "@/lib/ats-content";
 import "./ats.css";
 import "./twww-brand.css";
 
@@ -17,6 +22,9 @@ export function AtsPrintView() {
 
   return (
     <div className="ats-print-root deck-print-root deck-fixed-layout">
+      <LiveBannerPreload
+        banners={[...CREATIVE_DECIDE.banners, ...CREATIVE_GAMES.banners]}
+      />
       {Array.from({ length: ATS_SLIDE_COUNT }, (_, index) => (
         <div key={index} className="ats-print-slide deck-print-slide deck-stage">
           {renderAtsSlide(index)}

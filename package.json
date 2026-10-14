@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "generate-crisp-pdf": "npm run build && node scripts/generate-twww-crisp-pdf.mjs"
+    "generate-crisp-pdf": "npm run build && NEXT_PUBLIC_SITE_URL=https://twww-creatives.vercel.app node scripts/generate-twww-crisp-pdf.mjs",
+    "generate-slides-pdf": "npm run generate-crisp-pdf"
   },
   "dependencies": {
     "framer-motion": "^12.38.0",
